@@ -4,6 +4,7 @@
   --light-color: #f3f3f3;
   --dark-color: #333;
   --sports-color: #f99500;
+  --politics_and_country-color: #e45001;
   --entertainment-color: #a66bbe;
   --technology-color: #009cff;
   --max-width: 1500px;
@@ -47,16 +48,31 @@ svg {
 /* navbar */
 #main-nav {
   background: var(--dark-color);
-}
-.nav-container {
   display: grid;
-  grid-template-columns: 6fr 4fr 3fr;
+  grid-template-columns: 6fr 5fr;
   padding: 0.5rem 1rem;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+#main-nav .nav-container {
+  display: grid;
+  grid-template-columns: 10fr 2fr;
+  align-items: center;
+}
+#main-nav .nav-container .nav-socials {
+  display: flex;
+  grid-template-columns: 30% 10%;
   align-items: center;
 }
 .logo svg {
   width: 1.5rem;
   fill: #f3f3f3;
+}
+.latest {
+  width: 0.7rem;
+  fill: #fff;
 }
 .logo {
   color: #fff;
@@ -106,15 +122,31 @@ svg {
 .nav-container ul li {
   padding: 0 1rem;
 }
+.nav-container ul:hover li {
+  color: var(--light-color);
+}
+
 .nav-container ul li a {
   color: #fff;
 }
-.nav-container ul:hover a {
-  color: #ccc;
-}
 .nav-container ul:hover a:hover {
   color: #fff;
-  box-shadow: 0 2px 0 #c72727;
+}
+.nav-container ul li a::after {
+  content: "";
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+}
+.nav-container ul li a::after:hover {
+  height: 2px;
+  color: var(--primary-color);
+}
+
+.open-nav-menu {
+  display: none;
 }
 
 /* header */
@@ -261,22 +293,30 @@ button {
 
 /* ------showcase container------ */
 #showcase {
-  width: 100vw;
-  height: 50vh;
+  width: 95vw;
+  height: fit-content;
   color: #fff;
   padding: 1.5rem;
 }
+
 .container {
   display: grid;
   grid-template-columns: repeat(3, 35%);
   grid-gap: 0.5rem;
   margin: 1rem auto;
 }
+#welcome {
+  width: 90vw;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .box {
   width: 15rem;
   aspect-ratio: 1;
   background-color: #f3f3f3;
-  color: #333;
+  color: rgb(51, 51, 51);
   text-align: center;
   padding: 1rem;
   border-radius: 2%;
@@ -296,10 +336,97 @@ button {
 .box:nth-child(2) {
   transform: translateY(-20%);
 }
-.box .image img {
+.box img {
   width: 13rem;
+  aspect-ratio: 1;
+  box-shadow: 0 0 9px rgba(51, 51, 51, 0.5);
 }
 .box h3 {
   font-weight: 1000;
   font-size: 1.3rem;
+}
+
+/* -------stories container--------- */
+#stories {
+  width: 100vw;
+  height: 100vh;
+}
+#stories h1 {
+  color: var(--light-color);
+  display: flex;
+  justify-content: center;
+}
+#stories-container {
+  width: 100%;
+  height: 100%;
+  color: var(--light-color);
+  display: grid;
+  grid-template-columns: 50% 25% 25%;
+}
+.stories-box {
+  width: 35%;
+  height: 10rem;
+}
+.stories-box:first-child {
+  display: inline-block;
+  width: 50%;
+  height: 20rem;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 1;
+}
+/* .stories-box:nth-child(2) {
+  grid-row-start: 1;
+  grid-column-start: 4;
+}
+
+.stories-box:nth-child(3) {
+  grid-row-start: 3;
+  grid-column-start: 2;
+}
+
+.stories-box:nth-child(4) {
+  grid-row-start: 3;
+  grid-column-start: 3;
+} */
+
+.stories-box img::before {
+  content: "";
+  background: var(--primary-color);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  opacity: 1;
+}
+.stories-box img {
+  width: 100%;
+  height: 100%;
+}
+
+.sports-text {
+  transform: translateY(-100%);
+  overflow-wrap: break-word;
+  padding: 0.5rem 1rem;
+}
+.article-sub-head {
+  width: 2px;
+  height: 1rem;
+  background: var(--sports-color);
+}
+.no-2 {
+  background: var(--entertainment-color) !important;
+}
+.no-3 {
+  background: var(--politics_and_country-color) !important;
+}
+.no-4 {
+  background: var(--sports-color) !important;
+}
+.no-5 {
+  width: 2px;
+  height: 1rem;
+  background: var(--technology-color) !important;
 }

@@ -63,3 +63,11 @@ function init() {
   // Init TypeWriter
   new TypeWriter(txtElement, words, wait);
 }
+
+// show/hide menu
+const menu = document.querySelector(".nav-container");
+const dropdown = document.querySelector(".open-nav-menu");
+
+div.addEventListener("click", () => {
+  dropdown.getElementsByClassName.display;
+});
