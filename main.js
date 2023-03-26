@@ -64,10 +64,44 @@ function init() {
   new TypeWriter(txtElement, words, wait);
 }
 
-// show/hide menu
-const menu = document.querySelector(".nav-container");
-const dropdown = document.querySelector(".open-nav-menu");
-
-div.addEventListener("click", () => {
-  dropdown.getElementsByClassName.display;
+//javascript for navigation bar effect on scroll
+window.addEventListener("scroll", () => {
+  document
+    .querySelector("nav")
+    .classList.toggle("nav-sticky", window.scrollY > 10);
 });
+
+//javascript for responsive navigation sidebar menu
+let menu = document.querySelector("#main-nav.nav-container");
+let menuBtn = document.querySelector("button.open-nav-menu");
+// const closeBtn = document.querySelector(".close-nav-menu");
+
+closeBtn.onclick = function () {
+  menu.classList.add("open-menu");
+  menu.classList.toggle("open-menu");
+
+  if (menu.classList.contains("open-menu")) {
+    menuBtn.src = "./img/images (1).png";
+  }
+};
+
+// preloader function
+// jQuery(window).load(function () {
+// makes sure the whole site is loaded
+// $("#status").fadeOut(); // will first fade out the loading animation
+// $("#preloader").delay(100).fadeOut("slow"); // will fade out the white DIV that covers the website.
+//   $("body").delay(100).css({
+//     overflow: "visible",
+//   });
+// });
+
+function myPreloader() {
+  document.querySelector(".preloader").classList.add("fade-out");
+}
+function fadeOut() {
+  setInterval(myPreloader, 300);
+}
+window.onload = fadeOut;
+// window.addEventListener("load", fadeOutEffect);
+// console.log(fadeOutEffect);
+// console.log(myPreloader);

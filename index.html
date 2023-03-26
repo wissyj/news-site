@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- it's not always necessary to display as block in mobile view, you can simply change flex-direction: column -->
 
 <head>
     <meta charset="UTF-8">
@@ -16,6 +15,11 @@
 </head>
 
 <body>
+    <!-- 
+    <div class="preloader">
+
+        <img src="./img/fancybox_loading@2x.gif" alt="spinner">
+    </div> -->
     <!-- navbar -->
     <nav id="main-nav">
         <a class="logo" href="./index.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -25,11 +29,19 @@
         <div class="nav-container">
             <ul>
                 <li><a class="current" href="index.html">Home</a></li>
+                <li><a class="current" href="index.html">About Us</a></li>
                 <li><a href="#">Latest News <svg class="latest" xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 448 512">
                             <path
                                 d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
-                        </svg></a></li>
+                        </svg></a>
+                    <ul class="dropdown">
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">Website Design</a></li>
+                        <li><a href="#">Mobile Development</a></li>
+                        <li><a href="#">SEO</a></li>
+                    </ul>
+                </li>
             </ul>
             <div class="nav-socials">
                 <a href="http://facebook.com" target="_blank" rel="noopener noreferrer"><svg
@@ -55,7 +67,8 @@
             </div>
 
         </div>
-        <div class="open-nav-menu"><span></span></div>
+        <button class="open-nav-menu"><img src="./img/images (1).png" alt=""></button>
+        <button class="close-nav-menu"><img src="./img/download (1).png" alt=""></button>
     </nav>
     <!-- header -->
     <div id="header">
@@ -104,50 +117,59 @@
         <h1>Top Stories </h1>
         <div id="stories-container">
             <div class="stories-box">
-                <img src="./img/featured.jpg" alt="sports">
+                <a href="./article.html" target="_blank" rel="noopener noreferrer"> <img src="./img/featured.jpg"
+                        alt="sports"></a>
                 <div class="sports-text">
                     <h3 class="stories-heading">
                         Liverpool trashes Manchester United
                     </h3>
                     <p>This comes ahead of their Champions League game against Real Madrid</p>
-                    <span class="article-sub-head"></span>Sports
+                    <div class="py-5"><span class="article-sub-head"></span>LOCAL</div>
                 </div>
             </div>
-            <div class="stories-box">
-                <img src="./img/featured.jpg" alt="sports">
-                <div class="sports-text">
-                    <h3 class="stories-heading">
-                        Liverpool trashes Manchester United
-                    </h3>
+            <div class="stories-main-box ">
 
-                    <span class="article-sub-head no-2"></span>Sports
+                <div class="stories-box">
+                    <a href="./article.html" target="_blank" rel="noopener noreferrer"> <img src="./img/images.jpg"
+                            alt="sports"></a>
+                    <div class="sports-text">
+                        <h3 class="stories-heading">
+                            Liverpool trashes Manchester United
+                        </h3>
+
+                        <div class="py-5"><span class="article-sub-head no-2 "></span>POLITICS</div>
+                    </div>
                 </div>
-            </div>
-            <div class="stories-box">
-                <img src="./img/featured.jpg" alt="sports">
-                <div class="sports-text">
-                    <h3 class="stories-heading">
-                        Liverpool trashes Manchester United
-                    </h3>
-                    <span class="article-sub-head no-3"></span>Sports
+                <div class="stories-box">
+                    <a href="./article.html" target="_blank" rel="noopener noreferrer"> <img src="./img/featured.jpg"
+                            alt="sports"></a>
+                    <div class="sports-text">
+                        <h3 class="stories-heading">
+                            Liverpool trashes Manchester United
+                        </h3>
+                        <div class="py-5"> <span class="article-sub-head no-3"></span>SPORTS</div>
+                    </div>
                 </div>
-            </div>
-            <div class="stories-box">
-                <img src="./img/featured.jpg" alt="sports">
-                <div class="sports-text">
-                    <h3 class="stories-heading">
-                        Liverpool trashes Manchester United
-                    </h3>
-                    <span class="article-sub-head no-4"></span>Sports
+                <div class="stories-box">
+                    <a href="./article.html" target="_blank" rel="noopener noreferrer"> <img src="./img/featured.jpg"
+                            alt="sports"></a>
+                    <div class="sports-text">
+                        <h3 class="stories-heading">
+                            Liverpool trashes Manchester United
+                        </h3>
+                        <div class="py-5"> <span class="article-sub-head no-4"></span>ENTERTAINMENT</div>
+                    </div>
                 </div>
-            </div>
-            <div class="stories-box">
-                <img src="./img/featured.jpg" alt="sports">
-                <div class="sports-text">
-                    <h3 class="stories-heading">
-                        Liverpool trashes Manchester United
-                    </h3>
-                    <span class="article-sub-head no-5"></span>Sports
+                <div class="stories-box">
+                    <a href="./article.html" target="_blank" rel="noopener noreferrer"><img src="./img/featured.jpg"
+                            alt="sports"></a>
+                    <div class="sports-text">
+                        <h3 class="stories-heading">
+                            Liverpool trashes Manchester United
+                        </h3>
+                        <div class="py-5"> <span class="article-sub-head no-5"></span>
+                            FOREIGN</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -161,5 +183,12 @@
 <!-- signup for github co-pilot immediately you gain admission into school -->
 <!-- even bbc sef dey use svg -->
 <!-- did you know you can copy any styling you see on the web as a js declaration? Just right click the style in developer tools on the right pane and select copy as js declaratio, BOOM! -->
+
+<!-- you can target the direct last-child using this pseudo selector(eg: .main>*:last-child) -->
+
+<!-- it's not always necessary to display as block in mobile view, you can simply change flex-direction: column -->
+
+
+<!-- You can simply use (place-content:center)  instead of align-contents together with  justify-content-->
 
 </html>
