@@ -86,19 +86,15 @@
   }
 
   #main-nav .nav-container {
-    display: block;
     position: fixed;
-    top: 5rem;
-    right: 5%;
+    top: 7%;
+    left: 0;
     width: 15rem;
     background: var(--dark-color);
     z-index: 1000;
     display: none;
   }
 
-  #main-nav .nav-container .open-menu {
-    display: contents;
-  }
   .nav-container .nav-socials,
   .nav-container li {
     display: flex;
@@ -108,18 +104,30 @@
     height: 4rem;
     background: var(--light-color);
     z-index: 2000;
+    opacity: 0;
+    animation: anim-nav 0.5s linear forwards;
+    animation-delay: 0.1s;
   }
   .nav-container ul {
     display: contents;
   }
   .nav-container ul li a {
     padding-top: 0.5rem;
-    color: #333;
+    color: var(--dark-color);
   }
   .nav-container ul li {
     margin: 0 auto;
     transition: color 0.3s;
     border-bottom: 0.1px dotted var(--dark-color);
+  }
+  .nav-container li:nth-child(2) {
+    animation-delay: 0.5s;
+  }
+  .nav-container li:nth-child(3) {
+    animation-delay: 1s;
+  }
+  .nav-container .nav-socials {
+    animation-delay: 1.5s;
   }
   .nav-container ul li:hover {
     background: var(--dark-color);
@@ -134,19 +142,18 @@
 
   .logo svg {
     width: 1.8rem;
-    fill: #f3f3f3;
-  }
-
-  .nav-container {
-    grid-template-columns: 6fr 6fr 5fr;
-    padding: 0.5rem;
   }
   nav button {
     display: contents;
     cursor: pointer;
+    position: absolute;
+    left: 20px;
   }
   nav button img {
-    width: 30px;
+    width: 40px;
+  }
+  .latest {
+    display: none;
   }
   #header {
     padding: 2rem 1.5rem;
@@ -164,68 +171,173 @@
   #showcase {
     padding: 1.5rem;
   }
-}
-/* ----720px------ */
-@media (max-width: 720px) {
-}
-
-/* max-width:600px */
-@media (max-width: 600px) {
-  .logo {
-    width: 100%;
+  #stories-container {
+    display: block;
+    padding: var(--gap-1);
+    column-gap: var(--gap-1);
+    height: fit-content;
+    margin-bottom: 15rem;
   }
-  .nav-container ul {
-    display: contents;
-  }
-  .nav-socials {
-    justify-self: right;
-  }
-  .nav-container {
-    grid-template-columns: 6fr 4fr;
-  }
-}
-@media (max-width: 500px) {
-  .logo {
-    color: #fff;
-    width: 15rem;
-    font-size: 2rem;
-  }
-  .box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  #stories-container .bigger-box {
     width: 100%;
     height: 20rem;
-    text-align: center;
-    padding: 1rem;
-    border-radius: 2%;
-    margin: 1rem;
+  }
+  .stories-main-box {
+    margin-top: 10%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(2, 0.5fr);
+    column-gap: var(--gap-1);
+    row-gap: var(--gap-1);
+  }
+  #stories-container .stories-main-box .stories-box {
+    width: 100%;
+    height: calc(35rem / 2);
+    column-gap: var(--gap-1);
+  }
+  #stories-container .stories-main-box .stories-box:last-child {
+    margin-bottom: 5rem;
+  }
+  #footer-container {
+    margin: 20rem 2rem 0 2rem;
+  }
+  .footer-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #first-box h4 {
+    display: none;
+  }
+  #second-box {
+    border-top: 1px dotted var(--light-color);
+    margin-top: var(--gap-2);
+  }
+  #second-box .inner-box {
+    border-right: none;
+  }
+  .inner-box {
+    font-size: 14px;
   }
 
-  .box:hover img {
-    transform: scale(1);
+  /* ----600px-780px------ */
+  @media (min-width: 600px) and (max-width: 780px) {
+    #stories-container {
+      display: block;
+      padding: var(--gap-1);
+      column-gap: var(--gap-1);
+      height: fit-content;
+      margin-bottom: 15rem;
+    }
+    #stories-container .bigger-box {
+      width: 100%;
+      height: 20rem;
+    }
+    #footer-container {
+      margin: 30rem var(--gap-2) 0 var(--gap-2);
+    }
   }
-  .box:nth-child(2) {
-    transform: translateY(0);
+
+  /* max-width:600px */
+  @media (max-width: 600px) {
+    .logo {
+      width: 100%;
+    }
+    .nav-container ul {
+      display: contents;
+    }
+    .nav-socials {
+      justify-self: right;
+    }
+    .nav-container {
+      grid-template-columns: 6fr 4fr;
+    }
+    #main-nav .nav-container {
+      top: 10%;
+    }
+    .stories-main-box {
+      display: block;
+      row-gap: var(--gap-1);
+    }
+    #stories-container .bigger-box {
+      width: 100%;
+      height: 20rem;
+    }
+    #stories-container .stories-main-box .stories-box {
+      height: 7rem;
+      border-bottom: 1px dotted var(--light-color);
+    }
+    .sports-text {
+      transform: translateY(0);
+    }
+    .bigger-box .sports-text {
+      transform: translateY(-100%);
+    }
+    .stories-box img {
+      display: none;
+    }
+    .bigger-box img {
+      display: block;
+    }
   }
-  .box:hover {
-    background-color: transparent;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
-    border-radius: 2%;
-    border: 2px solid #fff;
-    box-shadow: 0 1rem 3rem rgba(255, 255, 255, 0.5);
+  /* max-width: 500px */
+  @media (max-width: 500px) {
+    .logo {
+      color: #fff;
+      font-size: 2rem;
+    }
+
+    #welcome p {
+      margin-left: 0rem;
+    }
+    .showcase-text {
+      margin: 0 1rem;
+    }
+
+    .box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 20rem;
+      text-align: center;
+      padding: 1rem;
+      border-radius: 2%;
+      margin: var(--gap-1);
+    }
+
+    .box:hover img {
+      transform: scale(1);
+    }
+    .box:nth-child(2) {
+      transform: translateY(0);
+    }
+    .box:hover {
+      background-color: transparent;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      border-radius: 2%;
+      border: 2px solid #fff;
+      box-shadow: 0 1rem 3rem rgba(255, 255, 255, 0.5);
+    }
+    .box:hover img {
+      transform: scale(1.1);
+    }
+    .box h3 {
+      font-weight: 1500;
+      font-size: 1.2rem;
+    }
+    .box img {
+      width: 10rem;
+      height: 15rem;
+    }
   }
-  .box:hover img {
-    transform: scale(1.1);
-  }
-  .box h3 {
-    font-weight: 1500;
-    font-size: 1.2rem;
-  }
-  .box img {
-    width: 10rem;
-    height: 15rem;
+  @media (min-width: 490px) and (max-width: 500px) {
+    #welcome {
+      width: 95vw;
+      justify-content: space-between;
+      column-gap: var(--gap-1);
+    }
   }
 }
