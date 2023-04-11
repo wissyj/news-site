@@ -6,13 +6,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News Hub | Latest Info</title>
-    <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat" rel="stylesheet">
+    <title>News Hub | Get Updated with the Latest Info</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Montserrat:wght@500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/mobile.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <script defer src="main.js"></script>
-
 </head>
 
 <body>
@@ -31,17 +32,18 @@
 
             <ul>
                 <li><a class="current" href="index.html">Home</a></li>
-                <li><a class="current" href="index.html">About Us</a></li>
-                <li><a href="#">Latest News <svg class="latest" xmlns="http://www.w3.org/2000/svg"
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="article.html">Latest News <svg class="latest" xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 448 512">
                             <path
                                 d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
                         </svg></a>
                     <ul class="dropdown">
-                        <li><a href="#">Web Development</a></li>
-                        <li><a href="#">Website Design</a></li>
-                        <li><a href="#">Mobile Development</a></li>
-                        <li><a href="#">SEO</a></li>
+                        <li><a href="#">Breaking Stories</a></li>
+                        <li><a href="#">Local News</a></li>
+                        <li><a href="#">Politics</a></li>
+                        <li><a href="#">Sports</a></li>
+                        <li><a href="#">Foreign</a></li>
                     </ul>
                 </li>
             </ul>
@@ -75,11 +77,11 @@
     <div id="header">
         <div>
             <div class="flex-h1">
-                <h1> We lead in </h1>
+                <h1 class="first-h1"> We lead in </h1>
                 <h1><span class="header-text" data-wait="500"
                         data-words='["Premium Content", "Accurate Facts", "Breaking News" ]'></span></h1>
             </div>
-            <p>Your <span class="header">one-stop</span> for <span class="header">online media.</span></p>
+            <p class="motto">Your <span class="header">one-stop</span> for <span class="header">online media.</span></p>
 
             <a href="article.html"><button class="custom-btn btn-3"><span>Join our Live Stream</span> </button></a>
         </div>
@@ -225,6 +227,10 @@
             Copyright <span>&copy;</span> News Hub 2023. All Rights Reserved
         </div>
     </footer>
+    <!-- JQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script defer src="main.js"></script>
 </body>
 <!-- remember to clone all those repositories using git desktop -->
 <!-- --bbc-font: ReithSans, Arial, Helvetica, freesans, sans-serif; -->

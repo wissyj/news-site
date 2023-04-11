@@ -3,6 +3,7 @@
   --secondary-color: #f99500;
   --light-color: #e5e5e5;
   --dark-color: #333;
+  --scroll-bar-color: #827f7f;
   --sports-color: #f99500;
   --politics_and_country-color: #e45001;
   --entertainment-color: #a66bbe;
@@ -16,18 +17,27 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   background: var(--dark-color);
-  font-family: "lato", sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1.5;
-  /* height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: var(--foreign-color); */
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
-
+::-webkit-scrollbar {
+  width: 0.8rem;
+}
+::-webkit-scrollbar-track {
+  background: #fff;
+  border-radius: 10px;
+  margin-block: 0.5rem;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--scroll-bar-color);
+  border-radius: 10px;
+}
 /* other items */
 h1,
 h2,
@@ -35,7 +45,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "staatliches", cursive;
+  font-family: "Lato", cursive;
   margin-bottom: 0.5rem;
   line-height: 1.6;
   color: var(--light-color);
@@ -69,7 +79,9 @@ span {
 }
 svg {
   width: 1.2rem;
+  cursor: pointer;
 }
+
 #preloader {
   position: fixed;
   top: 0;
@@ -100,6 +112,13 @@ svg {
   position: absolute;
   border-radius: 100%;
   background: url(../img/loading.gif) no-repeat center center;
+}
+.gif {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  border-radius: 100%;
+  background: url(../img/status.gif) no-repeat center center;
 }
 @keyframes fadeLeft {
   from {
@@ -184,6 +203,7 @@ nav {
 #main-nav {
   display: grid;
   grid-template-columns: 40% 60%;
+  width: 100vw;
   padding: 0.5rem 1rem;
   align-items: center;
   position: fixed;
@@ -212,7 +232,7 @@ nav {
 }
 .logo {
   color: #fff;
-  width: 12rem;
+  width: fit-content;
   font-size: 1.8rem;
 }
 .logo span {
@@ -242,7 +262,7 @@ nav {
 .nav-container ul {
   display: flex;
   flex-wrap: wrap;
-  width: 20rem;
+  width: fit-content;
 }
 .nav-container ul li {
   padding: 0 1rem;
@@ -267,8 +287,14 @@ nav .nav-container ul li a::after {
   width: 100%;
   height: 0;
 }
-nav .nav-container ul li:last-child a::after {
-  display: none;
+.current::after {
+  content: "";
+  position: relative;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
 }
 nav .nav-container ul li:hover a::after {
   height: 2px;
@@ -295,7 +321,7 @@ nav button {
   overflow: hidden;
 }
 #header h1 {
-  font-family: sans-serif;
+  font-family: "montserrat";
   font-size: 3.5rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -330,10 +356,33 @@ nav button {
   opacity: 0.6;
   z-index: -1;
 }
+.flex-h1 > .first-h1 {
+  transition: transform 0.8s ease;
+  animation: down 1s linear forwards;
+  animation-delay: 1.5s;
+  transform: translateY(-1rem);
+}
+@keyframes down {
+  100% {
+    transform: translateY(1rem);
+  }
+}
+.motto {
+  transition: transform 0.8s ease;
+  animation: side 1s linear forwards;
+  animation-delay: 1.5s;
+  transform: translateX(-1rem);
+}
+@keyframes side {
+  100% {
+    transform: translateX(1rem);
+  }
+}
 /* read more button */
 button {
   margin: 2rem 0;
 }
+
 .custom-btn {
   width: 130px;
   height: 40px;
@@ -343,12 +392,20 @@ button {
   font-family: sans-serif;
   background: transparent;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: transform 0.8s ease;
   position: relative;
   display: inline-block;
   box-shadow: inset -2px 2px 2px rgba(255, 255, 255, 0.5),
     7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
   outline: none;
+  animation: up 1s linear forwards;
+  animation-delay: 1.5s;
+  transform: translateY(1rem);
+}
+@keyframes up {
+  100% {
+    transform: translateY(-1rem);
+  }
 }
 .btn-3 {
   background: var(--primary-color);
@@ -606,74 +663,175 @@ button {
 }
 
 /* article.html styling */
-/* #article-header {
+#topic-container {
+  width: 100%;
+  height: 3rem;
+  align-items: center;
+  position: relative;
+  top: 3.5rem;
+  bottom: 2rem;
+  z-index: 100;
+  background: var(--light-color);
+  border-bottom: 1px dotted var(--dark-color);
+}
+.topic-box {
+  height: 3rem;
+}
+.topic-box > ul {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  justify-content: space-evenly;
+  align-items: center;
+  transition: all 0.3s;
+}
+.topic-box ul > li {
+  text-align: center;
+  padding-top: 0.5rem;
+  width: 100%;
+  height: 100%;
+  border-right: 1px solid var(--dark-color);
+}
+.topic-box ul > li:hover {
+  background: var(--dark-color);
+}
+.topic-box ul > li:focus a {
+  color: var(--light-color);
+}
+.topic-box ul li:last-child:hover svg {
+  fill: var(--light-color);
+}
+.topic-box ul li a {
+  width: 4rem;
+  height: 3rem;
+  color: var(--dark-color);
+  padding: 0 0.1rem 0 0.1rem;
+  font-size: 1.2rem;
+}
+.topic-box ul > li:hover a,
+.topic-box ul .topic-box-dropdown li:hover a {
+  color: var(--light-color);
+}
+
+.topic-box-dropdown {
+  display: none;
+  height: fit-content;
+  width: 100%;
+  background: var(--dark-color);
+  margin-top: 1rem;
+  transition: all 0.3s;
+}
+.topic-box-dropdown li {
+  margin: 0 0.2rem;
+  width: 90%;
+  background: var(--light-color);
+  border-bottom: 1px dotted var(--dark-color);
+  transition: all 0.3s;
+}
+.topic-box ul .topic-box-dropdown li a {
+  color: var(--dark-color);
+}
+#listMenu {
+  margin: auto;
+}
+#hideMenu {
+  display: none;
+  margin: auto;
+}
+
+/* slider */
+#article-header {
   height: 60vh;
-  top: 44px;
+  position: relative;
+  top: 3.5rem;
   margin: 0;
   padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--foreign-color);
-  overflow: scroll;
-} */
+  background: var(--light-color);
+}
 
 #slider {
-  width: 800px;
-  height: 500px;
+  width: 45rem;
+  height: 350px;
   border-radius: 10px;
   overflow: hidden;
 }
 .slides {
   width: 500%;
-  height: 500px;
+  height: 350px;
   display: flex;
 }
+
 .slides input {
   display: none;
-  transform: translateX(-10%);
-  background: var(--light-color);
 }
 .slide {
   width: 20%;
-  transition: 2s;
+  transition: 1s;
+}
+.slide p {
+  color: var(--light-color);
+  transform: translate(20%, -10rem);
+  font-size: 3rem;
+  width: 100%;
+  transition: 1s;
+}
+.first p {
+  color: var(--dark-color);
+  font-size: 2.5rem;
+}
+.second p {
+  transform: translate(15%, -20rem);
+  font-size: 2rem;
+}
+.live {
+  color: var(--primary-color);
 }
 .slide img {
   width: 100%;
   height: 100%;
 }
-/* nav-buttons styling */
-.nav-btn {
+/*auto navigation styling */
+.nav-auto {
   position: absolute;
-  width: 800px;
-  margin-top: -40px;
   display: flex;
   justify-content: center;
+  margin: 22rem -50% 0 -50%;
 }
-.nav-btn div {
+.nav-auto div {
   border: 2px solid var(--foreign-color);
   padding: 5px;
-  width: 800px;
   transition: 1s;
+  border-radius: 100%;
 }
-.nav-btn div:not(:last-child) {
-  margin-right: 40px;
+.nav-auto div:not(:last-child) {
+  margin-right: 10px;
 }
-#radio-a:checked ~ .nav-btn .auto-btn-a {
-  margin-left: 0;
-}
-#radio-b:checked ~ .nav-btn .auto-btn-b {
+#radio-a:checked ~ .nav-auto .auto-btn-a {
   background: var(--foreign-color);
+}
+#radio-b:checked ~ .nav-auto .auto-btn-b {
+  background: var(--foreign-color);
+}
+/* css for manual  */
+.nav-btn {
+  position: relative;
+  margin: -3rem -50%;
+  display: flex;
+  justify-content: center;
 }
 .manual-btn {
   border: 2px solid var(--light-color);
   padding: 5px;
-  border-radius: 50%;
+  border-radius: 100%;
   cursor: pointer;
   transition: 1s;
 }
 .manual-btn:not(:last-child) {
-  margin-right: 40px;
+  margin-right: 10px;
 }
 .manual-btn:hover {
   background: var(--foreign-color);
@@ -684,10 +842,50 @@ button {
 #radio-b:checked ~ .first {
   margin-left: -20%;
 }
-#radio-b:focus {
-  background: var(--foreign-color);
+/* article stories container */
+#article-stories-container {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  margin: 2rem 0.5rem;
 }
-/* footer */
+.left-section-boxes {
+  width: 100%;
+  display: flex;
+  background: blue;
+}
+.left-section-box {
+  width: 8rem;
+  height: 8rem;
+  background: var(--light-color);
+  gap: 1rem;
+}
+.right-section {
+  background: var(--light-color);
+  color: var(--dark-color);
+  overflow-y: scroll;
+}
+#article-stories-container .right-section > h1 {
+  height: 4rem;
+  width: 100%;
+  font-size: 1.5rem;
+  background: var(--dark-color);
+  border: 1px dotted var(--light-color);
+  text-align: center;
+}
+#article-stories-container .right-section-box {
+  height: 7rem;
+  border-bottom: 1px dotted var(--light-color);
+}
+
+.right-section-box .section-text h3 {
+  color: var(--dark-color);
+}
+.section-heading a {
+  color: var(--dark-color);
+}
+
+/* article styling end */
+/* footer styling start*/
 #footer-container {
   margin: 5rem 2rem 0 2rem;
   height: fit-content;

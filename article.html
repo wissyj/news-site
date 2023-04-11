@@ -6,19 +6,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News Hub | Latest Info</title>
-    <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat" rel="stylesheet">
+    <title>News Hub | Get Updated with the Latest Info</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Montserrat:wght@500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="css/mobile.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <script defer src="./main.js"></script>
 
 </head>
 
 <body>
-    <!-- <div id="preloader">
-        <div id="gif"></div>
-    </div> -->
+    <div id="preloader">
+        <div class="gif"></div>
+    </div>
     <!-- navbar -->
     <nav id="main-nav">
         <button id="open-nav" class="open-nav-menu "><img src="./img/images (1).png" alt=""></button>
@@ -30,19 +32,9 @@
         <div class="nav-container ">
 
             <ul>
-                <li><a class="current" href="index.html">Home</a></li>
-                <li><a class="current" href=".container">About Us</a></li>
-                <li><a href="#">Latest News <svg class="latest" xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 448 512">
-                            <path
-                                d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
-                        </svg></a>
-                    <ul class="dropdown">
-                        <li><a href="#">Web Development</a></li>
-                        <li><a href="#">Website Design</a></li>
-                        <li><a href="#">Mobile Development</a></li>
-                        <li><a href="#">SEO</a></li>
-                    </ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a class="current" href="article.html">Latest News</a>
                 </li>
             </ul>
             <div class="nav-socials">
@@ -73,38 +65,241 @@
         </div>
 
     </nav>
+    <div id="topic-container">
+        <div class="topic-box">
+            <ul>
+                <li><a href="#">Live Stream</a></li>
+                <li><a href="#">Local Stories</a></li>
+                <li><a href="#">Politics</a></li>
+                <li><a href="#">Sports</a></li>
+                <li><a href="#">Entertainment</a></li>
+                <li><a href="#">Foreign</a></li>
+                <li>
+                    <svg id="listMenu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path
+                            d="M40 48C26.7 48 16 58.7 16 72v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V72c0-13.3-10.7-24-24-24H40zM192 64c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zM16 232v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V232c0-13.3-10.7-24-24-24H40c-13.3 0-24 10.7-24 24zM40 368c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V392c0-13.3-10.7-24-24-24H40z" />
+                    </svg>
+                    <svg id="hideMenu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path
+                            d="M201.4 137.4c12.5-12.5 32.8-12.5 45.3 0l160 160c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L224 205.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l160-160z" />
+                    </svg>
+                    <ul class="topic-box-dropdown">
+                        <li style="display: none;"><a href="#">Entertainment</a></li>
+                        <li style="display: none;"><a href="#">Foreign</a></li>
+                        <li><a href="#">Technology</a></li>
+                        <li><a href="#">Culture</a></li>
+                        <li><a href="#">Health</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
     <div id="article-header" class="slide-container">
         <div id="slider">
-            <div class="slides">
+            <div class="slides" id="slides">
                 <!-- radio buttons for navigation -->
                 <input type="radio" name="radio-btn" id="radio-a">
                 <input type="radio" name="radio-btn" id="radio-b">
                 <!-- slide images -->
                 <div class="slide first">
                     <img src="img/slide-1.jpg" alt="Man feeling bored and doubtful">
+                    <p>BORED???</p>
                 </div>
-                <div class="slide">
+                <div class=" slide second">
                     <img src="img/slide-2.jpg" alt="Lady feeling  happy and satisfied ">
+                    <p>JOIN OUR <br> <span class="live">LIVE STREAM</span> </p>
                 </div>
                 <!-- navigation for auto -->
-                <div class="nav-auto">
+                <div class=" nav-auto">
                     <div class="auto-btn-a"></div>
                     <div class="auto-btn-b"></div>
                 </div>
             </div>
             <div class="nav-btn">
-                <label for="radio-a" class="manual-btn"></label>
-                <label for="radio-b" class="manual-btn"></label>
+                <label for="radio-a" id="left" class="manual-btn"></label>
+                <label for="radio-b" id="right" class="manual-btn"></label>
             </div>
-            <!-- <a href="article.html"><button class="custom-btn btn-3"><span>Join our Live Stream</span> </button></a> -->
         </div>
     </div>
-    <!-- <section id="showcase">
+    <!-- welcome heading -->
+    <section id="showcase">
         <div id="welcome">
             <h2 class="welcome">Welcome to Newshub.com </h2>
             <p id="datetime" style="font-weight: bold; color: var(--light-color);">Friday, 10 March</p>
         </div>
-    </section> -->
+    </section>
+    <div id="article-stories-container">
+        <div class="left-section">
+            <h3 class="py-2">
+                <span class="article-sub-head no-5"></span> LOCAL
+            </h3>
+            <div class="left-section-boxes">
+                <div class="left-section-box">
+                </div>
+                <div class="left-section-box">
+                </div>
+                <div class="left-section-box">
+                </div>
+                <div class="left-section-box">
+                </div>
+            </div>
+            <h3 class="py-2">
+                <span class="article-sub-head no-5"></span> LOCAL
+            </h3>
+            <div class="left-section-boxes">
+                <div class="left-section-box">
+                </div>
+                <div class="left-section-box">
+                </div>
+                <div class="left-section-box">
+                </div>
+                <div class="left-section-box">
+                </div>
+            </div>
+            <h3 class="py-2">
+                <span class="article-sub-head no-5"></span> LOCAL
+            </h3>
+            <div class="left-section-boxes">
+                <div class="left-section-box">
+                </div>
+                <div class="left-section-box">
+                </div>
+                <div class="left-section-box">
+                </div>
+                <div class="left-section-box">
+                </div>
+            </div>
+            <h3 class="py-2">
+                <span class="article-sub-head no-5"></span> LOCAL
+            </h3>
+            <div class="left-section-boxes">
+                <div class="left-section-box">
+                </div>
+                <div class="left-section-box">
+                </div>
+                <div class="left-section-box">
+                </div>
+                <div class="left-section-box">
+                </div>
+            </div>
+            <h3 class="py-2">
+                <span class="article-sub-head no-5"></span> LOCAL
+            </h3>
+            <div class="left-section-boxes">
+                <div class="left-section-box">
+                </div>
+                <div class="left-section-box">
+                </div>
+                <div class="left-section-box">
+                </div>
+                <div class="left-section-box">
+                </div>
+            </div>
+        </div>
+        <div class="right-section">
+            <h1>Breaking Stories</h1>
+            <div class="right-section-box py-2 ">
+                <div class="section-text">
+                    <h3 class="section-heading">
+                        <a href="./article.html" target="_blank" rel="noopener noreferrer"> Liverpool trashes
+                            Manchester United </a>
+                    </h3>
+                    <div class="py-5"><span class="article-sub-head"></span>LOCAL</div>
+                </div>
+            </div>
+
+            <div class="right-section-box py-2 ">
+                <div class="section-text hidden">
+                    <h3 class="section-heading">
+                        <a href="./article.html" target="_blank" rel="noopener noreferrer"> Liverpool trashes
+                            Manchester United </a>
+                    </h3>
+
+                    <div class="py-5"><span class="article-sub-head no-2 "></span>POLITICS</div>
+                </div>
+            </div>
+            <div class="right-section-box py-2 ">
+                <div class="section-text hidden">
+                    <h3 class="section-heading">
+                        <a href="./article.html" target="_blank" rel="noopener noreferrer"> Liverpool trashes
+                            Manchester United </a>
+                    </h3>
+                    <div class="py-5"> <span class="article-sub-head no-3"></span>SPORTS</div>
+                </div>
+            </div>
+            <div class="right-section-box py-2 ">
+                <div class="section-text hidden">
+                    <h3 class="section-heading">
+                        <a href="./article.html" target="_blank" rel="noopener noreferrer"> Liverpool trashes
+                            Manchester United</a>
+                    </h3>
+                    <div class="py-5"> <span class="article-sub-head no-4"></span>ENTERTAINMENT</div>
+                </div>
+            </div>
+            <div class="right-section-box py-2 ">
+                <div class="section-text hidden">
+                    <h3 class="section-heading">
+                        <a href="./article.html" target="_blank" rel="noopener noreferrer"> President of Russia,
+                            Putin visits South Africa </a>
+                    </h3>
+                    <div class="py-5"> <span class="article-sub-head no-5"></span>
+                        FOREIGN</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <!-- footer starts -->
+    <footer id="footer-container">
+        <h2 id="footer-head">Explore News Hub</h2>
+        <div class="footer-box">
+            <div id="first-box">
+                <!-- <h4>Quick Links</h4> -->
+                <div class="inner-box" style="width: fit-content;">
+                    <a href="">Home</a>
+                    <a href="">About Us</a>
+                    <a href="">Latest News</a>
+                </div>
+                <div class="inner-box">
+                    <a href="">Trending</a>
+                    <a href="">Politics</a>
+                    <a href="">Entertainment</a>
+                </div>
+                <div class="inner-box">
+                    <a href="">Sports</a>
+                    <a href="">Foreign</a>
+                    <a href="">2023 Election</a>
+                </div>
+            </div>
+            <div id="second-box">
+                <div class="inner-box">
+                    <a href="">Terms of Use</a>
+                    <a href="">Cookies</a>
+                    <a href="">Accesibilty Help</a>
+                </div>
+                <div class="inner-box ">
+                    <a href="">Privacy Policy</a>
+                    <a href="">Do not Sell my Info</a>
+                    <a href="">NEWS HUB Emails for you</a>
+                </div>
+                <div class="inner-box">
+                    <a href="">Contact the News Hub</a>
+                    <a href="">Advertise with Us</a>
+                    <a href="">Join our community</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            Copyright <span>&copy;</span> News Hub 2023. All Rights Reserved
+        </div>
+    </footer>
+    <!-- JQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script defer src="./main.js"></script>
 </body>
+<!-- show ekom that the icon stuff of that other news website was an image -->
 
 </html>

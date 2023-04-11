@@ -80,11 +80,14 @@ window.addEventListener("load", function () {
   }, 1500);
 });
 
-// navbar menu toggle
+// navbar menu and list menu toggle
 
 const toggle = document.getElementById("open-nav");
 const closeBtn = document.getElementById("close-nav");
 const navmenu = document.querySelector("#main-nav .nav-container");
+const listmenu = document.getElementById("listMenu");
+const hidemenu = document.getElementById("hideMenu");
+const topicsMenu = document.querySelector("ul .topic-box-dropdown");
 
 // Toggle nav
 toggle.addEventListener("click", () => {
@@ -102,6 +105,22 @@ closeBtn.addEventListener("click", () => {
   closeBtn.style.display = "none";
   // shows menu button
   toggle.style.display = "inline-block";
+});
+listmenu.addEventListener("click", () => {
+  // shows topics-box-dropdown
+  topicsMenu.style.display = "block";
+  // shows hide menu icon
+  hidemenu.style.display = "block";
+  // hides show list menu icon
+  listmenu.style.display = "none";
+});
+hidemenu.addEventListener("click", () => {
+  // hides topics-box-dropdown
+  topicsMenu.style.display = "none";
+  // show list-menu icon
+  listmenu.style.display = "block";
+  // hides hide-menu icon
+  hidemenu.style.display = "none";
 });
 
 // // Show modal
@@ -172,7 +191,68 @@ function showdate() {
 setInterval(showdate, 1);
 
 // slider animation
-// const counter= 1;
-// setInterval(function){
-//   document.getElementById()
+// const counter = 1;
+// setInterval(function () {
+//   document.getElementById("radio" + counter).checked = true;
+//   counter++;
+//   if (counter > 2) {
+//     counter = 1;
+//   }
+// }, 5000);
+const slider = document.getElementById("slides");
+const leftBtn = document.getElementById("left");
+const rightBtn = document.getElementById("right");
+const firstslide = document.querySelector(".first");
+const secondslide = document.querySelector(".second");
+
+const img = document.querySelectorAll(".slide img");
+
+let idx = 0;
+
+let interval = setInterval(run, 4000);
+
+function run() {
+  idx++;
+  changeImage();
+}
+
+function changeImage() {
+  if (idx > img.length - 1) {
+    idx = 0;
+  } else if (idx < 0) {
+    idx = img.length - 1;
+    // secondslide.style.marginLeft = "20%";
+  }
+  firstslide.style.marginLeft = "-20%";
+}
+
+// function resetInterval() {
+//   clearInterval(interval);
+//   interval = setInterval(run, 4000);
 // }
+
+rightBtn.addEventListener("click", () => {
+  firstslide.style.marginLeft = " -20%";
+});
+
+leftBtn.addEventListener("click", () => {
+  firstslide.style.marginLeft = " 0";
+});
+
+// Smooth Scrolling
+$(".nav-container a, #topic-container a").on("click", function (event) {
+  if (this.hash !== "") {
+    event.preventDefault();
+
+    const hash = this.hash;
+
+    $("html, body").animate(
+      {
+        scrollTop: $(hash).offset().top - 100,
+      },
+      800
+    );
+  }
+});
+
+// shows scroll-bar
