@@ -1,9 +1,9 @@
 /* other media-queries */
-@media (prefers-reduced-motion) {
+/* @media (prefers-reduced-motion) {
   .hidden {
     transition: none;
   }
-}
+} */
 /* -----------780PX - 1000PX----------- */
 @media (min-width: 780px) and (max-width: 1000px) {
   #header {

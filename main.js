@@ -254,5 +254,3 @@ $(".nav-container a, #topic-container a").on("click", function (event) {
     );
   }
 });
-
-// shows scroll-bar

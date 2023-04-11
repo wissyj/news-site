@@ -38,6 +38,10 @@ body {
   background: var(--scroll-bar-color);
   border-radius: 10px;
 }
+::selection {
+  background: var(--dark-color);
+  color: var(--light-color);
+}
 /* other items */
 h1,
 h2,
@@ -548,6 +552,9 @@ button {
   font-size: 1.3rem;
   color: var(--dark-color);
 }
+.box:hover h3 {
+  color: var(--light-color);
+}
 
 /* -------stories container--------- */
 #stories {
@@ -733,7 +740,9 @@ button {
   color: var(--dark-color);
 }
 #listMenu {
-  margin: auto;
+  margin: 0 auto;
+  margin-top: -0.5rem;
+  width: 30px;
 }
 #hideMenu {
   display: none;
@@ -847,22 +856,57 @@ button {
   display: grid;
   grid-template-columns: 75% 25%;
   margin: 2rem 0.5rem;
+  column-gap: var(--gap-1);
 }
 .left-section-boxes {
+  background: var(--light-color);
   width: 100%;
   display: flex;
-  background: blue;
+  justify-content: space-between;
+  column-gap: var(--gap-1);
 }
 .left-section-box {
-  width: 8rem;
-  height: 8rem;
+  width: 18rem;
+  height: fit-content;
+  background: #fff;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+  padding: var(--gap-1) 0;
+}
+.left-section-box-text {
+  border-bottom: 1px dotted var(--dark-color);
+}
+.left-section-box ul {
+  width: 100%;
+  height: fit-content;
   background: var(--light-color);
-  gap: 1rem;
+}
+.left-section-box ul li {
+  width: 100%;
+  height: fit-content;
+  background: #fff;
+  border-bottom: 1px dotted var(--dark-color);
+  padding: var(--gap-1) 0.3rem;
+}
+.left-section-box ul li:last-child {
+  border-bottom: none;
+}
+.left-section-box ul li a,
+.left-section-box h3 a {
+  color: var(--dark-color);
+}
+.left-section-box img {
+  background: var(--dark-color);
+  width: 100%;
+  height: 100%;
+}
+.left-section-box-text {
+  padding: var(--gap-1) 0.3rem;
 }
 .right-section {
   background: var(--light-color);
   color: var(--dark-color);
-  overflow-y: scroll;
+  height: 45rem;
+  padding: var(--gap-1);
 }
 #article-stories-container .right-section > h1 {
   height: 4rem;
@@ -873,13 +917,17 @@ button {
   text-align: center;
 }
 #article-stories-container .right-section-box {
-  height: 7rem;
+  height: 7.5rem;
   border-bottom: 1px dotted var(--light-color);
+  padding: var(--gap-1);
 }
-
+#article-stories-container .shade {
+  background: var(--scroll-bar-color);
+}
 .right-section-box .section-text h3 {
   color: var(--dark-color);
 }
+
 .section-heading a {
   color: var(--dark-color);
 }
