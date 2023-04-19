@@ -65,10 +65,12 @@ function init() {
 }
 
 //javascript for navigation bar effect on scroll
-window.addEventListener("scroll", () => {
-  document
-    .querySelector("nav")
-    .classList.toggle("nav-sticky", window.scrollY > 10);
+window.addEventListener("scroll", function () {
+  if (window.scrollY > 15) {
+    document.querySelector("#main-nav").style.opacity = "0.9";
+  } else {
+    document.querySelector("#main-nav").style.opacity = "1";
+  }
 });
 
 // preloader
@@ -122,7 +124,7 @@ hidemenu.addEventListener("click", () => {
   // hides hide-menu icon
   hidemenu.style.display = "none";
 });
-
+// this represents the search box that will pop on the screen with opacity so that it fades in and out- it's from brad's project
 // // Show modal
 // open.addEventListener("click", () => modal.classList.add("show-modal"));
 
@@ -134,60 +136,41 @@ hidemenu.addEventListener("click", () => {
 //   e.target == modal ? modal.classList.remove("show-modal") : false
 // );
 
-// animate on scroll
+// animate on scroll and play video on scroll
+// this makes the video to be in a dormant state(not play or pause) until the intersection observer checks out its position on the viewport
 const observer = new IntersectionObserver((entries) => {
+  let playState = null;
   entries.forEach((entry) => {
     console.log(entry);
     if (entry.isIntersecting) {
       entry.target.classList.add("show");
+      entry.target.classList.add("show2");
+      video.play();
+      playState = true;
     } else {
       entry.target.classList.remove("show");
+      entry.target.classList.remove("show2");
+      video.pause();
+      playState = false;
     }
   });
-});
+}, {});
 const hidden = document.querySelectorAll(".hidden");
+const hidden2 = document.querySelectorAll(".hidden2");
+const video = document.getElementById("stream-video");
 hidden.forEach((el) => observer.observe(el));
+hidden2.forEach((el) => observer.observe(el));
+video.forEach((el) => observer.observe(el));
 
-// JavaScript code to fade in boxes from the left as they become visible in the viewport
-const boxes = document.querySelectorAll(".boxes");
+//  date and time
 
-const options = {
-  rootMargin: "0px",
-  threshold: 0.5,
-};
-const boxObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    console.log(entry);
-    if (entry.isIntersecting) {
-      entry.target.classList.add("boxIn");
-    } else {
-      entry.target.classList.remove("boxIn");
-    }
-  });
-}, options);
-const hide = document.querySelectorAll(".boxOut");
-hide.forEach((el) => observer.observe(el));
 function showdate() {
-  // Get the current date and time
-  let now = new Date();
-
-  // Get the user's timezone offset from UTC in minutes
-  let timezoneOffset = now.getTimezoneOffset();
-
-  // Convert the timezone offset to hours and adjust the date and time accordingly
-  now.setHours(now.getHours() + timezoneOffset);
-
-  // Format the date and time as a string
-  let dateAndTime = now.toLocaleString();
-
-  // Get a reference to the HTML element where you want to display the date and time
-  let dateTimeElement = document.getElementById("datetime");
-
-  // Set the text content of the HTML element to the formatted date and time string
-  dateTimeElement.textContent = ` ${dateAndTime}`;
-  // chat gpt made a mistake here, it should have added the last line above as a template string
+  var date = Date();
+  var dateTimeElement = document.getElementById("datetime");
+  dateTimeElement.textContent = `${date}`;
 }
-
+// Initiate On DOM Load
+document.addEventListener("DOMContentLoaded", showdate);
 setInterval(showdate, 1);
 
 // slider animation
@@ -204,6 +187,7 @@ const leftBtn = document.getElementById("left");
 const rightBtn = document.getElementById("right");
 const firstslide = document.querySelector(".first");
 const secondslide = document.querySelector(".second");
+const thirdslide = document.querySelector(".third");
 
 const img = document.querySelectorAll(".slide img");
 
@@ -224,19 +208,17 @@ function changeImage() {
     // secondslide.style.marginLeft = "20%";
   }
   firstslide.style.marginLeft = "-20%";
+  setTimeout(() => {
+    secondslide.style.marginLeft = "-20%";
+  }, 2000);
 }
-
-// function resetInterval() {
-//   clearInterval(interval);
-//   interval = setInterval(run, 4000);
-// }
 
 rightBtn.addEventListener("click", () => {
   firstslide.style.marginLeft = " -20%";
 });
 
 leftBtn.addEventListener("click", () => {
-  firstslide.style.marginLeft = " 0";
+  secondslide.style.marginLeft = " -20%";
 });
 
 // Smooth Scrolling
