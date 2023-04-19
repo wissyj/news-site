@@ -136,22 +136,21 @@ hidemenu.addEventListener("click", () => {
 //   e.target == modal ? modal.classList.remove("show-modal") : false
 // );
 
-// animate on scroll and play video on scroll
-// this makes the video to be in a dormant state(not play or pause) until the intersection observer checks out its position on the viewport
+// animate on scroll
+
 const observer = new IntersectionObserver((entries) => {
-  let playState = null;
   entries.forEach((entry) => {
     console.log(entry);
     if (entry.isIntersecting) {
       entry.target.classList.add("show");
       entry.target.classList.add("show2");
-      video.play();
-      playState = true;
+      // video.play();
+      // playState = true;
     } else {
       entry.target.classList.remove("show");
       entry.target.classList.remove("show2");
-      video.pause();
-      playState = false;
+      // video.pause();
+      // playState = false;
     }
   });
 }, {});
@@ -160,7 +159,7 @@ const hidden2 = document.querySelectorAll(".hidden2");
 const video = document.getElementById("stream-video");
 hidden.forEach((el) => observer.observe(el));
 hidden2.forEach((el) => observer.observe(el));
-video.forEach((el) => observer.observe(el));
+// video.forEach((el) => observer.observe(el));
 
 //  date and time
 
@@ -173,15 +172,7 @@ function showdate() {
 document.addEventListener("DOMContentLoaded", showdate);
 setInterval(showdate, 1);
 
-// slider animation
-// const counter = 1;
-// setInterval(function () {
-//   document.getElementById("radio" + counter).checked = true;
-//   counter++;
-//   if (counter > 2) {
-//     counter = 1;
-//   }
-// }, 5000);
+// slider
 const slider = document.getElementById("slides");
 const leftBtn = document.getElementById("left");
 const rightBtn = document.getElementById("right");
@@ -205,7 +196,6 @@ function changeImage() {
     idx = 0;
   } else if (idx < 0) {
     idx = img.length - 1;
-    // secondslide.style.marginLeft = "20%";
   }
   firstslide.style.marginLeft = "-20%";
   setTimeout(() => {
@@ -230,9 +220,9 @@ $(".nav-container a, #topic-container a").on("click", function (event) {
 
     $("html, body").animate(
       {
-        scrollTop: $(hash).offset().top - 100,
+        scrollTop: $(hash).offset().top - 200,
       },
-      800
+      1000
     );
   }
 });

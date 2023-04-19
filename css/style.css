@@ -949,7 +949,7 @@ button {
   display: block;
   width: 13rem;
   color: #fff;
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin: 0 1rem;
   border-left: inset 2px solid var(--primary-color);
   transition: all 0.3s;
