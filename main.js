@@ -198,9 +198,6 @@ function changeImage() {
     idx = img.length - 1;
   }
   firstslide.style.marginLeft = "-20%";
-  setTimeout(() => {
-    secondslide.style.marginLeft = "-20%";
-  }, 2000);
 }
 
 rightBtn.addEventListener("click", () => {
@@ -220,9 +217,9 @@ $(".nav-container a, #topic-container a").on("click", function (event) {
 
     $("html, body").animate(
       {
-        scrollTop: $(hash).offset().top - 200,
+        scrollTop: $(hash).offset().top - 100,
       },
-      1000
+      800
     );
   }
 });

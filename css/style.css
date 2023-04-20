@@ -948,6 +948,7 @@ button {
 #breaking-stories-tab ul li a {
   display: block;
   width: 13rem;
+  height: 2rem;
   color: #fff;
   font-size: 1rem;
   margin: 0 1rem;
@@ -976,12 +977,14 @@ button {
   width: 100%;
   display: flex;
   column-gap: var(--gap-1);
+  margin: 0 4rem 0 1rem;
 }
 .left-section .left-section-boxes {
   display: grid;
   grid-template-columns: repeat(2, calc(100% / 2 - 1rem));
   grid-gap: var(--gap-1);
   overflow-x: hidden;
+  margin: 0 1rem;
 }
 
 .left-section-box {
@@ -1120,7 +1123,7 @@ button {
 /* article styling end */
 /* footer styling start*/
 #footer-container {
-  margin: 20rem 2rem 0 2rem;
+  margin: 5rem 2rem 0 2rem;
   height: fit-content;
 }
 .footer-box {
