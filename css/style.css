@@ -219,7 +219,7 @@ nav {
 }
 #main-nav {
   display: grid;
-  grid-template-columns: 35vw 65vw;
+  grid-template-columns: 30vw 70vw;
   width: 100vw;
   align-items: center;
   position: fixed;
@@ -834,10 +834,6 @@ button {
   width: 20%;
   transition: 1s;
 }
-.third img {
-  object-fit: cover;
-  object-position: 10px;
-}
 .slide p {
   color: var(--light-color);
   transform: translate(20%, -10rem);
@@ -860,6 +856,9 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.third img {
+  object-position: 4rem 0 0 0;
 }
 /*auto navigation styling */
 .nav-auto {
@@ -1080,12 +1079,13 @@ button {
   height: 70vh;
   position: relative;
   top: 5rem;
+  margin-bottom: 15rem;
 }
 .live-stream-box > video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(0.6);
+  filter: brightness(0.9);
 }
 .live-stream-box > svg {
   width: 2.4rem;

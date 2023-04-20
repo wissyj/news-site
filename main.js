@@ -144,13 +144,9 @@ const observer = new IntersectionObserver((entries) => {
     if (entry.isIntersecting) {
       entry.target.classList.add("show");
       entry.target.classList.add("show2");
-      // video.play();
-      // playState = true;
     } else {
       entry.target.classList.remove("show");
       entry.target.classList.remove("show2");
-      // video.pause();
-      // playState = false;
     }
   });
 }, {});
@@ -198,6 +194,9 @@ function changeImage() {
     idx = img.length - 1;
   }
   firstslide.style.marginLeft = "-20%";
+  setTimeout(() => {
+    secondslide.style.marginLeft = "-20%";
+  }, 2000);
 }
 
 rightBtn.addEventListener("click", () => {
