@@ -112,7 +112,7 @@ const video = document.getElementById("stream-video");
 hidden.forEach((el) => observer.observe(el));
 hidden2.forEach((el) => observer.observe(el));
 
-// navbar menu and list menu toggle
+// navbar menu, search-box, subscribe-box and list menu toggle
 
 const toggle = document.getElementById("open-nav");
 const closeBtn = document.getElementById("close-nav");
@@ -120,16 +120,42 @@ const navmenu = document.querySelector("#main-nav .nav-container");
 const listmenu = document.getElementById("listMenu");
 const hidemenu = document.getElementById("hideMenu");
 const topicsMenu = document.querySelector("ul .topic-box-dropdown");
+const subscribeBtn = document.querySelector(".subscribe-main-btn");
+const subscribeContainer = document.querySelector(".subscribe-container");
+const closeSubscribeMenu = document.getElementById("close-subscribe-menu");
+const closeSearchBox = document.getElementById("close-search-menu");
+const searchBtn = document.querySelector("#search-icon");
+const searchBox = document.querySelector(".search-box");
+function search(e) {
+  if ((searchBox.style.display = "none")) {
+    searchBox.style.display = "flex";
+  } else {
+    searchBox.style.display = "flex";
+  }
+}
+searchBtn.addEventListener("click", search);
+// closes search box
+closeSearchBox.addEventListener("click", () => {
+  // closes search-boxr
+  searchBox.style.display = "none";
+});
 
 // Toggle nav
 toggle.addEventListener("click", () => {
   // shows nav
   navmenu.style.display = "block";
   // shows close button
-  closeBtn.style.display = "inline";
+  closeBtn.style.display = "block";
   // hides menu button
   toggle.style.display = "none";
 });
+// Toggle subscribe-box
+subscribeBtn.addEventListener("click", () => {
+  // shows nav
+  subscribeContainer.style.display = "flex";
+  subscribeContainer.style.opacity = 1;
+});
+// closes nav menu
 closeBtn.addEventListener("click", () => {
   // hides nav
   navmenu.style.display = "none";
@@ -138,6 +164,13 @@ closeBtn.addEventListener("click", () => {
   // shows menu button
   toggle.style.display = "";
 });
+// closes subscribe menu
+closeSubscribeMenu.addEventListener("click", () => {
+  // closes subscribe-container
+  subscribeContainer.style.display = "none";
+});
+
+// topic-box open and close functionality
 listmenu.addEventListener("click", () => {
   // shows topics-box-dropdown
   topicsMenu.style.display = "block";
@@ -154,6 +187,7 @@ hidemenu.addEventListener("click", () => {
   // hides hide-menu icon
   hidemenu.style.display = "none";
 });
+
 function handleChange(el) {
   if (window.scrollY > 15) {
     document.querySelector("#main-nav").style.display = "none";
