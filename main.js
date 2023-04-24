@@ -254,35 +254,6 @@ var repeat = function (activeClass) {
 };
 repeat();
 
-// let idx = 0;
-
-// let interval = setInterval(run, 4000);
-
-// function run() {
-//   idx++;
-//   changeImage();
-// }
-
-// function changeImage() {
-//   if (idx > img.length - 1) {
-//     idx = 0;
-//   } else if (idx < 0) {
-//     idx = img.length - 1;
-//   }
-//   firstslide.style.marginLeft = "-20%";
-//   setTimeout(() => {
-//     secondslide.style.marginLeft = "-20%";
-//   }, 4000);
-// }
-
-// rightBtn.addEventListener("click", () => {
-//   firstslide.style.marginLeft = " -20%";
-// });
-
-// leftBtn.addEventListener("click", () => {
-//   secondslide.style.marginLeft = " -20%";
-// });
-
 // Smooth Scrolling
 $(".nav-container a, #topic-container a").on("click", function (event) {
   if (this.hash !== "") {
