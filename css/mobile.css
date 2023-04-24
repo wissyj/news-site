@@ -519,8 +519,41 @@
     bottom: 10px;
   }
 }
-@media (max-width: 350px) {
-  .box {
-    flex-direction: column;
+@media (max-width: 360px) {
+  .logo {
+    font-size: 1.2rem;
+  }
+  @media (max-width: 350px) {
+    .box {
+      flex-direction: column;
+    }
+    #welcome p {
+      width: 7rem;
+      height: 4.5rem;
+      margin-left: 1rem;
+      overflow: hidden;
+    }
+  }
+  @media (max-width: 335px) {
+    .logo {
+      font-size: 1rem;
+    }
+  }
+  @media (max-width: 300px) {
+    #header h1 {
+      font-size: 1.5rem;
+      line-height: 2;
+    }
+    #header p {
+      font-size: 1.2rem;
+    }
+    .subscribe-main-btn {
+      width: fit-content;
+      height: 1.4rem;
+      border-radius: 5px;
+      margin: 0 0;
+      padding: 0 0.2rem;
+      font-size: 12px;
+    }
   }
 }

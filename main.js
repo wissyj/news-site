@@ -120,10 +120,7 @@ const navmenu = document.querySelector("#main-nav .nav-container");
 const listmenu = document.getElementById("listMenu");
 const hidemenu = document.getElementById("hideMenu");
 const topicsMenu = document.querySelector("ul .topic-box-dropdown");
-const subscribeBtn = document.querySelector(".subscribe-main-btn");
-const subscribeContainer = document.querySelector(".subscribe-container");
-const closeSubscribeMenu = document.getElementById("close-subscribe-menu");
-const closeSearchBox = document.getElementById("close-search-menu");
+const closeSearchBox = document.querySelector(".close-search-menu");
 const searchBtn = document.querySelector("#search-icon");
 const searchBox = document.querySelector(".search-box");
 function search(e) {
@@ -149,12 +146,6 @@ toggle.addEventListener("click", () => {
   // hides menu button
   toggle.style.display = "none";
 });
-// Toggle subscribe-box
-subscribeBtn.addEventListener("click", () => {
-  // shows nav
-  subscribeContainer.style.display = "flex";
-  subscribeContainer.style.opacity = 1;
-});
 // closes nav menu
 closeBtn.addEventListener("click", () => {
   // hides nav
@@ -163,11 +154,6 @@ closeBtn.addEventListener("click", () => {
   closeBtn.style.display = "none";
   // shows menu button
   toggle.style.display = "";
-});
-// closes subscribe menu
-closeSubscribeMenu.addEventListener("click", () => {
-  // closes subscribe-container
-  subscribeContainer.style.display = "none";
 });
 
 // topic-box open and close functionality
@@ -273,3 +259,16 @@ $("a[href='#top']").click(function () {
   $("html, body").animate({ scrollTop: 0 }, "slow");
   return false;
 });
+
+// Show search
+const close = document.getElementById("close");
+const open = document.getElementById("open");
+const modal = document.getElementById("modal");
+open.addEventListener("click", () => modal.classList.add("show-modal"));
+// Hide modal on outside click
+document.body.addEventListener("click", (e) =>
+  e.target == modal ? modal.classList.remove("show-modal") : false
+);
+
+// Hide modal
+close.addEventListener("click", () => modal.classList.remove("show-modal"));

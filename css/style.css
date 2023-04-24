@@ -172,6 +172,15 @@ svg {
     opacity: 1;
   }
 }
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
 .close-nav-menu {
   position: relative;
   left: 5rem;
@@ -368,18 +377,23 @@ nav button {
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 100vh;
+  height: 50vh;
   background: var(--dark-color);
   overflow: hidden;
-  transition: all 1s ease-in;
-  opacity: 0;
-  position: static;
+  transition: all 1s;
+  position: fixed;
+  top: 3rem;
+  left: 0;
+  z-index: 20000;
+  animation: modalopen 1s;
 }
-
+.show-modal {
+  display: block;
+}
 .subscribe-container > .close-subscribe-menu {
   position: relative;
-  top: -30vh;
-  left: 65vw;
+  top: -3vh;
+  left: 75vw;
   cursor: pointer;
   width: 2rem;
 }
@@ -434,9 +448,6 @@ nav button {
   .subscribe-box h4 {
     font-size: 0.9rem;
   }
-  .subscribe-container > .close-subscribe-menu {
-    left: 70vw;
-  }
 }
 @media (max-width: 500px) {
   .subscribe-container > .close-subscribe-menu {
@@ -474,6 +485,7 @@ button:focus {
   display: none;
   z-index: 10000000;
   overflow: hidden;
+  animation: modalopen 1s;
 }
 
 .search-box::after {
