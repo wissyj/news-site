@@ -310,6 +310,7 @@ nav {
   height: 1.8rem;
   border-radius: 10px;
   margin: 0 0.5rem;
+  transition: all 0.4s;
 }
 .subscribe-main-btn:hover {
   color: var(--primary-color);
@@ -1191,14 +1192,15 @@ button {
   width: 100%;
   display: flex;
   column-gap: var(--gap-1);
-  margin: 0 4rem 0 1rem;
+  margin: 0 4rem 0 0;
+  padding-left: var(--gap-1);
 }
 .left-section .left-section-boxes {
   display: grid;
   grid-template-columns: repeat(2, calc(100% / 2 - 1rem));
   grid-gap: var(--gap-1);
   overflow-x: hidden;
-  margin: 0 1rem;
+  padding-left: var(--gap-1);
 }
 
 .left-section-box {
