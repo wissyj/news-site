@@ -1,17 +1,418 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>News Hub | Get Updated with the Latest Info</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Montserrat:wght@500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        #form-container {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width: calc(100vw - 2rem);
+            height: fit-content;
+            padding: 1rem;
+            font-family: "Lato", sans-serif;
+        }
+
+        .form-head {
+            width: 90vw;
+            height: 30vh;
+            background: var(--dark-color);
+            color: #fff;
+            border-width: 100vw 50vh 50vh 0;
+        }
+
+        #form-container .form-head img {
+            width: calc(100vw - 1rem);
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .form-head>.first-h1 {
+            position: absolute;
+            color: #fff;
+            top: 20vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+
+        .form-head-text {
+            color: #333;
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .form-box {
+            width: calc(100vw - 1rem);
+            height: fit-content;
+            color: #333;
+            display: grid;
+            grid-template-columns: 50vw 50vw;
+        }
+
+
+
+        .form-box h3 {
+            text-align: center;
+            color: var(--dark-color);
+        }
+
+        .form-box h4 {
+            color: var(--dark-color);
+        }
+
+        .form-box-one {
+            width: 100%;
+            height: 100%;
+            padding: 2rem 2rem;
+            background: #fff;
+        }
+
+        .form-box-one div {
+            padding: 1rem 0;
+        }
+
+        .form-box-one div>h4 {
+            padding-top: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .form-box-one div>a {
+            display: block;
+            color: #f99500;
+            text-decoration: underline;
+        }
+
+        .form-box-one div>a:hover {
+            text-decoration: none;
+        }
+
+        .form-box-one p {
+            font-family: sans-serif;
+        }
+
+        .form-box-two {
+            width: 100%;
+            height: 100vh;
+            background: #333;
+            padding: 2rem 0;
+            overflow: hidden;
+        }
+
+        .form-box-two h3 {
+            color: #fff;
+            margin-bottom: 0;
+            width: 100%;
+        }
+
+        .form-box-two form {
+            margin-left: 3rem;
+            width: 100%;
+            height: 100%;
+        }
+
+        .form-control {
+            width: 100%;
+        }
+
+        .form-control input,
+        textarea {
+            width: 30vw;
+            outline: none;
+            margin: 1rem 0;
+            border: none;
+            border-bottom: 2.5px solid #fff;
+            transition: all 0.4s;
+            background: transparent;
+            color: #fff;
+            font-size: 1.2rem;
+            padding: 18px 0 0;
+        }
+
+        .form-control input:focus,
+        textarea:focus {
+            border-color: #f99500;
+        }
+
+        textarea {
+            height: 8rem;
+            resize: none;
+            border: 1.5px solid #fff;
+            word-wrap: break-word;
+        }
+
+        textarea::placeholder {
+            padding: 0.5rem 0 0 0.5rem;
+            color: #fff;
+        }
+
+        .form-control label {
+            position: relative;
+            top: 0;
+            left: -30vw;
+            pointer-events: none;
+            color: #fff;
+        }
+
+        .form-control label span {
+            display: inline-block;
+            font-size: 18px;
+            min-width: 5px;
+            transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        .form-control input:focus+label span,
+        .form-control input:valid+label span {
+            color: #f99500;
+            transform: translateY(-40px);
+        }
+
+        .text {
+            color: #fff;
+            margin-top: 7rem;
+        }
+
+        .form-btn {
+            position: absolute;
+            width: 6rem;
+            padding: 15px;
+            left: 65%;
+            cursor: pointer;
+        }
+
+        .form-btn:hover {
+            background: #333;
+            color: #fff;
+            border: 1px solid #fff;
+        }
+
+        @media (max-width:700px) {
+            .form-box {
+                display: block;
+            }
+
+
+
+            .form-control input,
+            textarea {
+                width: 70vw;
+            }
+
+            .form-control label {
+                left: -80vw;
+            }
+
+            .form-btn {
+                left: calc(10vw + 2rem);
+            }
+
+            @media (max-width:580px) and (max-width:700px) {
+                .form-control label {
+                    left: -75vw;
+                }
+            }
+        }
+    </style>
 </head>
 
 <body>
     <div id="preloader">
-        <img src="./img/status.gif" alt="preloader for contact page">
+        <img src="img/status.gif" alt="preloader for contact page">
     </div>
+    <a href="#" id="top" alt="scroll-to-top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path
+                d="M201.4 137.4c12.5-12.5 32.8-12.5 45.3 0l160 160c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L224 205.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l160-160z" />
+        </svg>
+    </a>
+    <!-- navbar -->
+    <nav id="main-nav">
+        <button name="open menu" id="open-nav" class="open-nav-menu "><img src="./img/images (1).webp"
+                alt="open-menu image"></button>
+        <a class="logo" href="./index.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path
+                    d="M352 256c0 22.2-1.2 43.6-3.3 64H163.3c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64H348.7c2.2 20.4 3.3 41.8 3.3 64zm28.8-64H503.9c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64H380.8c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32H376.7c-10-63.9-29.8-117.4-55.3-151.6c78.3 20.7 142 77.5 171.9 151.6zm-149.1 0H167.7c6.1-36.4 15.5-68.6 27-94.7c10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5c11.6 26 21 58.2 27 94.7zm-209 0H18.6C48.6 85.9 112.2 29.1 190.6 8.4C165.1 42.6 145.3 96.1 135.3 160zM8.1 192H131.2c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64H8.1C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zM194.7 446.6c-11.6-26-20.9-58.2-27-94.6H344.3c-6.1 36.4-15.5 68.6-27 94.6c-10.5 23.6-22.2 40.7-33.5 51.5C272.6 508.8 263.3 512 256 512s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6C112.2 482.9 48.6 426.1 18.6 352H135.3zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6c25.5-34.2 45.2-87.7 55.3-151.6H493.4z" />
+            </svg> <span> News</span> Hub</a>
+        <div class="nav-container ">
+            <ul>
+                <li><button name="close menu" id="close-nav" class="close-nav-menu "><img
+                            src="./img/download (1) (1).webp" alt="close-menu image"></button></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Contact Us</a></li>
+                <li><a class="current" href="article.html">Latest News</a>
+                </li>
+            </ul>
+            <div class="nav-socials">
+                <a href="http://facebook.com" target="_blank" rel="noopener noreferrer"><img src="./img/facebook.png"
+                        alt="facebook logo"></a>
+                <a href="http://whatsapp.com" target="_blank" rel="noopener noreferrer"><img
+                        src="./img/whatsapp (1).png" alt="whatsapplogo"></a>
+                <a href="http://twitter.com" target="_blank" rel="noopener noreferrer"><img src="./img/twitter.png"
+                        alt="twitter logo"></a>
+                <a href="http://youtube.com" target="_blank" rel="noopener noreferrer"><img src="img/youtube.png"
+                        alt="youtub logo"></a>
+                <a href="http://instagram.com" target="_blank" rel="noopener noreferrer"><img src="./img/instagram.png"
+                        alt=""></a>
+            </div>
+        </div>
+        <div>
+            <a class="subscribe-main-btn px-2" href="#" id="open">Subscribe</a>
+            <svg id="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                    d="M19.023 16.977a35.13 35.13 0 0 1-1.367-1.384c-.372-.378-.596-.653-.596-.653l-2.8-1.337A6.962 6.962 0 0 0 16 9c0-3.859-3.14-7-7-7S2 5.141 2 9s3.14 7 7 7c1.763 0 3.37-.66 4.603-1.739l1.337 2.8s.275.224.653.596c.387.363.896.854 1.384 1.367l1.358 1.392.604.646 2.121-2.121-.646-.604c-.379-.372-.885-.866-1.391-1.36zM9 14c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5z" />
+            </svg>
+        </div>
+    </nav>
+    <div class="subscribe-container" id="modal">
+        <button name="close menu" id="close" class="close-subscribe-menu "><img src="./img/download (1) (1).webp"
+                alt="close-menu image"></button>
+        <div class="subscribe-box">
+            <h4> Subscribe for daily content in your Mail Box</h4>
+            <div>
+                <form id="subscribe-form">
+                    <div class="input-field">
+                        <input type="email" name="email" id="search" placeholder="Subscribe to our newsletter...">
+                    </div>
+
+                    <input type="submit" value="Subscribe" class="subscribe-btn">
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- search-box -->
+    <header class="search-box">
+        <button name="close menu" id="close-search-menu" class="close-search-menu "><img
+                src="./img/download (1) (1).webp" alt="close-menu image"></button>
+        <h1>NEWS SEARCH</h1>
+
+        <form id="form">
+            <input type="text" id="search" placeholder="Search for keywords..." />
+            <button>Search</button>
+        </form>
+    </header>
+    <div id="form-container">
+        <div class="form-head">
+            <img src="img/reportage.webp" alt="customer care personnel image">
+            <h1 class="first-h1">CONTACT US</h1>
+            <p class="form-head-text">We value your feedback</p>
+        </div>
+        <!-- welcome heading -->
+        <div class="form-box">
+            <div class="form-box-one">
+                <div>
+                    <h3>Office Adresses</h3>
+                    <h4>
+                        Uyo Offices
+                    </h4>
+                    <p>Ibom E-library, Off IBB Way, Uyo, Akwa Ibom ( <strong>HEADQUARTERS </strong>).<br> <strong>
+                            Contact: (+234) - 000000002</strong></p>
+
+                    <p>Ibom Hall, Off IBB Way, Uyo, Akwa Ibom . <br> <strong> Contact: (+234) - 000000002</strong></p>
+                </div>
+                <div>
+                    <h4>
+                        Lagos Office
+                    </h4>
+                    <p>Ibom Hall, Off IBB Way, Uyo, Akwa Ibom . <br> <strong> Contact: (+234) - 000000003</strong></p>
+                </div>
+                <div>
+                    <h4>
+                        Abuja Office
+                    </h4>
+                    <p>Ibom Hall, Off IBB Way, Uyo, Akwa Ibom . <br> <strong> Contact: (+234) - 000000004</strong></p>
+                </div>
+                <div>
+                    <h4>
+                        Ibadan Office
+                    </h4>
+                    <p>Ibom Hall, Off IBB Way, Uyo, Akwa Ibom . <br> <strong> Contact: (+234) - 000000004</strong></p>
+                </div>
+                <div>
+                    <a href="gmail.com">Email us</a> @ newshub.team.mail.com <br>
+                    <h4>Social Media Accounts</h4>
+                    <a href="twitter.com">Twitter</a>
+                    <a href="twitter.com">Facebook</a>
+                    <a href="twitter.com">Whatsapp Help Desk</a>
+                    <a href="twitter.com">Youtube Live Stream</a>
+                    <a href="twitter.com">Instagram</a>
+                </div>
+            </div>
+            <div class="form-box-two">
+                <h3>Leave a message</h3>
+                <form>
+                    <div class="form-control">
+                        <input type="text" required name="firstName">
+                        <label> <span style="transition-delay: 0ms;">F</span>
+                            <span style="transition-delay: 50ms;">i</span>
+                            <span style="transition-delay: 100ms;">r</span>
+                            <span style="transition-delay: 150ms;">s</span>
+                            <span style="transition-delay: 200ms;">t</span>
+                            <span style="transition-delay: 250ms;">N</span>
+                            <span style="transition-delay: 300ms;">a</span>
+                            <span style="transition-delay: 350ms;">m</span>
+                            <span style="transition-delay: 400ms;">e</span></label>
+                    </div>
+                    <div class="form-control">
+                        <input type="text" name="lastName" required>
+                        <label> <span style="transition-delay: 0ms;">L</span>
+                            <span style="transition-delay: 100ms;">a</span>
+                            <span style="transition-delay: 150ms;">s</span>
+                            <span style="transition-delay: 200ms;">t</span>
+                            <span style="transition-delay: 250ms;">N</span>
+                            <span style="transition-delay: 300ms;">a</span>
+                            <span style="transition-delay: 350ms;">m</span>
+                            <span style="transition-delay: 400ms;">e</span></label>
+                    </div>
+                    <div class="form-control">
+                        <input type="email" required name="email">
+                        <label>
+                            <span style="transition-delay: 0ms;">E</span>
+                            <span style="transition-delay: 50ms;">m</span>
+                            <span style="transition-delay: 100ms;">a</span>
+                            <span style="transition-delay: 150ms;">i</span>
+                            <span style="transition-delay: 200ms;">l</span>
+                        </label>
+                    </div>
+                    <div class="form-control">
+                        <input type="text" required name="phoneNumber">
+                        <label> <span style="transition-delay: 0ms;">P</span>
+                            <span style="transition-delay: 50ms;">h</span>
+                            <span style="transition-delay: 100ms;">o</span>
+                            <span style="transition-delay: 150ms;">n</span>
+                            <span style="transition-delay: 200ms;">e</span>
+                            <span style="transition-delay: 250ms;">N</span>
+                            <span style="transition-delay: 300ms;">u</span>
+                            <span style="transition-delay: 350ms;">m</span>
+                            <span style="transition-delay: 400ms;">b</span>
+                            <span style="transition-delay: 450ms;">e</span>
+                            <span style="transition-delay: 500ms;">r</span></label>
+                    </div>
+                    <div class="form-control">
+                        <textarea placeholder="Leave a message here..."></textarea>
+                    </div>
+                    <button class="form-btn">SEND</button>
+                    <p class="text">Want daily news content in your mail box? <a style="color: #f99500;"
+                            href="#close">Subscribe</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="./main.js"></script>
 </body>
 
 </html>

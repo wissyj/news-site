@@ -109,7 +109,7 @@ svg {
   display: flex;
   place-content: center;
   align-items: center;
-  transition: all 0.2s linear;
+  transition: all 0.4s linear;
   width: 100%;
   opacity: 1;
   z-index: 99999;
@@ -135,8 +135,8 @@ svg {
   background: var(--light-color);
   display: flex;
   justify-content: right;
-  top: 90vh;
-  left: 90vw;
+  top: 70vh;
+  left: 85vw;
   z-index: 1000;
   border-radius: 5px;
   border: 1px solid var(--dark-color);
@@ -949,6 +949,7 @@ button {
   width: 100%;
   height: 100%;
   border-right: 1px solid var(--dark-color);
+  transition: all 0.4s;
 }
 .topic-box > ul > li .topic-box-dropdown > li:first-child {
   display: none;
@@ -1329,7 +1330,7 @@ button {
   color: var(--primary-color);
 }
 .live-stream-box-text p {
-  background: var(--light-color);
+  background: #fff;
   color: var(--dark-color);
   text-align: center;
   position: relative;
@@ -1338,6 +1339,8 @@ button {
   color: var(--primary-color);
 }
 /* article styling end */
+/* contact page styling */
+
 /* footer styling start*/
 #footer-container {
   margin: 10rem 2rem 0 2rem;

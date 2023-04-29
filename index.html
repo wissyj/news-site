@@ -40,7 +40,7 @@
                 <li><button name="close menu" id="close-nav" class="close-nav-menu "><img
                             src="./img/download (1) (1).webp" alt="close-menu image"></button></li>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
                 <li><a class="current" href="article.html">Latest News</a>
                 </li>
             </ul>
@@ -58,16 +58,16 @@
             </div>
         </div>
         <div>
-            <a class="subscribe-main-btn px-2" href="#">Subscribe</a>
+            <a class="subscribe-main-btn px-2" href="#" id="open">Subscribe</a>
             <svg id="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path
                     d="M19.023 16.977a35.13 35.13 0 0 1-1.367-1.384c-.372-.378-.596-.653-.596-.653l-2.8-1.337A6.962 6.962 0 0 0 16 9c0-3.859-3.14-7-7-7S2 5.141 2 9s3.14 7 7 7c1.763 0 3.37-.66 4.603-1.739l1.337 2.8s.275.224.653.596c.387.363.896.854 1.384 1.367l1.358 1.392.604.646 2.121-2.121-.646-.604c-.379-.372-.885-.866-1.391-1.36zM9 14c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5z" />
             </svg>
         </div>
     </nav>
-    <div class="subscribe-container">
-        <button name="close menu" id="close-subscribe-menu" class="close-subscribe-menu "><img
-                src="./img/download (1) (1).webp" alt="close-menu image"></button>
+    <div class="subscribe-container" id="modal">
+        <button name="close menu" id="close" class="close-subscribe-menu "><img src="./img/download (1) (1).webp"
+                alt="close-menu image"></button>
         <div class="subscribe-box">
             <h4> Subscribe for daily content in your Mail Box</h4>
             <div>
@@ -243,6 +243,39 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script defer src="./main.js"></script>
+    <script>class TypeWriter {
+            constructor(e, t, n = 3e3) {
+                (this.txtElement = e),
+                    (this.words = t),
+                    (this.txt = ""),
+                    (this.wordIndex = 0),
+                    (this.wait = parseInt(n, 10)),
+                    this.type(),
+                    (this.isDeleting = !1);
+            }
+            type() {
+                const e = this.wordIndex % this.words.length,
+                    t = this.words[e];
+                this.isDeleting
+                    ? (this.txt = t.substring(0, this.txt.length - 1))
+                    : (this.txt = t.substring(0, this.txt.length + 1)),
+                    (this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`);
+                let n = 200;
+                this.isDeleting && (n /= 2),
+                    this.isDeleting || this.txt !== t
+                        ? this.isDeleting &&
+                        "" === this.txt &&
+                        ((this.isDeleting = !1), this.wordIndex++, (n = 500))
+                        : ((n = this.wait), (this.isDeleting = !0)),
+                    setTimeout(() => this.type(), n);
+            }
+        }
+        function init() {
+            const e = document.querySelector(".header-text"),
+                t = JSON.parse(e.getAttribute("data-words")),
+                n = e.getAttribute("data-wait");
+            new TypeWriter(e, t, n);
+        }</script>
 </body>
 <!-- remember to clone all those repositories using git desktop -->
 <!-- --bbc-font: ReithSans, Arial, Helvetica, freesans, sans-serif; -->
