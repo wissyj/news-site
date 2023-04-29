@@ -25,6 +25,15 @@
             font-family: "Lato", sans-serif;
         }
 
+        #form-container a {
+            color: #f99500;
+            text-decoration: underline;
+        }
+
+        #form-container a:hover {
+            text-decoration: none;
+        }
+
         .form-head {
             width: 90vw;
             height: 30vh;
@@ -37,6 +46,7 @@
             width: calc(100vw - 1rem);
             height: 100%;
             object-fit: cover;
+            filter: brightness(0.7);
         }
 
         .form-head>.first-h1 {
@@ -93,13 +103,8 @@
 
         .form-box-one div>a {
             display: block;
-            color: #f99500;
-            text-decoration: underline;
         }
 
-        .form-box-one div>a:hover {
-            text-decoration: none;
-        }
 
         .form-box-one p {
             font-family: sans-serif;
@@ -107,7 +112,6 @@
 
         .form-box-two {
             width: 100%;
-            height: 100vh;
             background: #333;
             padding: 2rem 0;
             overflow: hidden;
@@ -126,7 +130,7 @@
         }
 
         .form-control {
-            width: 100%;
+            width: 110%;
         }
 
         .form-control input,
@@ -184,6 +188,7 @@
         .text {
             color: #fff;
             margin-top: 7rem;
+            margin-left: -2rem;
         }
 
         .form-btn {
@@ -207,13 +212,14 @@
 
 
 
+
             .form-control input,
             textarea {
                 width: 70vw;
             }
 
             .form-control label {
-                left: -80vw;
+                left: -70vw;
             }
 
             .form-btn {
@@ -222,8 +228,15 @@
 
             @media (max-width:580px) and (max-width:700px) {
                 .form-control label {
-                    left: -75vw;
+                    left: -70vw;
                 }
+            }
+
+            @media (max-width:530px) {
+                .form-control {
+                    width: 120%;
+                }
+
             }
         }
     </style>
@@ -306,16 +319,16 @@
     </header>
     <div id="form-container">
         <div class="form-head">
-            <img src="img/reportage.webp" alt="customer care personnel image">
+            <img src="img/contact us.jpg" alt="customer care personnel image">
             <h1 class="first-h1">CONTACT US</h1>
             <p class="form-head-text">We value your feedback</p>
         </div>
         <!-- welcome heading -->
         <div class="form-box">
             <div class="form-box-one">
-                <div>
+                <div class="hidden">
                     <h3>Office Adresses</h3>
-                    <h4>
+                    <h4 class="hidden2">
                         Uyo Offices
                     </h4>
                     <p>Ibom E-library, Off IBB Way, Uyo, Akwa Ibom ( <strong>HEADQUARTERS </strong>).<br> <strong>
@@ -323,25 +336,25 @@
 
                     <p>Ibom Hall, Off IBB Way, Uyo, Akwa Ibom . <br> <strong> Contact: (+234) - 000000002</strong></p>
                 </div>
-                <div>
-                    <h4>
+                <div class="hidden">
+                    <h4 class="hidden2">
                         Lagos Office
                     </h4>
                     <p>Ibom Hall, Off IBB Way, Uyo, Akwa Ibom . <br> <strong> Contact: (+234) - 000000003</strong></p>
                 </div>
-                <div>
-                    <h4>
+                <div class="hidden">
+                    <h4 class="hidden2">
                         Abuja Office
                     </h4>
                     <p>Ibom Hall, Off IBB Way, Uyo, Akwa Ibom . <br> <strong> Contact: (+234) - 000000004</strong></p>
                 </div>
-                <div>
-                    <h4>
+                <div class="hidden">
+                    <h4 class="hidden2">
                         Ibadan Office
                     </h4>
                     <p>Ibom Hall, Off IBB Way, Uyo, Akwa Ibom . <br> <strong> Contact: (+234) - 000000004</strong></p>
                 </div>
-                <div>
+                <div class="hidden">
                     <a href="gmail.com">Email us</a> @ newshub.team.mail.com <br>
                     <h4>Social Media Accounts</h4>
                     <a href="twitter.com">Twitter</a>
@@ -351,7 +364,7 @@
                     <a href="twitter.com">Instagram</a>
                 </div>
             </div>
-            <div class="form-box-two">
+            <div class="form-box-two hidden2">
                 <h3>Leave a message</h3>
                 <form>
                     <div class="form-control">
@@ -412,6 +425,48 @@
             </div>
         </div>
     </div>
+    <!-- the footer of the page -->
+
+    <footer id="footer-container">
+        <h2 id="footer-head">Explore News Hub</h2>
+        <div class="footer-box">
+            <div id="first-box">
+                <div class="inner-box hidden2">
+                    <a href="">Home</a>
+                    <a href="">About Us</a>
+                    <a href="">Latest News</a>
+                </div>
+                <div class="inner-box hidden2">
+                    <a href="">Politics</a>
+                    <a href="">Trending</a>
+                    <a href="">Entertainment</a>
+                </div>
+                <div class="inner-box hidden2">
+                    <a href="">Sports</a>
+                    <a href="">Foreign</a>
+                    <a href="">2023 Election</a>
+                </div>
+                <div class="inner-box hidden2">
+                    <a href="">Cookies</a>
+                    <a href="">Terms of Use</a>
+                    <a href="">Accesibilty Help</a>
+                </div>
+                <div class="inner-box hidden2">
+                    <a href="">Privacy Policy</a>
+                    <a href="">Do not Sell my Info</a>
+                    <a href="">NEWS HUB Emails for you</a>
+                </div>
+                <div class="inner-box hidden2">
+                    <a href="">Advertise with Us</a>
+                    <a href="">Join our community</a>
+                    <a href="">Contact the News Hub</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            Copyright <span>&copy;</span> News Hub 2023. All Rights Reserved
+        </div>
+    </footer>
     <script src="./main.js"></script>
 </body>
 

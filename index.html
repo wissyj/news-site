@@ -243,39 +243,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script defer src="./main.js"></script>
-    <script>class TypeWriter {
-            constructor(e, t, n = 3e3) {
-                (this.txtElement = e),
-                    (this.words = t),
-                    (this.txt = ""),
-                    (this.wordIndex = 0),
-                    (this.wait = parseInt(n, 10)),
-                    this.type(),
-                    (this.isDeleting = !1);
-            }
-            type() {
-                const e = this.wordIndex % this.words.length,
-                    t = this.words[e];
-                this.isDeleting
-                    ? (this.txt = t.substring(0, this.txt.length - 1))
-                    : (this.txt = t.substring(0, this.txt.length + 1)),
-                    (this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`);
-                let n = 200;
-                this.isDeleting && (n /= 2),
-                    this.isDeleting || this.txt !== t
-                        ? this.isDeleting &&
-                        "" === this.txt &&
-                        ((this.isDeleting = !1), this.wordIndex++, (n = 500))
-                        : ((n = this.wait), (this.isDeleting = !0)),
-                    setTimeout(() => this.type(), n);
-            }
-        }
-        function init() {
-            const e = document.querySelector(".header-text"),
-                t = JSON.parse(e.getAttribute("data-words")),
-                n = e.getAttribute("data-wait");
-            new TypeWriter(e, t, n);
-        }</script>
 </body>
 <!-- remember to clone all those repositories using git desktop -->
 <!-- --bbc-font: ReithSans, Arial, Helvetica, freesans, sans-serif; -->
