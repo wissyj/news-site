@@ -498,6 +498,36 @@
     margin: 6px;
   }
 }
+@media (max-width: 700px) {
+  .form-box {
+    display: block;
+  }
+
+  .form-control input,
+  textarea {
+    width: 70vw;
+  }
+
+  .form-control label {
+    left: -70vw;
+  }
+
+  .form-btn {
+    left: calc(10vw + 2rem);
+  }
+
+  @media (max-width: 580px) and (max-width: 700px) {
+    .form-control label {
+      left: -70vw;
+    }
+  }
+
+  @media (max-width: 530px) {
+    .form-control {
+      width: 120%;
+    }
+  }
+}
 
 @media (max-width: 420px) {
   .img-slider {
@@ -517,6 +547,14 @@
 
   .img-slider .navigation {
     bottom: 10px;
+  }
+  /* contact page */
+  /* .form-control input,
+  textarea {
+    width: 60vw;
+  } */
+  .form-box-two form {
+    margin-left: 1rem;
   }
 }
 @media (max-width: 360px) {
