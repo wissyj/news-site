@@ -5,7 +5,7 @@ window.addEventListener("load", function () {
     e.style.display = "none";
   }, 1500);
 });
-if (window.location.pathname !== "/news-site/contact.html") {
+if (window.location.pathname !== "/contact.html") {
   function showdate() {
     // code to execute if index.html is being displayed
     var now = new Date();
@@ -47,7 +47,7 @@ if (window.location.pathname !== "/news-site/contact.html") {
 } else {
   console.log("no text content");
 }
-if (window.location.pathname === "/news-site/index.html") {
+if (window.location.pathname !== "/article.html") {
   class TypeWriter {
     constructor(txtElement, words, wait = 3000) {
       this.txtElement = txtElement;
