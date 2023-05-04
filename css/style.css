@@ -383,9 +383,12 @@ nav button {
   overflow: hidden;
   transition: all 1s;
   position: fixed;
-  top: 3rem;
+  transform: translate(0, -50%);
+  top: 50%;
+  right: 0;
   left: 0;
-  z-index: 20000;
+  bottom: 0;
+  z-index: 2000000;
   animation: modalopen 1s;
 }
 .show-modal {
@@ -417,7 +420,7 @@ nav button {
 }
 
 .input-field input {
-  width: 15rem;
+  width: 18rem;
   outline: none;
   padding: 0.5rem;
   margin-bottom: 1rem;
@@ -430,7 +433,7 @@ nav button {
 }
 
 .subscribe-btn {
-  padding: 0.5rem;
+  padding: 1rem;
   margin-left: 1rem;
   border-radius: 10px;
   background: var(--primary-color);
@@ -483,6 +486,9 @@ button:focus {
   padding: 100px 0;
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: none;
   z-index: 10000000;
   overflow: hidden;
