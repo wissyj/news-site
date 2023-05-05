@@ -1352,7 +1352,7 @@ button {
   flex-direction: column;
   width: calc(100vw - 2rem);
   height: fit-content;
-  padding: 1rem;
+  padding: 1rem 0;
   font-family: "Lato", sans-serif;
 }
 
