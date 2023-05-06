@@ -193,7 +193,7 @@ svg {
   opacity: 0;
   filter: blur(7px);
   transform: translateY(100%);
-  transition: all 1s;
+  transition: all 0.8s;
 }
 .show {
   opacity: 1;
@@ -205,7 +205,7 @@ svg {
   opacity: 0;
   filter: blur(7px);
   transform: translateX(-100%);
-  transition: all 0.8s;
+  transition: all 0.5s;
 }
 .show2 {
   opacity: 1;
