@@ -547,6 +547,7 @@ button:focus {
 }
 
 .autocom-box li {
+  background: #fff;
   list-style: none;
   padding: 8px 12px;
   display: none;
@@ -561,8 +562,8 @@ button:focus {
 }
 
 .autocom-box li:hover {
-  background: $dark-color;
-  color: $light-color;
+  background: $light-color;
+  color: $dark-color;
 }
 
 .search-input {

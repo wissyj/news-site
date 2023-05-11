@@ -577,6 +577,7 @@ button:focus {
 }
 
 .autocom-box li {
+  background: #fff;
   list-style: none;
   padding: 8px 12px;
   display: none;
@@ -591,8 +592,8 @@ button:focus {
 }
 
 .autocom-box li:hover {
-  background: #333;
-  color: #e5e5e5;
+  background: #e5e5e5;
+  color: #333;
 }
 
 .search-input .icon {
@@ -1333,9 +1334,7 @@ button {
 .left-section .left-section-boxes {
   display: grid;
   grid-template-columns: repeat(2, calc(50% - 1rem));
-  grid-gap: 1rem;
   overflow-x: hidden;
-  padding-left: 1rem;
 }
 
 .left-section-box {

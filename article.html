@@ -89,116 +89,242 @@
                 </div>
             </div>
         </div>
-            <!$ search-box $>
-                <div class="wrapper">
-                    <button name="close menu" id="close-search-menu" class="close-search-menu "><img
-                            src="./img/download (1) (1).webp" alt="close-menu image"></button>
-                    <h1>NEWS SEARCH</h1>
-                    <div class="search-input">
-                        <a href="" target="_blank" hidden></a>
-                        <input type="text" placeholder="Type to search..">
-                        <div class="autocom-box">
-                            <!-- here list are inserted from javascript -->
+        <!$ search-box $>
+            <div class="wrapper">
+                <button name="close menu" id="close-search-menu" class="close-search-menu "><img
+                        src="./img/download (1) (1).webp" alt="close-menu image"></button>
+                <h1>NEWS SEARCH</h1>
+                <div class="search-input">
+                    <a href="" target="_blank" hidden></a>
+                    <input type="text" placeholder="Type to search..">
+                    <div class="autocom-box">
+                        <!-- here list are inserted from javascript -->
+                    </div>
+                    <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="30"
+                            viewBox="0 0 24 24">
+                            <path
+                                d="M19.023 16.977a35.13 35.13 0 0 1-1.367-1.384c-.372-.378-.596-.653-.596-.653l-2.8-1.337A6.962 6.962 0 0 0 16 9c0-3.859-3.14-7-7-7S2 5.141 2 9s3.14 7 7 7c1.763 0 3.37-.66 4.603-1.739l1.337 2.8s.275.224.653.596c.387.363.896.854 1.384 1.367l1.358 1.392.604.646 2.121-2.121-.646-.604c-.379-.372-.885-.866-1.391-1.36zM9 14c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5z" />
+                        </svg></div>
+                </div>
+            </div>
+            <!$ search box ends $>
+                <div id="topic-container">
+                    <div class="topic-box">
+                        <ul>
+                            <li><a href="#live-stream">Live Stream</a></li>
+                            <li><a href="#local">Local </a></li>
+                            <li><a href="#politics">Politics</a></li>
+                            <li><a href="#sports">Sports</a></li>
+                            <li><a href="#entertainment">Entertainment</a></li>
+                            <li><a href="#foreign">Foreign</a></li>
+                            <li>
+                                <svg id="listMenu" height="48" viewBox="0 0 48 48" width="48"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 0h48v48h-48z" fill="none" />
+                                    <path
+                                        d="M12 20c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm24 0c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm-12 0c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4z" />
+                                </svg>
+                                <svg id="hideMenu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                    <path
+                                        d="M201.4 137.4c12.5-12.5 32.8-12.5 45.3 0l160 160c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L224 205.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l160-160z" />
+                                </svg>
+                                <ul class="topic-box-dropdown">
+                                    <li><a href="#sports">Sports</a></li>
+                                    <li><a href="#entertainment">Entertainment</a></li>
+                                    <li><a href="#foreign">Foreign</a></li>
+                                    <li><a href="#technology">Technology</a></li>
+                                    <li><a href="#education">Education</a></li>
+                                    <li><a href="#culture">Culture</a></li>
+                                    <li><a href="#health">Health</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="img-slider">
+                    <h4>Advertisement</h4>
+                    <div class="slide active">
+                        <img src="img/AD.webp" alt="advertisement">
+                    </div>
+                    <div class="slide">
+                        <img src="img/slide-2.webp" alt="advertisement">
+                        <div class="info">
                         </div>
-                        <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="30"
-                                viewBox="0 0 24 24">
-                                <path
-                                    d="M19.023 16.977a35.13 35.13 0 0 1-1.367-1.384c-.372-.378-.596-.653-.596-.653l-2.8-1.337A6.962 6.962 0 0 0 16 9c0-3.859-3.14-7-7-7S2 5.141 2 9s3.14 7 7 7c1.763 0 3.37-.66 4.603-1.739l1.337 2.8s.275.224.653.596c.387.363.896.854 1.384 1.367l1.358 1.392.604.646 2.121-2.121-.646-.604c-.379-.372-.885-.866-1.391-1.36zM9 14c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5z" />
-                            </svg></div>
+                    </div>
+                    <div class="slide">
+                        <img src="img/slide-1.webp" alt="advertisement">
+                        <div class="info">
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="img/featured.webp" alt="advertisement">
+                        <div class="info">
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="img/ent1.webp" alt="advertisement">
+                        <div class="info">
+                        </div>
+                    </div>
+                    <div class="navigation">
+                        <div class="btn active"></div>
+                        <div class="btn"></div>
+                        <div class="btn"></div>
+                        <div class="btn"></div>
+                        <div class="btn"></div>
                     </div>
                 </div>
-                <!$ search box ends $>
-            <div id="topic-container">
-                <div class="topic-box">
-                    <ul>
-                        <li><a href="#live-stream">Live Stream</a></li>
-                        <li><a href="#local">Local </a></li>
-                        <li><a href="#politics">Politics</a></li>
-                        <li><a href="#sports">Sports</a></li>
-                        <li><a href="#entertainment">Entertainment</a></li>
-                        <li><a href="#foreign">Foreign</a></li>
-                        <li>
-                            <svg id="listMenu" height="48" viewBox="0 0 48 48" width="48"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 0h48v48h-48z" fill="none" />
-                                <path
-                                    d="M12 20c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm24 0c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm-12 0c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4z" />
-                            </svg>
-                            <svg id="hideMenu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                <path
-                                    d="M201.4 137.4c12.5-12.5 32.8-12.5 45.3 0l160 160c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L224 205.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l160-160z" />
-                            </svg>
-                            <ul class="topic-box-dropdown">
-                                <li><a href="#sports">Sports</a></li>
-                                <li><a href="#entertainment">Entertainment</a></li>
-                                <li><a href="#foreign">Foreign</a></li>
-                                <li><a href="#technology">Technology</a></li>
-                                <li><a href="#education">Education</a></li>
-                                <li><a href="#culture">Culture</a></li>
-                                <li><a href="#health">Health</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="img-slider">
-                <h4>Advertisement</h4>
-                <div class="slide active">
-                    <img src="img/AD.webp" alt="advertisement">
-                </div>
-                <div class="slide">
-                    <img src="img/slide-2.webp" alt="advertisement">
-                    <div class="info">
-                    </div>
-                </div>
-                <div class="slide">
-                    <img src="img/slide-1.webp" alt="advertisement">
-                    <div class="info">
-                    </div>
-                </div>
-                <div class="slide">
-                    <img src="img/featured.webp" alt="advertisement">
-                    <div class="info">
-                    </div>
-                </div>
-                <div class="slide">
-                    <img src="img/ent1.webp" alt="advertisement">
-                    <div class="info">
-                    </div>
-                </div>
-                <div class="navigation">
-                    <div class="btn active"></div>
-                    <div class="btn"></div>
-                    <div class="btn"></div>
-                    <div class="btn"></div>
-                    <div class="btn"></div>
-                </div>
-            </div>
-            <!$ welcome heading $>
-                <section id="showcase">
-                    <div id="welcome">
-                        <h2 class="welcome">Welcome to Newshub.com </h2>
-                        <p id="datetime" style="font-size: 16px; color: var(--light-color);">Friday, 10 March</p>
-                    </div>
-                </section>
-                <!$ breaking stories tab for mobile view below 600px $>
-                    <section id="breaking-stories-tab">
-                        <div>
-                            <h4> <strong>Breaking Stories:</strong></h4>
-
-                            <ul>
-                                <li><a href="#">JAMB reschedules </a></li>
-                                <li><a href="#">JAMB reschedules exams </a></li>
-                                <li><a href="#">JAMB reschedules exams </a></li>
-                                <li><a href="#">JAMB reschedules exams </a></li>
-                                <li><a href="#">JAMB starts exams </a></li>
-                            </ul>
+                <!$ welcome heading $>
+                    <section id="showcase">
+                        <div id="welcome">
+                            <h2 class="welcome">Welcome to Newshub.com </h2>
+                            <p id="datetime" style="font-size: 16px; color: var(--light-color);">Friday, 10 March</p>
                         </div>
                     </section>
-                    <div id="article-stories-container">
-                        <div class="left-section">
-                            <h3 class="p-2" id="local">
-                                <span class="article-sub-head "></span> LOCAL
+                    <!$ breaking stories tab for mobile view below 600px $>
+                        <section id="breaking-stories-tab">
+                            <div>
+                                <h4> <strong>Breaking Stories:</strong></h4>
+
+                                <ul>
+                                    <li><a href="#">JAMB reschedules </a></li>
+                                    <li><a href="#">JAMB reschedules exams </a></li>
+                                    <li><a href="#">JAMB reschedules exams </a></li>
+                                    <li><a href="#">JAMB reschedules exams </a></li>
+                                    <li><a href="#">JAMB starts exams </a></li>
+                                </ul>
+                            </div>
+                        </section>
+                        <div id="article-stories-container">
+                            <div class="left-section">
+                                <h3 class="p-2" id="local">
+                                    <span class="article-sub-head "></span> LOCAL
+                                </h3>
+                                <div class="left-section-boxes">
+                                    <div class="left-section-box">
+                                        <img src="./img/ent1.webp" alt="sports" loading="lazy">
+                                        <div class="left-section-box-text ">
+                                            <h3 class="hidden2">
+                                                <a href="./article.html" target="_blank" rel="noopener noreferrer">
+                                                    Liverpool trashes
+                                                    Manchester United </a>
+                                            </h3>
+                                            <p> This becomes the greatest defeat United has suffered in the hands of a
+                                                big
+                                                team for a ...
+                                            </p>
+                                        </div>
+                                        <ul>
+                                            <li class="hidden"><a href="#"><strong>Climate change</strong> is getting
+                                                    worse
+                                                    - UN warns</a>
+                                            </li>
+                                            <li class="hidden"><a href="#"><strong>Climate change</strong> is getting
+                                                    worse
+                                                    - UN warns</a>
+                                            </li>
+                                            <li class="hidden"><a href="#"><strong>Climate change</strong> is getting
+                                                    worse
+                                                    - UN warns</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="left-section-box">
+                                        <img src="./img/ent1.webp" alt="sports" loading="lazy">
+                                        <div class="left-section-box-text ">
+                                            <h3 class="hidden2">
+                                                <a href="./article.html" target="_blank" rel="noopener noreferrer">
+                                                    Liverpool trashes
+                                                    Manchester United </a>
+                                            </h3>
+                                            <p> This becomes the greatest defeat United has suffered in the hands of a
+                                                big
+                                                team for a ...
+                                            </p>
+                                        </div>
+                                        <ul>
+                                            <li class="hidden"><a href="#"><strong>Climate change</strong> is getting
+                                                    worse
+                                                    - UN warns</a>
+                                            </li>
+                                            <li class="hidden"><a href="#"><strong>Climate change</strong> is getting
+                                                    worse
+                                                    - UN warns</a>
+                                            </li>
+                                            <li class="hidden"><a href="#"><strong>Climate change</strong> is getting
+                                                    worse
+                                                    - UN warns</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right-section">
+                                <h1>Breaking Stories</h1>
+                                <div class="right-section-box p-2 ">
+                                    <div class="section-text">
+                                        <h3 class="section-heading">
+                                            <a href="./article.html" target="_blank" rel="noopener noreferrer">
+                                                Liverpool
+                                                trashes
+                                                Manchester United </a>
+                                        </h3>
+                                        <div class="py-1"><span class="article-sub-head"></span>LOCAL</div>
+                                    </div>
+                                </div>
+
+                                <div class="right-section-box p-2 shade">
+                                    <div class="section-text hidden">
+                                        <h3 class="section-heading">
+                                            <a href="./article.html" target="_blank" rel="noopener noreferrer">
+                                                Liverpool
+                                                trashes
+                                                Manchester United </a>
+                                        </h3>
+
+                                        <div class="py-1"><span class="article-sub-head no-2 "></span>POLITICS</div>
+                                    </div>
+                                </div>
+                                <div class="right-section-box p-2 ">
+                                    <div class="section-text hidden">
+                                        <h3 class="section-heading">
+                                            <a href="./article.html" target="_blank" rel="noopener noreferrer">
+                                                Liverpool
+                                                trashes
+                                                Manchester United </a>
+                                        </h3>
+                                        <div class="py-1"> <span class="article-sub-head no-3"></span>SPORTS</div>
+                                    </div>
+                                </div>
+                                <div class="right-section-box p-2 shade">
+                                    <div class="section-text hidden">
+                                        <h3 class="section-heading">
+                                            <a href="./article.html" target="_blank" rel="noopener noreferrer">
+                                                Liverpool
+                                                trashes
+                                                Manchester United</a>
+                                        </h3>
+                                        <div class="py-1"> <span class="article-sub-head no-4"></span>ENTERTAINMENT
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="right-section-box p-2 ">
+                                    <div class="section-text hidden">
+                                        <h3 class="section-heading">
+                                            <a href="./article.html" target="_blank" rel="noopener noreferrer">
+                                                President of
+                                                Russia,
+                                                Putin visits South Africa </a>
+                                        </h3>
+                                        <div class="py-1"> <span class="article-sub-head no-5"></span>
+                                            FOREIGN</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="last-section">
+                            <h3 class="p-2" id="politics">
+                                <span class="article-sub-head no-2"></span> POLITICS
                             </h3>
                             <div class="left-section-boxes">
                                 <div class="left-section-box">
@@ -206,23 +332,24 @@
                                     <div class="left-section-box-text ">
                                         <h3 class="hidden2">
                                             <a href="./article.html" target="_blank" rel="noopener noreferrer">
-                                                Liverpool trashes
+                                                Liverpool
+                                                trashes
                                                 Manchester United </a>
                                         </h3>
                                         <p> This becomes the greatest defeat United has suffered in the hands of a big
-                                            team for a ...
-                                        </p>
+                                            team
+                                            for a ...</p>
                                     </div>
                                     <ul>
                                         <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse
-                                                - UN warns</a>
-                                        </li>
+                                                - UN
+                                                warns</a></li>
                                         <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse
-                                                - UN warns</a>
-                                        </li>
+                                                - UN
+                                                warns</a></li>
                                         <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse
-                                                - UN warns</a>
-                                        </li>
+                                                - UN
+                                                warns</a></li>
                                     </ul>
                                 </div>
                                 <div class="left-section-box">
@@ -230,672 +357,662 @@
                                     <div class="left-section-box-text ">
                                         <h3 class="hidden2">
                                             <a href="./article.html" target="_blank" rel="noopener noreferrer">
-                                                Liverpool trashes
+                                                Liverpool
+                                                trashes
                                                 Manchester United </a>
                                         </h3>
                                         <p> This becomes the greatest defeat United has suffered in the hands of a big
-                                            team for a ...
-                                        </p>
+                                            team
+                                            for a ...</p>
                                     </div>
                                     <ul>
                                         <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse
-                                                - UN warns</a>
-                                        </li>
+                                                - UN
+                                                warns</a></li>
                                         <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse
-                                                - UN warns</a>
-                                        </li>
+                                                - UN
+                                                warns</a></li>
                                         <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse
-                                                - UN warns</a>
-                                        </li>
+                                                - UN
+                                                warns</a></li>
+                                    </ul>
+                                </div>
+                                <div class="left-section-box">
+                                    <img src="./img/ent1.webp" alt="sports" loading="lazy">
+                                    <div class="left-section-box-text ">
+                                        <h3 class="hidden2">
+                                            <a href="./article.html" target="_blank" rel="noopener noreferrer">
+                                                Liverpool
+                                                trashes
+                                                Manchester United </a>
+                                        </h3>
+                                        <p> This becomes the greatest defeat United has suffered in the hands of a big
+                                            team
+                                            for a ...</p>
+                                    </div>
+                                    <ul>
+                                        <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse
+                                                - UN
+                                                warns</a></li>
+                                        <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse
+                                                - UN
+                                                warns</a></li>
+                                        <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse
+                                                - UN
+                                                warns</a></li>
                                     </ul>
                                 </div>
                             </div>
-                        </div>
-                        <div class="right-section">
-                            <h1>Breaking Stories</h1>
-                            <div class="right-section-box p-2 ">
-                                <div class="section-text">
-                                    <h3 class="section-heading">
-                                        <a href="./article.html" target="_blank" rel="noopener noreferrer"> Liverpool
-                                            trashes
-                                            Manchester United </a>
-                                    </h3>
-                                    <div class="py-1"><span class="article-sub-head"></span>LOCAL</div>
-                                </div>
-                            </div>
-
-                            <div class="right-section-box p-2 shade">
-                                <div class="section-text hidden">
-                                    <h3 class="section-heading">
-                                        <a href="./article.html" target="_blank" rel="noopener noreferrer"> Liverpool
-                                            trashes
-                                            Manchester United </a>
-                                    </h3>
-
-                                    <div class="py-1"><span class="article-sub-head no-2 "></span>POLITICS</div>
-                                </div>
-                            </div>
-                            <div class="right-section-box p-2 ">
-                                <div class="section-text hidden">
-                                    <h3 class="section-heading">
-                                        <a href="./article.html" target="_blank" rel="noopener noreferrer"> Liverpool
-                                            trashes
-                                            Manchester United </a>
-                                    </h3>
-                                    <div class="py-1"> <span class="article-sub-head no-3"></span>SPORTS</div>
-                                </div>
-                            </div>
-                            <div class="right-section-box p-2 shade">
-                                <div class="section-text hidden">
-                                    <h3 class="section-heading">
-                                        <a href="./article.html" target="_blank" rel="noopener noreferrer"> Liverpool
-                                            trashes
-                                            Manchester United</a>
-                                    </h3>
-                                    <div class="py-1"> <span class="article-sub-head no-4"></span>ENTERTAINMENT</div>
-                                </div>
-                            </div>
-                            <div class="right-section-box p-2 ">
-                                <div class="section-text hidden">
-                                    <h3 class="section-heading">
-                                        <a href="./article.html" target="_blank" rel="noopener noreferrer"> President of
-                                            Russia,
-                                            Putin visits South Africa </a>
-                                    </h3>
-                                    <div class="py-1"> <span class="article-sub-head no-5"></span>
-                                        FOREIGN</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="last-section">
-                        <h3 class="p-2" id="politics">
-                            <span class="article-sub-head no-2"></span> POLITICS
-                        </h3>
-                        <div class="left-section-boxes">
-                            <div class="left-section-box">
-                                <img src="./img/ent1.webp" alt="sports" loading="lazy">
-                                <div class="left-section-box-text ">
-                                    <h3 class="hidden2">
-                                        <a href="./article.html" target="_blank" rel="noopener noreferrer"> Liverpool
-                                            trashes
-                                            Manchester United </a>
-                                    </h3>
-                                    <p> This becomes the greatest defeat United has suffered in the hands of a big team
-                                        for a ...</p>
-                                </div>
-                                <ul>
-                                    <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse - UN
-                                            warns</a></li>
-                                    <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse - UN
-                                            warns</a></li>
-                                    <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse - UN
-                                            warns</a></li>
-                                </ul>
-                            </div>
-                            <div class="left-section-box">
-                                <img src="./img/ent1.webp" alt="sports" loading="lazy">
-                                <div class="left-section-box-text ">
-                                    <h3 class="hidden2">
-                                        <a href="./article.html" target="_blank" rel="noopener noreferrer"> Liverpool
-                                            trashes
-                                            Manchester United </a>
-                                    </h3>
-                                    <p> This becomes the greatest defeat United has suffered in the hands of a big team
-                                        for a ...</p>
-                                </div>
-                                <ul>
-                                    <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse - UN
-                                            warns</a></li>
-                                    <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse - UN
-                                            warns</a></li>
-                                    <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse - UN
-                                            warns</a></li>
-                                </ul>
-                            </div>
-                            <div class="left-section-box">
-                                <img src="./img/ent1.webp" alt="sports" loading="lazy">
-                                <div class="left-section-box-text ">
-                                    <h3 class="hidden2">
-                                        <a href="./article.html" target="_blank" rel="noopener noreferrer"> Liverpool
-                                            trashes
-                                            Manchester United </a>
-                                    </h3>
-                                    <p> This becomes the greatest defeat United has suffered in the hands of a big team
-                                        for a ...</p>
-                                </div>
-                                <ul>
-                                    <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse - UN
-                                            warns</a></li>
-                                    <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse - UN
-                                            warns</a></li>
-                                    <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse - UN
-                                            warns</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <h3 class="p-2" id="sports">
-                            <span class="article-sub-head no-3"></span> SPORTS
-                        </h3>
-                        <div class="left-section-boxes">
-                            <div class="left-section-box">
-                                <img src="./img/ent1.webp" alt="sports" loading="lazy">
-                                <div class="left-section-box-text ">
-                                    <h3 class="hidden2">
-                                        <a href="./article.html" target="_blank" rel="noopener noreferrer"> Liverpool
-                                            trashes
-                                            Manchester United </a>
-                                    </h3>
-                                    <p> This becomes the greatest defeat United has suffered in the hands of a big team
-                                        for a ...</p>
-                                </div>
-                                <ul>
-                                    <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse - UN
-                                            warns</a></li>
-                                </ul>
-                            </div>
-                            <div class="left-section-box">
-                                <img src="./img/ent1.webp" alt="sports">
-                                <div class="left-section-box-text ">
-                                    <h3 class="hidden2">
-                                        <a href="./article.html" target="_blank" rel="noopener noreferrer"> Liverpool
-                                            trashes
-                                            Manchester United </a>
-                                    </h3>
-                                    <p> This becomes the greatest defeat United has suffered in the hands of a big team
-                                        for a ...</p>
-                                </div>
-                                <ul>
-                                    <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse - UN
-                                            warns</a></li>
-                                    <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse - UN
-                                            warns</a></li>
-                                    <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse - UN
-                                            warns</a></li>
-                                </ul>
-                            </div>
-                            <div class="left-section-box">
-                                <img src="./img/ent1.webp" alt="sports" loading="lazy">
-                                <div class="left-section-box-text ">
-                                    <h3 class="hidden2">
-                                        <a href="./article.html" target="_blank" rel="noopener noreferrer"> Liverpool
-                                            trashes
-                                            Manchester United </a>
-                                    </h3>
-                                    <p> This becomes the greatest defeat United has suffered in the hands of a big team
-                                        for a ...</p>
-                                </div>
-                                <ul>
-                                    <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse - UN
-                                            warns</a></li>
-                                    <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse - UN
-                                            warns</a></li>
-                                    <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse - UN
-                                            warns</a></li>
-                                </ul>
-                            </div>
-                            <div class="left-section-box">
-                                <img src="./img/ent1.webp" alt="sports" loading="lazy">
-                                <div class="left-section-box-text ">
-                                    <h3 class="hidden2">
-                                        <a href="./article.html" target="_blank" rel="noopener noreferrer"> Liverpool
-                                            trashes
-                                            Manchester United </a>
-                                    </h3>
-                                    <p> This becomes the greatest defeat United has suffered in the hands of a big team
-                                        for a ...</p>
-                                </div>
-                                <ul>
-                                    <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse - UN
-                                            warns</a></li>
-                                    <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse - UN
-                                            warns</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <h3 class="p-2" id="entertainment">
-                            <span class="article-sub-head no-4"></span> ENTERTAINMENT
-                        </h3>
-                        <div class="left-section-boxes">
-                            <div class="left-section-box">
-                                <img src="./img/gettyimages-1290904409-612x612.webp" alt="sports" loading="lazy">
-                                <div class="left-section-box-text ">
-                                    <h3 class="hidden2">
-                                        <a href="./article.html" target="_blank" rel="noopener noreferrer"> Liverpool
-                                            trashes
-                                            Manchester United </a>
-                                    </h3>
-                                    <p> This becomes the greatest defeat United has suffered in the hands of a big team
-                                        for a ...</p>
-                                </div>
-                                <ul>
-                                    <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse - UN
-                                            warns</a></li>
-                                    <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse - UN
-                                            warns</a></li>
-                                    <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse - UN
-                                            warns</a></li>
-                                </ul>
-                            </div>
-                            <div class="left-section-box">
-                                <img src="./img/ent1.webp" alt="sports" loading="lazy">
-                                <div class="left-section-box-text ">
-                                    <h3 class="hidden2">
-                                        <a href="./article.html" target="_blank" rel="noopener noreferrer"> Liverpool
-                                            trashes
-                                            Manchester United </a>
-                                    </h3>
-                                    <p> This becomes the greatest defeat United has suffered in the hands of a big team
-                                        for a ...</p>
-                                </div>
-                                <ul>
-                                    <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse - UN
-                                            warns</a></li>
-                                    <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse - UN
-                                            warns</a></li>
-                                    <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse - UN
-                                            warns</a></li>
-                                </ul>
-                            </div>
-                            <div class="left-section-box">
-                                <img src="./img/ent1.webp" alt="sports" loading="lazy">
-                                <div class="left-section-box-text ">
-                                    <h3 class="hidden2">
-                                        <a href="./article.html" target="_blank" rel="noopener noreferrer"> Liverpool
-                                            trashes
-                                            Manchester United </a>
-                                    </h3>
-                                    <p> This becomes the greatest defeat United has suffered in the hands of a big team
-                                        for a ...</p>
-                                </div>
-                                <ul>
-                                    <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse - UN
-                                            warns</a></li>
-                                    <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse - UN
-                                            warns</a></li>
-                                    <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse - UN
-                                            warns</a></li>
-                                </ul>
-                            </div>
-                            <div class="left-section-box">
-                                <img src="./img/ent1.webp" alt="sports" loading="lazy">
-                                <div class="left-section-box-text ">
-                                    <h3 class="hidden2">
-                                        <a href="./article.html" target="_blank" rel="noopener noreferrer"> Liverpool
-                                            trashes
-                                            Manchester United </a>
-                                    </h3>
-                                    <p> This becomes the greatest defeat United has suffered in the hands of a big team
-                                        for a ...</p>
-                                </div>
-                                <ul>
-                                    <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse - UN
-                                            warns</a></li>
-                                    <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse - UN
-                                            warns</a></li>
-                                    <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse - UN
-                                            warns</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <h3 class="p-2" id="foreign">
-                            <span class="article-sub-head no-5"></span> FOREIGN
-                        </h3>
-                        <div class="left-section-boxes">
-                            <div class="left-section-box">
-                                <img src="./img/ent1.webp" alt="sports" loading="lazy">
-                                <div class="left-section-box-text ">
-                                    <h3 class="hidden2">
-                                        <a href="./article.html" target="_blank" rel="noopener noreferrer"> Liverpool
-                                            trashes
-                                            Manchester United </a>
-                                    </h3>
-                                    <p> This becomes the greatest defeat United has suffered in the hands of a big team
-                                        for a ...</p>
-                                </div>
-                                <ul>
-                                    <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse - UN
-                                            warns</a></li>
-                                    <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse - UN
-                                            warns</a></li>
-                                    <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse - UN
-                                            warns</a></li>
-                                </ul>
-                            </div>
-                            <div class="left-section-box">
-                                <img src="./img/ent1.webp" alt="sports" loading="lazy">
-                                <div class="left-section-box-text ">
-                                    <h3 class="hidden2">
-                                        <a href="./article.html" target="_blank" rel="noopener noreferrer"> Liverpool
-                                            trashes
-                                            Manchester United </a>
-                                    </h3>
-                                    <p> This becomes the greatest defeat United has suffered in the hands of a big team
-                                        for a ...</p>
-                                </div>
-                                <ul>
-                                    <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse - UN
-                                            warns</a></li>
-                                    <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse - UN
-                                            warns</a></li>
-                                    <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse - UN
-                                            warns</a></li>
-                                </ul>
-                            </div>
-                            <div class="left-section-box">
-                                <img src="./img/ent1.webp" alt="sports" loading="lazy">
-                                <div class="left-section-box-text ">
-                                    <h3 class="hidden2">
-                                        <a href="./article.html" target="_blank" rel="noopener noreferrer"> Liverpool
-                                            trashes
-                                            Manchester United </a>
-                                    </h3>
-                                    <p> This becomes the greatest defeat United has suffered in the hands of a big team
-                                        for a ...</p>
-                                </div>
-                                <ul>
-                                    <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse - UN
-                                            warns</a></li>
-                                    <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse - UN
-                                            warns</a></li>
-                                    <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse - UN
-                                            warns</a></li>
-                                </ul>
-                            </div>
-                            <div class="left-section-box">
-                                <img src="./img/ent1.webp" alt="sports" loading="lazy">
-                                <div class="left-section-box-text ">
-                                    <h3 class="hidden2">
-                                        <a href="./article.html" target="_blank" rel="noopener noreferrer"> Liverpool
-                                            trashes
-                                            Manchester United </a>
-                                    </h3>
-                                    <p> This becomes the greatest defeat United has suffered in the hands of a big team
-                                        for a ...</p>
-                                </div>
-                                <ul>
-                                    <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse - UN
-                                            warns</a></li>
-                                    <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse - UN
-                                            warns</a></li>
-                                    <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse - UN
-                                            warns</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <h3 class="p-2" id="technology">
-                            <span class="article-sub-head "></span> TECHNOLOGY
-                        </h3>
-                        <div class="left-section-boxes">
-                            <div class="left-section-box">
-                                <img src="./img/ent1.webp" alt="sports" loading="lazy">
-                                <div class="left-section-box-text ">
-                                    <h3 class="hidden2">
-                                        <a href="./article.html" target="_blank" rel="noopener noreferrer"> Liverpool
-                                            trashes
-                                            Manchester United </a>
-                                    </h3>
-                                    <p> This becomes the greatest defeat United has suffered in the hands of a big team
-                                        for a ...</p>
-                                </div>
-                            </div>
-                            <div class="left-section-box">
-                                <img src="./img/ent1.webp" alt="sports" loading="lazy">
-                                <div class="left-section-box-text ">
-                                    <h3 class="hidden2">
-                                        <a href="./article.html" target="_blank" rel="noopener noreferrer"> Liverpool
-                                            trashes
-                                            Manchester United </a>
-                                    </h3>
-                                    <p> This becomes the greatest defeat United has suffered in the hands of a big team
-                                        for a ...</p>
-                                </div>
-                            </div>
-                            <div class="left-section-box">
-                                <img src="./img/ent1.webp" alt="sports" loading="lazy">
-                                <div class="left-section-box-text ">
-                                    <h3 class="hidden2">
-                                        <a href="./article.html" target="_blank" rel="noopener noreferrer"> Liverpool
-                                            trashes
-                                            Manchester United </a>
-                                    </h3>
-                                    <p> This becomes the greatest defeat United has suffered in the hands of a big team
-                                        for a ...</p>
-                                </div>
-                            </div>
-
-                        </div>
-                        <h3 class="p-2" id="education">
-                            <span class="article-sub-head "></span> EDUCATION
-                        </h3>
-                        <div class="left-section-boxes">
-                            <div class="left-section-box">
-                                <img src="./img/ent1.webp" alt="sports" loading="lazy">
-                                <div class="left-section-box-text ">
-                                    <h3 class="hidden2">
-                                        <a href="./article.html" target="_blank" rel="noopener noreferrer"> Liverpool
-                                            trashes
-                                            Manchester United </a>
-                                    </h3>
-                                    <p> This becomes the greatest defeat United has suffered in the hands of a big team
-                                        for a ...</p>
-                                </div>
-                            </div>
-                            <div class="left-section-box">
-                                <img src="./img/ent1.webp" alt="sports">
-                                <div class="left-section-box-text ">
-                                    <h3 class="hidden2">
-                                        <a href="./article.html" target="_blank" rel="noopener noreferrer"> Liverpool
-                                            trashes
-                                            Manchester United </a>
-                                    </h3>
-                                    <p> This becomes the greatest defeat United has suffered in the hands of a big team
-                                        for a ...</p>
-                                </div>
-                            </div>
-                            <div class="left-section-box">
-                                <img src="./img/ent1.webp" alt="sports" loading="lazy">
-                                <div class="left-section-box-text ">
-                                    <h3 class="hidden2">
-                                        <a href="./article.html" target="_blank" rel="noopener noreferrer"> Liverpool
-                                            trashes
-                                            Manchester United </a>
-                                    </h3>
-                                    <p> This becomes the greatest defeat United has suffered in the hands of a big team
-                                        for a ...</p>
-                                </div>
-                            </div>
-
-                        </div>
-                        <h3 class="p-2" id="culture">
-                            <span class="article-sub-head "></span> CULTURE
-                        </h3>
-                        <div class="left-section-boxes">
-                            <div class="left-section-box">
-                                <img src="./img/ent1.webp" alt="sports" loading="lazy">
-                                <div class="left-section-box-text ">
-                                    <h3 class="hidden2">
-                                        <a href="./article.html" target="_blank" rel="noopener noreferrer"> Liverpool
-                                            trashes
-                                            Manchester United </a>
-                                    </h3>
-                                    <p> This becomes the greatest defeat United has suffered in the hands of a big team
-                                        for a ...</p>
-                                </div>
-                            </div>
-                            <div class="left-section-box">
-                                <img src="./img/ent1.webp" alt="sports" loading="lazy">
-                                <div class="left-section-box-text ">
-                                    <h3 class="hidden2">
-                                        <a href="./article.html" target="_blank" rel="noopener noreferrer"> Liverpool
-                                            trashes
-                                            Manchester United </a>
-                                    </h3>
-                                    <p> This becomes the greatest defeat United has suffered in the hands of a big team
-                                        for a ...</p>
-                                </div>
-                            </div>
-                            <div class="left-section-box">
-                                <img src="./img/ent1.webp" alt="sports" loading="lazy">
-                                <div class="left-section-box-text ">
-                                    <h3 class="hidden2">
-                                        <a href="./article.html" target="_blank" rel="noopener noreferrer"> Liverpool
-                                            trashes
-                                            Manchester United </a>
-                                    </h3>
-                                    <p> This becomes the greatest defeat United has suffered in the hands of a big team
-                                        for a ...</p>
-                                </div>
-                            </div>
-
-                        </div>
-                        <h3 class="p-2" id="health">
-                            <span class="article-sub-head "></span> HEALTH
-                        </h3>
-                        <div class="left-section-boxes">
-                            <div class="left-section-box">
-                                <img src="./img/ent1.webp" alt="sports">
-                                <div class="left-section-box-text ">
-                                    <h3 class="hidden2">
-                                        <a href="./article.html" target="_blank" rel="noopener noreferrer"> Liverpool
-                                            trashes
-                                            Manchester United </a>
-                                    </h3>
-                                    <p> This becomes the greatest defeat United has suffered in the hands of a big team
-                                        for a ...</p>
-                                </div>
-                            </div>
-                            <div class="left-section-box">
-                                <img src="./img/ent1.webp" alt="sports" loading="lazy">
-                                <div class="left-section-box-text ">
-                                    <h3 class="hidden2">
-                                        <a href="./article.html" target="_blank" rel="noopener noreferrer"> Liverpool
-                                            trashes
-                                            Manchester United </a>
-                                    </h3>
-                                    <p> This becomes the greatest defeat United has suffered in the hands of a big team
-                                        for a ...</p>
-                                </div>
-                            </div>
-                            <div class="left-section-box">
-                                <img src="./img/ent1.webp" alt="sports" loading="lazy">
-                                <div class="left-section-box-text ">
-                                    <h3 class="hidden2">
-                                        <a href="./article.html" target="_blank" rel="noopener noreferrer"> Liverpool
-                                            trashes
-                                            Manchester United </a>
-                                    </h3>
-                                    <p> This becomes the greatest defeat United has suffered in the hands of a big team
-                                        for a ...</p>
-                                </div>
-                            </div>
-
-                        </div>
-                        <h3 class="p-2" id="health">
-                            <span class="article-sub-head "></span> MORE FROM NEWSHUB
-                        </h3>
-                        <div class="left-section-boxes">
-                            <div class="left-section-box">
-                                <img src="./img/ent1.webp" alt="sports" loading="lazy">
-                                <div class="left-section-box-text ">
-                                    <h3 class="hidden2">
-                                        <a href="./article.html" target="_blank" rel="noopener noreferrer"> Liverpool
-                                            trashes
-                                            Manchester United </a>
-                                    </h3>
-                                    <p> This becomes the greatest defeat United has suffered in the hands of a big team
-                                        for a ...</p>
-                                </div>
-                            </div>
-                            <div class="left-section-box">
-                                <img src="./img/ent1.webp" alt="sports" loading="lazy">
-                                <div class="left-section-box-text ">
-                                    <h3 class="hidden2">
-                                        <a href="./article.html" target="_blank" rel="noopener noreferrer"> Liverpool
-                                            trashes
-                                            Manchester United </a>
-                                    </h3>
-                                    <p> This becomes the greatest defeat United has suffered in the hands of a big team
-                                        for a ...</p>
-                                </div>
-                            </div>
-                            <div class="left-section-box">
-                                <img src="./img/ent1.webp" alt="sports" loading="lazy">
-                                <div class="left-section-box-text ">
-                                    <h3 class="hidden2">
-                                        <a href="./article.html" target="_blank" rel="noopener noreferrer"> Liverpool
-                                            trashes
-                                            Manchester United </a>
-                                    </h3>
-                                    <p> This becomes the greatest defeat United has suffered in the hands of a big team
-                                        for a ...</p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="live-stream-box">
-                        <h3 class="p-2" id="live-stream">
-                            <span class="article-sub-head "></span> LIVE STREAM FROM NEWSHUB
-                        </h3>
-                        <video id="stream-video" controls="controls">
-                            <source src="./img/live-stream.mp4" type="video/mp4">
-
-                        </video>
-                        <div class="live-stream-box-text ">
-                            <h3>
-                                <img src="./img/youtube__.webp" alt="youtube logo"> Live from NewsHub
+                            <h3 class="p-2" id="sports">
+                                <span class="article-sub-head no-3"></span> SPORTS
                             </h3>
-                            <p>All the <span>LATEST NEWS</span> at your <span> FINGERTIPS</span></p>
-                        </div>
-                    </div>
-                    <!$ footer starts $>
-                        <footer id="footer-container">
-                            <h2 id="footer-head">Explore News Hub</h2>
-                            <div class="footer-box">
-                                <div id="first-box">
-                                    <div class="inner-box hidden2">
-                                        <a href="">Home</a>
-                                        <a href="">About Us</a>
-                                        <a href="">Latest News</a>
+                            <div class="left-section-boxes">
+                                <div class="left-section-box">
+                                    <img src="./img/ent1.webp" alt="sports" loading="lazy">
+                                    <div class="left-section-box-text ">
+                                        <h3 class="hidden2">
+                                            <a href="./article.html" target="_blank" rel="noopener noreferrer">
+                                                Liverpool
+                                                trashes
+                                                Manchester United </a>
+                                        </h3>
+                                        <p> This becomes the greatest defeat United has suffered in the hands of a big
+                                            team
+                                            for a ...</p>
                                     </div>
-                                    <div class="inner-box hidden2">
-                                        <a href="">Politics</a>
-                                        <a href="">Trending</a>
-                                        <a href="">Entertainment</a>
+                                    <ul>
+                                        <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse
+                                                - UN
+                                                warns</a></li>
+                                    </ul>
+                                </div>
+                                <div class="left-section-box">
+                                    <img src="./img/ent1.webp" alt="sports">
+                                    <div class="left-section-box-text ">
+                                        <h3 class="hidden2">
+                                            <a href="./article.html" target="_blank" rel="noopener noreferrer">
+                                                Liverpool
+                                                trashes
+                                                Manchester United </a>
+                                        </h3>
+                                        <p> This becomes the greatest defeat United has suffered in the hands of a big
+                                            team
+                                            for a ...</p>
                                     </div>
-                                    <div class="inner-box hidden2">
-                                        <a href="">Sports</a>
-                                        <a href="">Foreign</a>
-                                        <a href="">2023 Election</a>
+                                    <ul>
+                                        <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse
+                                                - UN
+                                                warns</a></li>
+                                        <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse
+                                                - UN
+                                                warns</a></li>
+                                        <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse
+                                                - UN
+                                                warns</a></li>
+                                    </ul>
+                                </div>
+                                <div class="left-section-box">
+                                    <img src="./img/ent1.webp" alt="sports" loading="lazy">
+                                    <div class="left-section-box-text ">
+                                        <h3 class="hidden2">
+                                            <a href="./article.html" target="_blank" rel="noopener noreferrer">
+                                                Liverpool
+                                                trashes
+                                                Manchester United </a>
+                                        </h3>
+                                        <p> This becomes the greatest defeat United has suffered in the hands of a big
+                                            team
+                                            for a ...</p>
                                     </div>
-                                    <div class="inner-box hidden2">
-                                        <a href="">Cookies</a>
-                                        <a href="">Terms of Use</a>
-                                        <a href="">Accesibilty Help</a>
+                                    <ul>
+                                        <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse
+                                                - UN
+                                                warns</a></li>
+                                        <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse
+                                                - UN
+                                                warns</a></li>
+                                        <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse
+                                                - UN
+                                                warns</a></li>
+                                    </ul>
+                                </div>
+                                <div class="left-section-box">
+                                    <img src="./img/ent1.webp" alt="sports" loading="lazy">
+                                    <div class="left-section-box-text ">
+                                        <h3 class="hidden2">
+                                            <a href="./article.html" target="_blank" rel="noopener noreferrer">
+                                                Liverpool
+                                                trashes
+                                                Manchester United </a>
+                                        </h3>
+                                        <p> This becomes the greatest defeat United has suffered in the hands of a big
+                                            team
+                                            for a ...</p>
                                     </div>
-                                    <div class="inner-box hidden2">
-                                        <a href="">Privacy Policy</a>
-                                        <a href="">Do not Sell my Info</a>
-                                        <a href="">NEWS HUB Emails for you</a>
-                                    </div>
-                                    <div class="inner-box hidden2">
-                                        <a href="">Advertise with Us</a>
-                                        <a href="">Join our community</a>
-                                        <a href="">Contact the News Hub</a>
-                                    </div>
+                                    <ul>
+                                        <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse
+                                                - UN
+                                                warns</a></li>
+                                        <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse
+                                                - UN
+                                                warns</a></li>
+                                    </ul>
                                 </div>
                             </div>
-                            <div class="footer-bottom">
-                                Copyright <span>&copy;</span> News Hub 2023. All Rights Reserved
+                            <h3 class="p-2" id="entertainment">
+                                <span class="article-sub-head no-4"></span> ENTERTAINMENT
+                            </h3>
+                            <div class="left-section-boxes">
+                                <div class="left-section-box">
+                                    <img src="./img/gettyimages-1290904409-612x612.webp" alt="sports" loading="lazy">
+                                    <div class="left-section-box-text ">
+                                        <h3 class="hidden2">
+                                            <a href="./article.html" target="_blank" rel="noopener noreferrer">
+                                                Liverpool
+                                                trashes
+                                                Manchester United </a>
+                                        </h3>
+                                        <p> This becomes the greatest defeat United has suffered in the hands of a big
+                                            team
+                                            for a ...</p>
+                                    </div>
+                                    <ul>
+                                        <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse
+                                                - UN
+                                                warns</a></li>
+                                        <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse
+                                                - UN
+                                                warns</a></li>
+                                        <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse
+                                                - UN
+                                                warns</a></li>
+                                    </ul>
+                                </div>
+                                <div class="left-section-box">
+                                    <img src="./img/ent1.webp" alt="sports" loading="lazy">
+                                    <div class="left-section-box-text ">
+                                        <h3 class="hidden2">
+                                            <a href="./article.html" target="_blank" rel="noopener noreferrer">
+                                                Liverpool
+                                                trashes
+                                                Manchester United </a>
+                                        </h3>
+                                        <p> This becomes the greatest defeat United has suffered in the hands of a big
+                                            team
+                                            for a ...</p>
+                                    </div>
+                                    <ul>
+                                        <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse
+                                                - UN
+                                                warns</a></li>
+                                        <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse
+                                                - UN
+                                                warns</a></li>
+                                        <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse
+                                                - UN
+                                                warns</a></li>
+                                    </ul>
+                                </div>
+                                <div class="left-section-box">
+                                    <img src="./img/ent1.webp" alt="sports" loading="lazy">
+                                    <div class="left-section-box-text ">
+                                        <h3 class="hidden2">
+                                            <a href="./article.html" target="_blank" rel="noopener noreferrer">
+                                                Liverpool
+                                                trashes
+                                                Manchester United </a>
+                                        </h3>
+                                        <p> This becomes the greatest defeat United has suffered in the hands of a big
+                                            team
+                                            for a ...</p>
+                                    </div>
+                                    <ul>
+                                        <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse
+                                                - UN
+                                                warns</a></li>
+                                        <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse
+                                                - UN
+                                                warns</a></li>
+                                        <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse
+                                                - UN
+                                                warns</a></li>
+                                    </ul>
+                                </div>
+                                <div class="left-section-box">
+                                    <img src="./img/ent1.webp" alt="sports" loading="lazy">
+                                    <div class="left-section-box-text ">
+                                        <h3 class="hidden2">
+                                            <a href="./article.html" target="_blank" rel="noopener noreferrer">
+                                                Liverpool
+                                                trashes
+                                                Manchester United </a>
+                                        </h3>
+                                        <p> This becomes the greatest defeat United has suffered in the hands of a big
+                                            team
+                                            for a ...</p>
+                                    </div>
+                                    <ul>
+                                        <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse
+                                                - UN
+                                                warns</a></li>
+                                        <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse
+                                                - UN
+                                                warns</a></li>
+                                        <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse
+                                                - UN
+                                                warns</a></li>
+                                    </ul>
+                                </div>
                             </div>
-                        </footer>
-                        <!$ JQuery CDN $>
-                            <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-                                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-                                crossorigin="anonymous"></script>
-                            <script defer src="./main.js"></script>
+                            <h3 class="p-2" id="foreign">
+                                <span class="article-sub-head no-5"></span> FOREIGN
+                            </h3>
+                            <div class="left-section-boxes">
+                                <div class="left-section-box">
+                                    <img src="./img/ent1.webp" alt="sports" loading="lazy">
+                                    <div class="left-section-box-text ">
+                                        <h3 class="hidden2">
+                                            <a href="./article.html" target="_blank" rel="noopener noreferrer">
+                                                Liverpool
+                                                trashes
+                                                Manchester United </a>
+                                        </h3>
+                                        <p> This becomes the greatest defeat United has suffered in the hands of a big
+                                            team
+                                            for a ...</p>
+                                    </div>
+                                    <ul>
+                                        <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse
+                                                - UN
+                                                warns</a></li>
+                                        <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse
+                                                - UN
+                                                warns</a></li>
+                                        <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse
+                                                - UN
+                                                warns</a></li>
+                                    </ul>
+                                </div>
+                                <div class="left-section-box">
+                                    <img src="./img/ent1.webp" alt="sports" loading="lazy">
+                                    <div class="left-section-box-text ">
+                                        <h3 class="hidden2">
+                                            <a href="./article.html" target="_blank" rel="noopener noreferrer">
+                                                Liverpool
+                                                trashes
+                                                Manchester United </a>
+                                        </h3>
+                                        <p> This becomes the greatest defeat United has suffered in the hands of a big
+                                            team
+                                            for a ...</p>
+                                    </div>
+                                    <ul>
+                                        <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse
+                                                - UN
+                                                warns</a></li>
+                                        <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse
+                                                - UN
+                                                warns</a></li>
+                                        <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse
+                                                - UN
+                                                warns</a></li>
+                                    </ul>
+                                </div>
+                                <div class="left-section-box">
+                                    <img src="./img/ent1.webp" alt="sports" loading="lazy">
+                                    <div class="left-section-box-text ">
+                                        <h3 class="hidden2">
+                                            <a href="./article.html" target="_blank" rel="noopener noreferrer">
+                                                Liverpool
+                                                trashes
+                                                Manchester United </a>
+                                        </h3>
+                                        <p> This becomes the greatest defeat United has suffered in the hands of a big
+                                            team
+                                            for a ...</p>
+                                    </div>
+                                    <ul>
+                                        <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse
+                                                - UN
+                                                warns</a></li>
+                                        <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse
+                                                - UN
+                                                warns</a></li>
+                                        <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse
+                                                - UN
+                                                warns</a></li>
+                                    </ul>
+                                </div>
+                                <div class="left-section-box">
+                                    <img src="./img/ent1.webp" alt="sports" loading="lazy">
+                                    <div class="left-section-box-text ">
+                                        <h3 class="hidden2">
+                                            <a href="./article.html" target="_blank" rel="noopener noreferrer">
+                                                Liverpool
+                                                trashes
+                                                Manchester United </a>
+                                        </h3>
+                                        <p> This becomes the greatest defeat United has suffered in the hands of a big
+                                            team
+                                            for a ...</p>
+                                    </div>
+                                    <ul>
+                                        <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse
+                                                - UN
+                                                warns</a></li>
+                                        <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse
+                                                - UN
+                                                warns</a></li>
+                                        <li class="hidden"><a href="#"><strong>Climate change</strong> is getting worse
+                                                - UN
+                                                warns</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <h3 class="p-2" id="technology">
+                                <span class="article-sub-head "></span> TECHNOLOGY
+                            </h3>
+                            <div class="left-section-boxes">
+                                <div class="left-section-box">
+                                    <img src="./img/ent1.webp" alt="sports" loading="lazy">
+                                    <div class="left-section-box-text ">
+                                        <h3 class="hidden2">
+                                            <a href="./article.html" target="_blank" rel="noopener noreferrer">
+                                                Liverpool
+                                                trashes
+                                                Manchester United </a>
+                                        </h3>
+                                        <p> This becomes the greatest defeat United has suffered in the hands of a big
+                                            team
+                                            for a ...</p>
+                                    </div>
+                                </div>
+                                <div class="left-section-box">
+                                    <img src="./img/ent1.webp" alt="sports" loading="lazy">
+                                    <div class="left-section-box-text ">
+                                        <h3 class="hidden2">
+                                            <a href="./article.html" target="_blank" rel="noopener noreferrer">
+                                                Liverpool
+                                                trashes
+                                                Manchester United </a>
+                                        </h3>
+                                        <p> This becomes the greatest defeat United has suffered in the hands of a big
+                                            team
+                                            for a ...</p>
+                                    </div>
+                                </div>
+                                <div class="left-section-box">
+                                    <img src="./img/ent1.webp" alt="sports" loading="lazy">
+                                    <div class="left-section-box-text ">
+                                        <h3 class="hidden2">
+                                            <a href="./article.html" target="_blank" rel="noopener noreferrer">
+                                                Liverpool
+                                                trashes
+                                                Manchester United </a>
+                                        </h3>
+                                        <p> This becomes the greatest defeat United has suffered in the hands of a big
+                                            team
+                                            for a ...</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <h3 class="p-2" id="education">
+                                <span class="article-sub-head "></span> EDUCATION
+                            </h3>
+                            <div class="left-section-boxes">
+                                <div class="left-section-box">
+                                    <img src="./img/ent1.webp" alt="sports" loading="lazy">
+                                    <div class="left-section-box-text ">
+                                        <h3 class="hidden2">
+                                            <a href="./article.html" target="_blank" rel="noopener noreferrer">
+                                                Liverpool
+                                                trashes
+                                                Manchester United </a>
+                                        </h3>
+                                        <p> This becomes the greatest defeat United has suffered in the hands of a big
+                                            team
+                                            for a ...</p>
+                                    </div>
+                                </div>
+                                <div class="left-section-box">
+                                    <img src="./img/ent1.webp" alt="sports">
+                                    <div class="left-section-box-text ">
+                                        <h3 class="hidden2">
+                                            <a href="./article.html" target="_blank" rel="noopener noreferrer">
+                                                Liverpool
+                                                trashes
+                                                Manchester United </a>
+                                        </h3>
+                                        <p> This becomes the greatest defeat United has suffered in the hands of a big
+                                            team
+                                            for a ...</p>
+                                    </div>
+                                </div>
+                                <div class="left-section-box">
+                                    <img src="./img/ent1.webp" alt="sports" loading="lazy">
+                                    <div class="left-section-box-text ">
+                                        <h3 class="hidden2">
+                                            <a href="./article.html" target="_blank" rel="noopener noreferrer">
+                                                Liverpool
+                                                trashes
+                                                Manchester United </a>
+                                        </h3>
+                                        <p> This becomes the greatest defeat United has suffered in the hands of a big
+                                            team
+                                            for a ...</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <h3 class="p-2" id="culture">
+                                <span class="article-sub-head "></span> CULTURE
+                            </h3>
+                            <div class="left-section-boxes">
+                                <div class="left-section-box">
+                                    <img src="./img/ent1.webp" alt="sports" loading="lazy">
+                                    <div class="left-section-box-text ">
+                                        <h3 class="hidden2">
+                                            <a href="./article.html" target="_blank" rel="noopener noreferrer">
+                                                Liverpool
+                                                trashes
+                                                Manchester United </a>
+                                        </h3>
+                                        <p> This becomes the greatest defeat United has suffered in the hands of a big
+                                            team
+                                            for a ...</p>
+                                    </div>
+                                </div>
+                                <div class="left-section-box">
+                                    <img src="./img/ent1.webp" alt="sports" loading="lazy">
+                                    <div class="left-section-box-text ">
+                                        <h3 class="hidden2">
+                                            <a href="./article.html" target="_blank" rel="noopener noreferrer">
+                                                Liverpool
+                                                trashes
+                                                Manchester United </a>
+                                        </h3>
+                                        <p> This becomes the greatest defeat United has suffered in the hands of a big
+                                            team
+                                            for a ...</p>
+                                    </div>
+                                </div>
+                                <div class="left-section-box">
+                                    <img src="./img/ent1.webp" alt="sports" loading="lazy">
+                                    <div class="left-section-box-text ">
+                                        <h3 class="hidden2">
+                                            <a href="./article.html" target="_blank" rel="noopener noreferrer">
+                                                Liverpool
+                                                trashes
+                                                Manchester United </a>
+                                        </h3>
+                                        <p> This becomes the greatest defeat United has suffered in the hands of a big
+                                            team
+                                            for a ...</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <h3 class="p-2" id="health">
+                                <span class="article-sub-head "></span> HEALTH
+                            </h3>
+                            <div class="left-section-boxes">
+                                <div class="left-section-box">
+                                    <img src="./img/ent1.webp" alt="sports">
+                                    <div class="left-section-box-text ">
+                                        <h3 class="hidden2">
+                                            <a href="./article.html" target="_blank" rel="noopener noreferrer">
+                                                Liverpool
+                                                trashes
+                                                Manchester United </a>
+                                        </h3>
+                                        <p> This becomes the greatest defeat United has suffered in the hands of a big
+                                            team
+                                            for a ...</p>
+                                    </div>
+                                </div>
+                                <div class="left-section-box">
+                                    <img src="./img/ent1.webp" alt="sports" loading="lazy">
+                                    <div class="left-section-box-text ">
+                                        <h3 class="hidden2">
+                                            <a href="./article.html" target="_blank" rel="noopener noreferrer">
+                                                Liverpool
+                                                trashes
+                                                Manchester United </a>
+                                        </h3>
+                                        <p> This becomes the greatest defeat United has suffered in the hands of a big
+                                            team
+                                            for a ...</p>
+                                    </div>
+                                </div>
+                                <div class="left-section-box">
+                                    <img src="./img/ent1.webp" alt="sports" loading="lazy">
+                                    <div class="left-section-box-text ">
+                                        <h3 class="hidden2">
+                                            <a href="./article.html" target="_blank" rel="noopener noreferrer">
+                                                Liverpool
+                                                trashes
+                                                Manchester United </a>
+                                        </h3>
+                                        <p> This becomes the greatest defeat United has suffered in the hands of a big
+                                            team
+                                            for a ...</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <h3 class="p-2" id="health">
+                                <span class="article-sub-head "></span> MORE FROM NEWSHUB
+                            </h3>
+                            <div class="left-section-boxes">
+                                <div class="left-section-box">
+                                    <img src="./img/ent1.webp" alt="sports" loading="lazy">
+                                    <div class="left-section-box-text ">
+                                        <h3 class="hidden2">
+                                            <a href="./article.html" target="_blank" rel="noopener noreferrer">
+                                                Liverpool
+                                                trashes
+                                                Manchester United </a>
+                                        </h3>
+                                        <p> This becomes the greatest defeat United has suffered in the hands of a big
+                                            team
+                                            for a ...</p>
+                                    </div>
+                                </div>
+                                <div class="left-section-box">
+                                    <img src="./img/ent1.webp" alt="sports" loading="lazy">
+                                    <div class="left-section-box-text ">
+                                        <h3 class="hidden2">
+                                            <a href="./article.html" target="_blank" rel="noopener noreferrer">
+                                                Liverpool
+                                                trashes
+                                                Manchester United </a>
+                                        </h3>
+                                        <p> This becomes the greatest defeat United has suffered in the hands of a big
+                                            team
+                                            for a ...</p>
+                                    </div>
+                                </div>
+                                <div class="left-section-box">
+                                    <img src="./img/ent1.webp" alt="sports" loading="lazy">
+                                    <div class="left-section-box-text ">
+                                        <h3 class="hidden2">
+                                            <a href="./article.html" target="_blank" rel="noopener noreferrer">
+                                                Liverpool
+                                                trashes
+                                                Manchester United </a>
+                                        </h3>
+                                        <p> This becomes the greatest defeat United has suffered in the hands of a big
+                                            team
+                                            for a ...</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="live-stream-box">
+                            <h3 class="p-2" id="live-stream">
+                                <span class="article-sub-head "></span> LIVE STREAM FROM NEWSHUB
+                            </h3>
+                            <video id="stream-video" controls="controls">
+                                <source src="./img/live-stream.mp4" type="video/mp4">
+
+                            </video>
+                            <div class="live-stream-box-text ">
+                                <h3>
+                                    <img src="./img/youtube__.webp" alt="youtube logo"> Live from NewsHub
+                                </h3>
+                                <p>All the <span>LATEST NEWS</span> at your <span> FINGERTIPS</span></p>
+                            </div>
+                        </div>
+                        <!$ footer starts $>
+                            <footer id="footer-container">
+                                <h2 id="footer-head">Explore News Hub</h2>
+                                <div class="footer-box">
+                                    <div id="first-box">
+                                        <div class="inner-box hidden2">
+                                            <a href="">Home</a>
+                                            <a href="">About Us</a>
+                                            <a href="">Latest News</a>
+                                        </div>
+                                        <div class="inner-box hidden2">
+                                            <a href="">Politics</a>
+                                            <a href="">Trending</a>
+                                            <a href="">Entertainment</a>
+                                        </div>
+                                        <div class="inner-box hidden2">
+                                            <a href="">Sports</a>
+                                            <a href="">Foreign</a>
+                                            <a href="">2023 Election</a>
+                                        </div>
+                                        <div class="inner-box hidden2">
+                                            <a href="">Cookies</a>
+                                            <a href="">Terms of Use</a>
+                                            <a href="">Accesibilty Help</a>
+                                        </div>
+                                        <div class="inner-box hidden2">
+                                            <a href="">Privacy Policy</a>
+                                            <a href="">Do not Sell my Info</a>
+                                            <a href="">NEWS HUB Emails for you</a>
+                                        </div>
+                                        <div class="inner-box hidden2">
+                                            <a href="">Advertise with Us</a>
+                                            <a href="">Join our community</a>
+                                            <a href="">Contact the News Hub</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="footer-bottom">
+                                    Copyright <span>&copy;</span> News Hub 2023. All Rights Reserved
+                                </div>
+                            </footer>
+                            <!$ JQuery CDN $>
+                                <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+                                    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+                                    crossorigin="anonymous"></script>
+                                <script defer src="./main.js"></script>
+                                <script src="./search_suggestions.js"></script>
 </body>
 <!$ add a light image background change to the website images to indicate a link, turn all image to links $>
     <!$ ::backdrop pseudo-selector adds a feature to an elemnt when in fullscreen mode $>
