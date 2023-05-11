@@ -189,16 +189,18 @@ const toggle = document.getElementById("open-nav"),
   topicsMenu = document.querySelector("ul .topic-box-dropdown"),
   closeSearchBox = document.querySelector(".close-search-menu"),
   searchBtn = document.querySelector("#search-icon"),
-  searchBox = document.querySelector(".search-box");
+  searchBox = document.querySelector(".wrapper");
 function search(e) {
   (searchBox.style.display = "none"), (searchBox.style.display = "flex");
 }
 function handleChange(e) {
   window.scrollY > 15
     ? ((document.querySelector("#main-nav").style.display = "none"),
-      (document.querySelector("#topic-container").style.top = ".5rem"))
+      (document.querySelector("#topic-container").style.top = ".5rem"),
+      (document.querySelector("#top").style.display = "flex"))
     : ((document.querySelector("#main-nav").style.display = ""),
-      (document.querySelector("#topic-container").style.top = "3.5rem"));
+      (document.querySelector("#topic-container").style.top = "3.5rem"),
+      (document.querySelector("#top").style.display = ""));
 }
 const close = document.getElementById("close"),
   open = document.getElementById("open"),
