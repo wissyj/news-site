@@ -1221,9 +1221,7 @@ button {
 .left-section .left-section-boxes {
   display: grid;
   grid-template-columns: repeat(2, calc(100% / 2 - 1rem));
-  grid-gap: $gap-1;
   overflow-x: hidden;
-  padding-left: $gap-1;
 }
 
 .left-section-box {
