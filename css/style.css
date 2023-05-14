@@ -191,7 +191,7 @@ svg {
   opacity: 0;
   filter: blur(7px);
   transform: translateY(100%);
-  transition: all 0.5s;
+  transition: all 0.8s;
 }
 
 .show {
@@ -205,7 +205,7 @@ svg {
   opacity: 0;
   filter: blur(7px);
   transform: translateX(-100%);
-  transition: all 0.3s;
+  transition: all 0.5s;
 }
 
 .show2 {
@@ -577,7 +577,6 @@ button:focus {
 }
 
 .autocom-box li {
-  background: #fff;
   list-style: none;
   padding: 8px 12px;
   display: none;
@@ -592,8 +591,8 @@ button:focus {
 }
 
 .autocom-box li:hover {
-  background: #e5e5e5;
-  color: #333;
+  background: #333;
+  color: #e5e5e5;
 }
 
 .search-input .icon {
@@ -1334,7 +1333,9 @@ button {
 .left-section .left-section-boxes {
   display: grid;
   grid-template-columns: repeat(2, calc(50% - 1rem));
+  grid-gap: 1rem;
   overflow-x: hidden;
+  padding-left: 1rem;
 }
 
 .left-section-box {
@@ -1436,11 +1437,6 @@ button {
   color: #333;
 }
 
-.highlight {
-  color: #f99500 !important;
-  text-decoration: underline;
-}
-
 .section-heading a {
   color: #333;
 }
@@ -1490,7 +1486,7 @@ button {
   left: 2%;
   display: flex;
   gap: 0.5rem;
-  color: #fff;
+  color: #c72727;
 }
 
 .live-stream-box-text p {

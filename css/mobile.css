@@ -224,7 +224,7 @@
     height: 20rem;
   }
   #footer-container {
-    margin: 25rem 2rem 0 2rem;
+    margin: 20rem 2rem 0 2rem;
   }
   .inner-box {
     font-size: 14px;
@@ -310,7 +310,6 @@
     background: #fff;
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
     padding: 0;
-    padding: 1rem 0;
   }
 }
 @media (max-width: 780px) and (max-width: 600px) {
@@ -351,12 +350,6 @@
   }
   .right-section {
     display: none;
-  }
-  .left-section-boxes {
-    padding-left: 0;
-  }
-  .left-section-text h3 {
-    text-align: center;
   }
   .footer-box {
     justify-content: center;

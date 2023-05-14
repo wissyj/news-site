@@ -191,7 +191,7 @@ svg {
   opacity: 0;
   filter: blur(7px);
   transform: translateY(100%);
-  transition: all 0.5s;
+  transition: all 0.8s;
 }
 .show {
   opacity: 1;
@@ -203,7 +203,7 @@ svg {
   opacity: 0;
   filter: blur(7px);
   transform: translateX(-100%);
-  transition: all 0.3s;
+  transition: all 0.5s;
 }
 .show2 {
   opacity: 1;
@@ -1305,10 +1305,7 @@ button {
 .right-section-box .section-text h3 {
   color: $dark-color;
 }
-.highlight {
-  color: $secondary-color !important;
-  text-decoration: underline;
-}
+
 .section-heading a {
   color: $dark-color;
 }
@@ -1351,7 +1348,7 @@ button {
   left: 2%;
   display: flex;
   gap: 0.5rem;
-  color: #fff;
+  color: $primary-color;
 }
 .live-stream-box-text p {
   background: #fff;
