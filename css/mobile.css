@@ -351,7 +351,6 @@
   .right-section {
     display: none;
   }
-<<<<<<< HEAD
   .left-section .left-section-boxes,
   .left-section-boxes {
     padding-left: 0;
@@ -363,8 +362,6 @@
   .left-section-text h3 {
     text-align: center;
   }
-=======
->>>>>>> 777e1f8f8095f775b4661e58aa283f9ca7dd725e
   .footer-box {
     justify-content: center;
   }
