@@ -348,11 +348,18 @@
     }
     .left-section .left-section-boxes,
     .left-section-boxes {
-      padding-left: 0;
+      padding-top: 0;
       display: block;
+      padding: 2rem;
+    }
+    .left-section-box {
+      border-top: 0 0 2px $dark-color;
     }
     .left-section-box img {
       height: 13rem;
+      width: 80%;
+      padding-top: $gap-1;
+      left: 10%;
     }
     .left-section-text h3 {
       text-align: center;

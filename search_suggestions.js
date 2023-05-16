@@ -28,7 +28,14 @@ let suggestions = [
   "Tiwa Savage at King Charles' Coronation",
   "Lecturers on the chat GPT spree",
   "Uyo fashion week 2023",
-  "Afang vs Eguisi",
+  "Afang vs Egusi",
   "NCC announces unified code for all telecom networks",
-  "Uyo fashion week 2023",
+  "Harry Styles Grammy award 2023 ",
+  "MET GALA 2023 ",
+  "Avatar the way of water ",
+  "FG on Compulsory primary education using native dialect",
+  "Cholera crisis in the North",
+  "US relaxes travel restrictions",
+  "Neil Armstrong's exploit on the moon",
 ];
+// ask chat gpt to generate code that fetches topics from the a tag in H3 in your html and fix them into the suggestions box while providing the direct links to where the topics are in the article page

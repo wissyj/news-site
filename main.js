@@ -319,7 +319,6 @@ var newsHeadlines = [
 
 // Set the interval (in milliseconds) between each slide
 var slideInterval = 5000; // 3 seconds
-
 // Get the list items where the breaking news will be displayed
 var newsItems = document.querySelectorAll(
   "#breaking-stories-tab li.topic-slides"
