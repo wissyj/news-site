@@ -66,7 +66,7 @@ inputBox.onkeyup = (e) => {
       linkTag.click();
     };
     emptyArray = suggestions.filter((data) => {
-      //filtering array value and user characters to lowercase and return only those words which are start with user enetered chars
+      //filtering array value and user characters to lowercase and return only those words which are started with user entered chars
       return data.toLocaleLowerCase().startsWith(userData.toLocaleLowerCase());
     });
     emptyArray = emptyArray.map((data) => {
@@ -308,3 +308,45 @@ $(".nav-container a, #topic-container a").on("click", function (e) {
 $("a[href='#top']").click(function () {
   return $("html, body").animate({ scrollTop: 0 }, "slow"), !1;
 });
+// Define an array of breaking news headlines
+var newsHeadlines = [
+  "Jamb reschedules UTME",
+  "Hilda Baci breaks guiness world record",
+  "Petition tribunal adjourns hearing",
+  "UTME results 2023 released",
+  "GPT-4 has been introduced",
+];
+
+// Set the interval (in milliseconds) between each slide
+var slideInterval = 5000; // 3 seconds
+
+// Get the list items where the breaking news will be displayed
+var newsItems = document.querySelectorAll(
+  "#breaking-stories-tab li.topic-slides"
+);
+
+// Function to update the news slide
+function updateSlide() {
+  // Loop through each news item
+  for (var i = 0; i < newsItems.length; i++) {
+    var currentItem = newsItems[i];
+
+    // Get the index for the current news item
+    var itemIndex = parseInt(currentItem.className.split(" ")[1].split("-")[0]);
+
+    // Calculate the index of the next news headline
+    var nextIndex = (itemIndex % newsHeadlines.length) + 1;
+
+    // Get the next news headline
+    var nextHeadline = newsHeadlines[nextIndex - 1];
+
+    // Update the news item with the next headline
+    currentItem.querySelector("a").textContent = nextHeadline;
+
+    // Update the class name of the news item
+    currentItem.className = "topic-slides " + nextIndex + "-slide";
+  }
+}
+
+// Start the automatic slide
+setInterval(updateSlide, slideInterval);

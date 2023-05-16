@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Montserrat:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Montserrat:wght@600&family=Open+Sans&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -139,7 +139,6 @@ svg {
   z-index: 1000;
   border-radius: 5px;
   border: 1px solid #333;
-  display: none;
 }
 
 #top svg {
@@ -631,7 +630,7 @@ button:focus {
 }
 
 #header h1 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "open sans", sans-serif;
   font-size: 3.5rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -1254,7 +1253,7 @@ button {
 #breaking-stories-tab {
   display: none;
   width: 100vw;
-  height: 4rem;
+  height: 5rem;
   position: relative;
   top: 9rem;
   margin: 0 auto;
@@ -1293,14 +1292,22 @@ button {
 #breaking-stories-tab ul li a {
   display: block;
   width: 13rem;
-  height: 2rem;
+  height: 3rem;
   color: #fff;
-  font-size: 1rem;
+  font-size: 0.8rem;
   margin: 0 1rem;
   border-left: inset 2px solid #c72727;
   transition: all 0.3s;
+  transform: translateX(-0.5rem);
+  animation-name: breaking_news;
+  animation-duration: 0.5s;
 }
 
+@keyframes breaking_news {
+  100% {
+    transform: translateX(0.5rem);
+  }
+}
 #breaking-stories-tab ul li a:hover {
   text-decoration: underline;
 }
@@ -1382,8 +1389,9 @@ button {
 
 .left-section-box img {
   width: 100%;
-  height: 100%;
+  height: 10rem;
   padding: 0 0.5rem;
+  background-position: center center/cover;
 }
 
 .left-section-box-text {

@@ -352,8 +352,13 @@
   .right-section {
     display: none;
   }
+  .left-section .left-section-boxes,
   .left-section-boxes {
     padding-left: 0;
+    display: block;
+  }
+  .left-section-box img {
+    height: 13rem;
   }
   .left-section-text h3 {
     text-align: center;
@@ -440,7 +445,7 @@
   }
   #breaking-stories-tab ul {
     display: block;
-    height: 1.9rem;
+    height: 3rem;
     overflow: hidden;
   }
 }
