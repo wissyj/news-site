@@ -829,7 +829,7 @@ button {
 }
 
 #welcome p {
-  width: 7rem;
+  width: 100%;
   height: 3rem;
   margin-left: 1rem;
   overflow: hidden;
@@ -1291,11 +1291,11 @@ button {
 
 #breaking-stories-tab ul li a {
   display: block;
-  width: 13rem;
+  width: 100%;
   height: 3rem;
   color: #fff;
-  font-size: 0.8rem;
-  margin: 0 1rem;
+  font-size: 1rem;
+  margin: 0 0 0 1rem;
   border-left: inset 2px solid #c72727;
   transition: all 0.3s;
   transform: translateX(-0.5rem);

@@ -345,6 +345,11 @@
   #breaking-stories-tab {
     display: contents;
   }
+  #breaking-stories-tab ul {
+    display: block;
+    height: 3rem;
+    overflow: hidden;
+  }
   .left-section {
     width: 95vw;
   }
@@ -448,11 +453,6 @@
   }
   #breaking-stories-tab div strong {
     width: 10rem;
-  }
-  #breaking-stories-tab ul {
-    display: block;
-    height: 3rem;
-    overflow: hidden;
   }
 }
 @media (max-width: 400px) {
@@ -569,12 +569,6 @@
 @media (max-width: 360px) and (max-width: 350px) {
   .box {
     flex-direction: column;
-  }
-  #welcome p {
-    width: 7rem;
-    height: 4.5rem;
-    margin-left: 1rem;
-    overflow: hidden;
   }
 }
 @media (max-width: 360px) and (max-width: 335px) {
