@@ -122,7 +122,7 @@
     justify-content: center;
     width: 100%;
     height: 4rem;
-    background: #e5e5e5;
+    background: #f3f3f3;
     z-index: 2000;
     opacity: 0;
     animation: anim-nav 0.5s linear forwards;
@@ -141,7 +141,7 @@
     border-bottom: 0.1px dotted #333;
   }
   .nav-container li:first-child:hover {
-    background: #e5e5e5;
+    background: #f3f3f3;
   }
   .nav-container li:nth-child(2) {
     animation-delay: 0.5s;
@@ -154,10 +154,10 @@
   }
   .nav-container ul li:hover {
     background: #333;
-    color: #e5e5e5;
+    color: #f3f3f3;
   }
   .nav-container ul li:hover a {
-    color: #e5e5e5;
+    color: #f3f3f3;
   }
   nav button {
     display: contents;
@@ -245,7 +245,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #e5e5e5;
+    background: #f3f3f3;
   }
   #slider {
     width: 75%;
@@ -278,18 +278,9 @@
     margin: 30rem 2rem 0 2rem;
   }
 }
-@media (max-width: 780px) and (max-width: 720px) {
-  .topic-box ul > li:nth-child(5) {
-    display: none;
-  }
-  .topic-box > ul > li .topic-box-dropdown > li:nth-child(2) {
-    display: block;
-  }
-  .left-section {
-    width: 65vw;
-  }
+@media (max-width: 780px) and (max-width: 768px) {
   .left-section-boxes {
-    background: #e5e5e5;
+    background: #f3f3f3;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, calc(50% - 1rem));
@@ -302,6 +293,17 @@
     grid-template-columns: repeat(2, calc(50% - 1rem));
     grid-gap: 1rem;
     overflow-x: hidden;
+  }
+}
+@media (max-width: 780px) and (max-width: 720px) {
+  .topic-box ul > li:nth-child(5) {
+    display: none;
+  }
+  .topic-box > ul > li .topic-box-dropdown > li:nth-child(2) {
+    display: block;
+  }
+  .left-section {
+    width: 65vw;
   }
   .left-section-box {
     width: 100%;
@@ -322,7 +324,7 @@
   }
   #stories-container .stories-main-box .stories-box {
     height: 7rem;
-    border-bottom: 1px dotted #e5e5e5;
+    border-bottom: 1px dotted #f3f3f3;
   }
   .sports-text {
     transform: translateY(0);

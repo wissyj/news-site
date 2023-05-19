@@ -50,7 +50,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Lato", sans-serif;
+  font-family: "open sans", sans-serif;
   margin-bottom: 0.5rem;
   line-height: 1.6;
   color: $light-color;
@@ -319,6 +319,7 @@ nav {
 }
 .nav-container .nav-socials img {
   width: 1.5rem;
+  height: 1.5rem;
 }
 .nav-container .nav-socials a {
   padding: 0.2rem;

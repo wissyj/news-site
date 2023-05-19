@@ -33,12 +33,12 @@ body {
 
 ::-moz-selection {
   background: #333;
-  color: #e5e5e5;
+  color: #f3f3f3;
 }
 
 ::selection {
   background: #333;
-  color: #e5e5e5;
+  color: #f3f3f3;
 }
 
 /* other items */
@@ -48,10 +48,10 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Lato", sans-serif;
+  font-family: "open sans", sans-serif;
   margin-bottom: 0.5rem;
   line-height: 1.6;
-  color: #e5e5e5;
+  color: #f3f3f3;
 }
 
 .p-1 {
@@ -101,7 +101,7 @@ svg {
   left: 0;
   right: 0;
   bottom: 0;
-  background: repeating-radial-gradient(circle at 50% 50%, #e5e5e5 0%, #e5e5e5 10%, #e5e5e5 5%, #333 45%, #e5e5e5 60%, #333 90%, #333 100%);
+  background: repeating-radial-gradient(circle at 50% 50%, #f3f3f3 0%, #f3f3f3 10%, #f3f3f3 5%, #333 45%, #f3f3f3 60%, #333 90%, #333 100%);
   display: flex;
   place-content: center;
   align-items: center;
@@ -131,7 +131,7 @@ svg {
   position: fixed;
   width: 2rem;
   aspect-ratio: 1;
-  background: #e5e5e5;
+  background: #f3f3f3;
   display: flex;
   justify-content: right;
   top: 70vh;
@@ -352,7 +352,7 @@ nav {
 }
 
 .nav-container ul:hover ul li a {
-  color: #e5e5e5;
+  color: #f3f3f3;
 }
 
 .nav-container ul li a {
@@ -385,7 +385,7 @@ nav .nav-container ul li a::after {
 
 nav .nav-container ul li:hover a::after {
   height: 2px;
-  background: #e5e5e5;
+  background: #f3f3f3;
 }
 
 nav button {
@@ -591,7 +591,7 @@ button:focus {
 }
 
 .autocom-box li:hover {
-  background: #e5e5e5;
+  background: #f3f3f3;
   color: #333;
 }
 
@@ -608,7 +608,7 @@ button:focus {
   cursor: pointer;
 }
 .search-input .icon > svg {
-  fill: #e5e5e5;
+  fill: #f3f3f3;
   width: 1.8rem;
   height: 2rem;
 }
@@ -877,7 +877,7 @@ button {
 }
 
 .box:hover h3 {
-  color: #e5e5e5;
+  color: #f3f3f3;
 }
 
 /* -------stories container--------- */
@@ -888,7 +888,7 @@ button {
 }
 
 #stories h1 {
-  color: #e5e5e5;
+  color: #f3f3f3;
   display: flex;
   justify-content: center;
 }
@@ -896,7 +896,7 @@ button {
 #stories-container {
   position: absolute;
   width: 100%;
-  color: #e5e5e5;
+  color: #f3f3f3;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   /* overflow: hidden; */
@@ -983,7 +983,7 @@ button {
 }
 
 .stories-heading a {
-  color: #e5e5e5;
+  color: #f3f3f3;
 }
 
 /* .sports-text p {
@@ -1022,7 +1022,7 @@ button {
   top: 2.5rem;
   bottom: 2rem;
   z-index: 100;
-  background: #e5e5e5;
+  background: #f3f3f3;
   border-bottom: 1px dotted #333;
 }
 
@@ -1066,11 +1066,11 @@ button {
 }
 
 .topic-box ul > li:focus a {
-  color: #e5e5e5;
+  color: #f3f3f3;
 }
 
 .topic-box ul li:last-child:hover svg {
-  fill: #e5e5e5;
+  fill: #f3f3f3;
 }
 
 .topic-box ul li a {
@@ -1083,7 +1083,7 @@ button {
 
 .topic-box ul > li:hover a,
 .topic-box ul .topic-box-dropdown li:hover a {
-  color: #e5e5e5;
+  color: #f3f3f3;
 }
 
 .topic-box-dropdown {
@@ -1099,7 +1099,7 @@ button {
 .topic-box-dropdown li {
   margin: 0 0.2rem;
   width: 90%;
-  background: #e5e5e5;
+  background: #f3f3f3;
   border-bottom: 1px dotted #333;
   transition: all 0.3s;
 }
@@ -1123,11 +1123,11 @@ button {
 }
 
 .topic-box ul li:hover #listMenu {
-  fill: #e5e5e5;
+  fill: #f3f3f3;
 }
 
 .topic-box ul li:hover #hideMenu {
-  fill: #e5e5e5;
+  fill: #f3f3f3;
 }
 
 /* slider */
@@ -1226,7 +1226,7 @@ button {
 }
 
 .manual-btn {
-  border: 2px solid #e5e5e5;
+  border: 2px solid #f3f3f3;
   padding: 5px;
   border-radius: 100%;
   cursor: pointer;
@@ -1268,7 +1268,7 @@ button {
   overflow: hidden;
   padding: 0.5rem 0.5rem 0.5rem 0;
   background: #333;
-  box-shadow: inset -2px 0 15px #e5e5e5;
+  box-shadow: inset -2px 0 15px #f3f3f3;
 }
 
 #breaking-stories-tab div strong {
@@ -1329,7 +1329,7 @@ button {
 }
 
 .left-section-boxes {
-  background: #e5e5e5;
+  background: #f3f3f3;
   width: 100%;
   display: flex;
   -moz-column-gap: 1rem;
@@ -1362,7 +1362,7 @@ button {
   width: 100%;
   height: -moz-fit-content;
   height: fit-content;
-  background: #e5e5e5;
+  background: #f3f3f3;
 }
 
 .left-section-box ul li {
@@ -1400,7 +1400,7 @@ button {
 }
 
 .right-section {
-  background: #e5e5e5;
+  background: #f3f3f3;
   color: #333;
   height: 85vh;
   position: relative;
@@ -1426,14 +1426,14 @@ button {
   padding: 0.5rem 0;
   font-size: 1.5rem;
   background: #333;
-  border: 1px dotted #e5e5e5;
+  border: 1px dotted #f3f3f3;
   text-align: center;
 }
 
 #article-stories-container .right-section-box {
   height: -moz-fit-content;
   height: fit-content;
-  border-bottom: 1px dotted #e5e5e5;
+  border-bottom: 1px dotted #f3f3f3;
   padding: 1rem;
 }
 
@@ -1480,7 +1480,7 @@ button {
   position: relative;
   bottom: 55%;
   left: 45%;
-  fill: #e5e5e5;
+  fill: #f3f3f3;
 }
 
 #pause-video {
@@ -1618,7 +1618,7 @@ button {
   padding: 2rem 0;
   overflow: hidden;
   word-wrap: break-word;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid #f3f3f3;
 }
 
 .form-box-two h3 {
@@ -1733,7 +1733,7 @@ textarea::placeholder {
   -o-object-fit: cover;
      object-fit: cover;
   filter: brightness(0.7);
-  box-shadow: 0 0 10px #e5e5e5;
+  box-shadow: 0 0 10px #f3f3f3;
   border-radius: 10px;
 }
 
@@ -1754,7 +1754,7 @@ textarea::placeholder {
   .contact-box {
     width: 100%;
     display: flex;
-    box-shadow: 0 0 10px #e5e5e5;
+    box-shadow: 0 0 10px #f3f3f3;
     margin-top: 2rem;
     border-radius: 10px;
   }
@@ -1803,7 +1803,7 @@ textarea::placeholder {
   display: block;
   width: 100%;
   text-decoration: none;
-  color: #e5e5e5;
+  color: #f3f3f3;
 }
 
 #first-box a:hover {
@@ -1819,8 +1819,8 @@ textarea::placeholder {
 
 .footer-bottom {
   text-align: center;
-  border-top: 1px dotted #e5e5e5;
-  color: #e5e5e5;
+  border-top: 1px dotted #f3f3f3;
+  color: #f3f3f3;
   margin-top: 2rem;
   padding: 1rem 0;
 }
