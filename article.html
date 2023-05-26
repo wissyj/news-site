@@ -486,7 +486,7 @@
                             </h3>
                             <div class="left-section-boxes">
                                 <div class="left-section-box">
-                                    <img  src="./img/tiwa at king charles' coronation.jpg"
+                                    <img src="./img/tiwa at king charles' coronation.jpg"
                                         alt="tiwa at king charles' coronation" class="lazy-load">
                                     <div class="left-section-box-text ">
                                         <h3 class="hidden2">
@@ -627,7 +627,8 @@
                                     </ul>
                                 </div>
                                 <div class="left-section-box">
-                                    <img src="./img/Nigerians from sudan.jpg" alt="Nigerians from Sudan" class="lazy-load">
+                                    <img src="./img/Nigerians from sudan.jpg" alt="Nigerians from Sudan"
+                                        class="lazy-load">
                                     <div class="left-section-box-text ">
                                         <h3 class="hidden2">
                                             <a href="./article.html" target="_blank" rel="noopener noreferrer">
@@ -757,7 +758,7 @@
                             <div class="left-section-boxes">
                                 <div class="left-section-box">
                                     <img src="./img/uyo fashion week.jpg" alt="photo from uyo fashion week"
-                                    class="lazy-load">
+                                        class="lazy-load">
                                     <div class="left-section-box-text ">
                                         <h3 class="hidden2">
                                             <a href="./article.html" target="_blank" rel="noopener noreferrer">
@@ -878,7 +879,8 @@
                             </video>
                             <div class="live-stream-box-text ">
                                 <h3>
-                                    <img src="./img/youtube__.webp" alt="youtube logo" class="lazy-load"> Live from NewsHub
+                                    <img src="./img/youtube__.webp" alt="youtube logo" class="lazy-load"> Live from
+                                    NewsHub
                                 </h3>
                                 <p>All the <span>LATEST NEWS</span> at your <span> FINGERTIPS</span></p>
                             </div>
@@ -972,6 +974,27 @@
 
                                     // Start the automatic slide
                                     setInterval(updateSlide, slideInterval);
+                                    //lazy loading images
+                                    function preload_image(img) {
+                                        img.src = img.src;
+                                        console.log(`Loading ${img.src}`);
+                                    }
+                                    const config_opts = {
+                                        rootMargin: '50px 50px 50px 50px'
+                                    };
+                                    let lazy_load = new IntersectionObserver(function (entries, self) {
+                                        for (entry of entries) {
+                                            if (entry.isIntersecting) {
+                                                let elem = entry.target;
+                                                preload_image(elem);
+                                                self.unobserve(elem);
+                                            }
+                                        }
+                                    }, config_opts);
+                                    let images = document.querySelectorAll('img.lazy-load');
+                                    for (image of images) {
+                                        lazy_load.observe(image);
+                                    }
                                 </script>
 </body>
 <!$ add a light image background change to the website images to indicate a link, turn all image to links $>

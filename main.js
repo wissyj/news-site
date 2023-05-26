@@ -225,7 +225,7 @@ var repeat = function (e) {
   s();
 };
 repeat();
-
+//intersection observer begins
 const observer = new IntersectionObserver((e) => {
     e.forEach((e) => {
       console.log(e),
@@ -238,10 +238,10 @@ const observer = new IntersectionObserver((e) => {
     });
   }, {}),
   hidden = document.querySelectorAll(".hidden"),
-  hidden2 = document.querySelectorAll(".hidden2"),
-  video = document.getElementById("stream-video");
+  hidden2 = document.querySelectorAll(".hidden2");
 hidden.forEach((e) => observer.observe(e)),
   hidden2.forEach((e) => observer.observe(e));
+//intersection observer ends
 const toggle = document.getElementById("open-nav"),
   closeBtn = document.getElementById("close-nav"),
   navmenu = document.querySelector("#main-nav .nav-container"),
