@@ -2,37 +2,15 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Montserrat:wght@600&family=Open+Sans&display=swap");
 
-// Set default styles for all elements
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-
-// Set smooth scrolling behavior for HTML element
 html {
   scroll-behavior: smooth;
 }
-
-// Define function for setting padding on all sides
-// @function padding-all($size) {
-//   padding: 1rem;
-// }
-
-// Define mixin for setting padding on x-axis
-@mixin padding-x($size) {
-  padding-left: $size;
-  padding-right: $size;
-}
-
-// Define mixin for setting padding on y-axis
-@mixin padding-y($size) {
-  padding-top: $size;
-  padding-bottom: $size;
-}
-
-// Set default styles for body element
 body {
   background: $dark-color;
   font-family: "Montserrat", sans-serif;
@@ -40,7 +18,6 @@ body {
   overflow-x: hidden;
 }
 
-// Set styles for scrollbar
 ::-webkit-scrollbar {
   width: 0.8rem;
 }
@@ -56,7 +33,6 @@ body {
   border-radius: 10px;
 }
 
-// Set styles for selected text
 ::-moz-selection {
   background: $dark-color;
   color: $light-color;
@@ -67,59 +43,53 @@ body {
   color: $light-color;
 }
 
-// Set default styles for headings
+/* other items */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: "Lato", sans-serif;
+  font-family: "open sans", sans-serif;
   margin-bottom: 0.5rem;
   line-height: 1.6;
   color: $light-color;
 }
-
-// Set styles for padding classes
-
+a:visited {
+  color: #aaa6a6;
+}
+.p-1 {
+  padding: 0.5rem;
+}
+.p-2 {
+  padding: 1rem;
+}
 .px-1 {
-  @include padding-x(0.5rem);
+  padding: 0 0.5rem;
 }
-
 .px-2 {
-  @include padding-x(1rem);
+  padding: 0 1rem;
 }
-
 .py-1 {
-  @include padding-y(0.5rem);
+  padding: 0.5rem 0;
 }
-
 .py-2 {
-  @include padding-y(1rem);
+  padding: 1rem 0;
 }
-
-// Set default styles for unordered lists
 ul {
   list-style: none;
 }
-
-// Set default styles for links
 a {
   text-decoration: none;
 }
-
-// Set default styles for span elements
 span {
   padding-left: 0.2rem;
 }
-
-// Set default styles for SVG elements
 svg {
   width: 1.2rem;
   cursor: pointer;
 }
 
-// Set styles for preloader element
 #preloader {
   position: fixed;
   top: 0;
@@ -144,71 +114,55 @@ svg {
   opacity: 1;
   z-index: 99999;
 }
-/* Variables */
-$light-color: #f5f5f5;
-$dark-color: #222;
-
-/* Mixins */
-@mixin center() {
+#gif {
+  width: 100px;
+  height: 100px;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  background: url(../img/loading.gif) no-repeat center center;
+}
+.gif {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  border-radius: 100%;
+  background: url(../img/waiting-loading.gif) no-repeat center center;
+}
+#top {
+  position: fixed;
+  width: 2rem;
+  aspect-ratio: 1;
+  background: $light-color;
+  display: flex;
+  justify-content: right;
+  top: 70vh;
+  left: 85vw;
+  z-index: 1000;
+  border-radius: 5px;
+  border: 1px solid $dark-color;
+}
+#top svg {
+  width: 2rem;
+  aspect-ratio: 1;
+  fill: $dark-color;
 }
 
-@mixin fade-in() {
-  opacity: 0;
-  filter: blur(7px);
-  transform: translateY(100%);
-  transition: all 0.5s;
-}
-
-@mixin fade-in-left() {
-  opacity: 0;
-  filter: blur(7px);
-  transform: translateX(-100%);
-  transition: all 0.3s;
-}
-
-@mixin fade-out() {
-  opacity: 1;
-  filter: blur(0px);
-  transform: translateY(0px);
-}
-
-@mixin slide-out() {
-  opacity: 0;
-  filter: blur(7px);
-  transform: translateX(-100%);
-  transition: all 1s;
-}
-
-@mixin slide-in() {
-  opacity: 1;
-  filter: blur(0);
-  transform: translateX(0);
-  transition: all 1s;
-}
-
-/* Functions */
-@function calc-percentage($target, $container) {
-  @return ($target / $container) * 100%;
-}
-
-/* Animation Keyframes */
-@keyframes fade-left {
+@keyframes fadeLeft {
   from {
     filter: blur(7px);
     opacity: 0;
-    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
   }
   to {
     filter: blur(0);
     opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
     transform: translateX(0);
   }
 }
-
 @keyframes anim-nav {
   0% {
     transform: rotateZ(-120deg);
@@ -218,159 +172,137 @@ $dark-color: #222;
     opacity: 1;
   }
 }
-
 @keyframes modalopen {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
 }
+.close-nav-menu {
+  position: relative;
+  left: 5rem;
+}
+.close-nav-menu > svg {
+  width: 1.5rem;
+}
+/* animation to make contents fade in from the bottom */
+.hidden {
+  opacity: 0;
+  filter: blur(7px);
+  transform: translateY(100%);
+  transition: all 0.5s;
+}
+.show {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateY(0px);
+}
+/* animation to make things fade in from left */
+.hidden2 {
+  opacity: 0;
+  filter: blur(7px);
+  transform: translateX(-100%);
+  transition: all 0.3s;
+}
+.show2 {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateX(0px);
+}
+.boxOut {
+  opacity: 0;
+  filter: blur(7px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+.boxIn {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transition: all 1s;
+}
 
-@keyframes fade-in-down {
+@keyframes fadeInDown {
   0% {
     opacity: 0;
+    -webkit-transform: translateY(-2000px);
+    -ms-transform: translateY(-2000px);
     transform: translateY(-2000px);
   }
   100% {
     opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
     transform: translateY(0);
   }
 }
 
-/* Global Styles */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+/* navbar */
 
-html,
-body {
-  height: 100%;
-}
-
-body {
-  font-family: sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-/* Button Styles */
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  color: #fff;
-  background-color: $dark-color;
-  transition: all 0.3s ease-in-out;
-  &:hover {
-    background-color: darken($dark-color, 10%);
-  }
-}
-
-/* Form Styles */
-.form-input {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  border: none;
-  background-color: #f9f9f9;
-  transition: all 0.3s ease-in-out;
-  &:focus {
-    outline: none;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  }
-}
-
-/* Navbar Styles */
 nav {
   background: $dark-color;
   width: 100%;
-  &.nav-sticky {
-    opacity: 0;
-  }
 }
-
-// Functions
-@function calc-percentage($value, $total) {
-  @return ($value / $total) * 100%;
+/* chnages the color of navbar on scroll */
+.nav-sticky {
+  opacity: 0.8;
 }
-
-// Mixins
-@mixin flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@mixin transition-all($time: 0.4s) {
-  transition: all $time;
-}
-
-// Styles
 #main-nav {
   display: grid;
-  grid-template-columns: calc-percentage(30, 100) calc-percentage(50, 100) calc-percentage(
-      20,
-      100
-    );
+  grid-template-columns: 30vw 50vw 20vw;
   width: 100vw;
   align-items: center;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
-
-  > svg {
-    width: 1.8rem;
-    fill: #f3f3f3;
-    position: relative;
-  }
-
-  > div {
-    display: flex;
-  }
 }
-
 #main-nav .nav-container {
-  @include flex-center;
+  display: flex;
+  align-items: center;
   justify-content: space-evenly;
 }
-
 #main-nav .nav-container .nav-socials {
-  @include flex-center;
+  display: flex;
   flex-direction: column;
   align-items: center;
   position: fixed;
   top: 40vh;
   left: 90vw;
 }
-
+#main-nav > svg {
+  width: 1.8rem;
+  fill: #f3f3f3;
+  position: relative;
+}
+.logo svg {
+  width: 1.8rem;
+  fill: #f3f3f3;
+  position: relative;
+  top: 0.2rem;
+}
+.latest {
+  width: 0.7rem;
+  fill: #fff;
+}
 .logo {
-  @include flex-center;
   color: #fff;
   width: fit-content;
   font-size: 1.5rem;
-
-  svg {
-    width: 1.8rem;
-    fill: #f3f3f3;
-    position: relative;
-    top: 0.2rem;
-  }
-
-  span {
-    color: $dark-color;
-    background: #fff;
-    padding: 0.2rem;
-  }
+  justify-content: center;
+  align-items: center;
 }
-
+.logo span {
+  color: $dark-color;
+  background: #fff;
+  padding: 0.2rem;
+}
+#main-nav > div {
+  display: flex;
+}
 .subscribe-main-btn {
   width: fit-content;
   background: $primary-color;
@@ -378,117 +310,74 @@ nav {
   height: 1.8rem;
   border-radius: 10px;
   margin: 0 0.5rem;
-  @include transition-all;
-
-  &:hover {
-    color: $primary-color;
-    background: #fff;
-  }
+  transition: all 0.4s;
 }
-
+.subscribe-main-btn:hover {
+  color: $primary-color;
+  background: #fff;
+}
 #main-nav > div > svg {
   width: 1.8rem;
   fill: #fff;
 }
-
+.nav-container .nav-socials img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
 .nav-container .nav-socials a {
   padding: 0.2rem;
 }
-
 .nav-container ul {
   display: flex;
   flex-wrap: wrap;
   width: fit-content;
-
-  li {
-    padding: 0 1rem;
-
-    .dropdown {
-      display: none;
-    }
-
-    a {
-      color: #fff;
-      &::after {
-        content: "";
-        position: relative;
-        display: block;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 0;
-      }
-    }
-
-    &:hover {
-      .dropdown {
-        display: block;
-      }
-
-      a {
-        color: $light-color;
-      }
-    }
-  }
+}
+.nav-container ul li {
+  padding: 0 1rem;
 }
 
-@mixin modal-open {
-  animation: modalopen 1s;
+.nav-container ul:hover ul li a {
+  color: $light-color;
+}
+.nav-container ul li a {
+  color: #fff;
+}
+.nav-container ul li .dropdown {
+  display: none;
 }
 
-@mixin input-focus {
-  &:focus {
-    outline: none;
-  }
+nav .nav-container ul li a::after {
+  content: "";
+  position: relative;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+}
+.current::after {
+  content: "";
+  position: relative;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+}
+nav .nav-container ul li:hover a::after {
+  height: 2px;
+  background: $light-color;
 }
 
-@mixin center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* nav styles */
-nav {
-  .nav-container {
-    ul {
-      li {
-        a {
-          &::after {
-            content: "";
-            position: relative;
-            display: block;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 0;
-          }
-          &.current::after {
-            content: "";
-            position: relative;
-            display: block;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 2px;
-          }
-          &:hover::after {
-            height: 2px;
-            background: $light-color;
-          }
-        }
-      }
-    }
-  }
-  button {
-    display: none;
-  }
+nav button {
+  display: none;
 }
 
 /* subscribe box */
 .subscribe-container {
   display: none;
-  @include center;
+  justify-content: center;
+  align-items: center;
   width: 100vw;
   height: 50vh;
   background: $dark-color;
@@ -501,7 +390,7 @@ nav {
   left: 0;
   bottom: 0;
   z-index: 2000000;
-  @include modal-open;
+  animation: modalopen 1s;
 }
 .show-modal {
   display: block;
@@ -518,15 +407,17 @@ nav {
   width: 1.8rem;
 }
 
-.subscribe-box {
-  h4 {
-    @include center;
-    text-transform: uppercase;
-    color: #fff;
-  }
-  > div {
-    @include center;
-  }
+.subscribe-box h4 {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.subscribe-box > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .input-field input {
@@ -536,7 +427,6 @@ nav {
   margin-bottom: 1rem;
   border: none;
   border-bottom: 1px solid;
-  @include input-focus;
 }
 
 .input-field input:focus {
@@ -553,18 +443,24 @@ nav {
   outline: none;
   cursor: pointer;
   transform: translateX(100%);
-  &:hover {
-    background: #fff;
-    color: $primary-color;
-  }
+}
+
+.subscribe-btn:hover {
+  background: #fff;
+  color: $primary-color;
 }
 
 /* search-box styling */
 button {
   cursor: pointer;
-  &:active {
-    transform: scale(0.95);
-  }
+}
+button:active {
+  transform: scale(0.95);
+}
+
+input:focus,
+button:focus {
+  outline: none;
 }
 
 .wrapper {
@@ -584,6 +480,11 @@ button {
   top: 0;
   left: 0;
   right: 0;
+  bottom: 0;
+  display: none;
+  z-index: 10000000;
+  overflow: hidden;
+  animation: modalopen 1s;
 }
 
 .wrapper::after {
@@ -881,9 +782,6 @@ button {
   height: fit-content;
   position: relative;
   top: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 #welcome p {
   width: 100%;
@@ -1184,6 +1082,7 @@ button {
   width: 800px;
   height: 300px;
   border-radius: 5px;
+  object-fit: contain;
 }
 
 .img-slider .slide .info {

@@ -54,6 +54,10 @@ h6 {
   color: #f3f3f3;
 }
 
+a:visited {
+  color: #aaa6a6;
+}
+
 .p-1 {
   padding: 0.5rem;
 }
@@ -334,6 +338,7 @@ nav {
 
 .nav-container .nav-socials img {
   width: 1.5rem;
+  height: 1.5rem;
 }
 
 .nav-container .nav-socials a {
@@ -823,9 +828,6 @@ button {
   height: fit-content;
   position: relative;
   top: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 #welcome p {
