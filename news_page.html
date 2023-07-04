@@ -125,7 +125,7 @@
             <!$ search box ends $>
                 <!-- <!$ news page begins$> -->
                 <div id="news-page">
-                    <div id="page-head">
+                    <div id="page-head" style="display: flex; background: #ccc; color: #000;">
                         <ul class="page-box">
                             <li>
                                 <a href="./index.html">Home</a>
@@ -137,6 +137,10 @@
                                 Local
                             </li>
                         </ul>
+                        <div id="welcome">
+                            <p id="datetime" style="font-size: 16px; color: var(--light-color);">Friday, 10 March
+                            </p>
+                        </div>
                     </div>
 
                     <div id="breaking-box">
@@ -338,26 +342,10 @@
                         <script src="https://code.jquery.com/jquery-3.3.1.min.js"
                             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
                             crossorigin="anonymous"></script>
-                        <!-- <script src="./search_suggestions.js"></script>
-                            <script defer src="./main.js"></script> -->
-                        <script>
-                            //intersection observer begins
-                            const observer = new IntersectionObserver((e) => {
-                                e.forEach((e) => {
-                                    console.log(e),
-                                        e.isIntersecting
-                                            ? (e.target.classList.add("show"),
-                                                e.target.classList.add("show2"),
-                                                observer.unobserve(e.target))
-                                            : (e.target.classList.remove("show"),
-                                                e.target.classList.remove("show2"));
-                                });
-                            }, {}),
-                                hidden = document.querySelectorAll(".hidden"),
-                                hidden2 = document.querySelectorAll(".hidden2");
-                            hidden.forEach((e) => observer.observe(e)),
-                                hidden2.forEach((e) => observer.observe(e));
-                                //intersection observer ends</script>
+                        </script>
+                        <script src="./js/search_suggestions.js"></script>
+                        <script defer src="./js/main.js"></script>
+
 </body>
 
 </html>

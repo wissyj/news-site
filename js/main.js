@@ -4,8 +4,17 @@ window.addEventListener("load", function () {
   setTimeout(function () {
     e.style.display = "none";
   }, 1500);
-});
-if (window.location.pathname !== "/contact.html") {
+}); // change in background of  navbar on scroll
+document.addEventListener(
+  "DOMContentLoaded",
+  window.addEventListener("scroll", function () {
+    window.scrollY > 20
+      ? (document.querySelector("#main-nav").style.opacity = "0.9")
+      : (document.querySelector("#main-nav").style.opacity = "1");
+  })
+);
+
+if (window.location.pathname != "/contact.html") {
   function showdate() {
     // code to execute if index.html is being displayed
     var now = new Date();
@@ -47,7 +56,6 @@ if (window.location.pathname !== "/contact.html") {
 } else {
   console.log("no text content");
 }
-
 // getting all required elements
 const searchWrapper = document.querySelector(".search-input");
 const inputBox = searchWrapper.querySelector("input");
@@ -108,7 +116,10 @@ function showSuggestions(list) {
   suggBox.innerHTML = listData;
   //show autocomplete box
 }
-if (window.location.pathname !== "/article.html") {
+
+// typewriter for home page
+
+if (window.location.pathname == "/index.html") {
   class TypeWriter {
     constructor(txtElement, words, wait = 3000) {
       this.txtElement = txtElement;
@@ -178,15 +189,82 @@ if (window.location.pathname !== "/article.html") {
   console.log("no available text content");
 }
 
-// change in background of  navbar on scroll
-document.addEventListener(
-  "DOMContentLoaded",
-  window.addEventListener("scroll", function () {
-    window.scrollY > 15
-      ? (document.querySelector("#main-nav").style.opacity = "0.9")
-      : (document.querySelector("#main-nav").style.opacity = "1");
-  })
-);
+//intersection observer begins
+const observer = new IntersectionObserver((e) => {
+    e.forEach((e) => {
+      console.log(e),
+        e.isIntersecting
+          ? (e.target.classList.add("show"),
+            e.target.classList.add("show2"),
+            observer.unobserve(e.target))
+          : (e.target.classList.remove("show"),
+            e.target.classList.remove("show2"));
+    });
+  }, {}),
+  hidden = document.querySelectorAll(".hidden"),
+  hidden2 = document.querySelectorAll(".hidden2");
+hidden.forEach((e) => observer.observe(e)),
+  hidden2.forEach((e) => observer.observe(e));
+//intersection observer ends
+const toggle = document.getElementById("open-nav"),
+  closeBtn = document.getElementById("close-nav"),
+  navmenu = document.querySelector("#main-nav .nav-container"),
+  listmenu = document.getElementById("listMenu"),
+  hidemenu = document.getElementById("hideMenu"),
+  topicsMenu = document.querySelector("ul .topic-box-dropdown"),
+  closeSearchBox = document.querySelector(".close-search-menu"),
+  searchBtn = document.querySelector("#search-icon"),
+  searchBox = document.querySelector(".wrapper");
+function search(e) {
+  (searchBox.style.display = "none"), (searchBox.style.display = "flex");
+}
+
+const close = document.getElementById("close"),
+  open = document.getElementById("open"),
+  modal = document.getElementById("modal");
+open.addEventListener("click", () => modal.classList.add("show-modal")),
+  document.body.addEventListener(
+    "click",
+    (e) => e.target == modal && modal.classList.remove("show-modal")
+  ),
+  close.addEventListener("click", () => modal.classList.remove("show-modal"));
+
+searchBtn.addEventListener("click", search),
+  closeSearchBox.addEventListener("click", () => {
+    searchBox.style.display = "none";
+  }),
+  toggle.addEventListener("click", () => {
+    (navmenu.style.display = "block"),
+      (closeBtn.style.display = "block"),
+      (toggle.style.display = "none");
+  }),
+  closeBtn.addEventListener("click", () => {
+    (navmenu.style.display = "none"),
+      (closeBtn.style.display = "none"),
+      (toggle.style.display = "");
+  }),
+  listmenu.addEventListener("click", () => {
+    (topicsMenu.style.display = "block"),
+      (hidemenu.style.display = "block"),
+      (listmenu.style.display = "none");
+  }),
+  hidemenu.addEventListener("click", () => {
+    (topicsMenu.style.display = "none"),
+      (listmenu.style.display = "block"),
+      (hidemenu.style.display = "none");
+  });
+// jquery dependent code, useless offline
+$(".nav-container a, #topic-container a").on("click", function (e) {
+  if ("" !== this.hash) {
+    e.preventDefault();
+    const t = this.hash;
+    $("html, body").animate({ scrollTop: $(t).offset().top - 100 }, 800);
+  }
+});
+top;
+$("a[href='#top']").click(function () {
+  return $("html, body").animate({ scrollTop: 0 }, "slow"), !1;
+});
 // slides
 const img = document.querySelectorAll(".slide img");
 var slides = document.querySelectorAll(".slide"),
@@ -225,87 +303,3 @@ var repeat = function (e) {
   s();
 };
 repeat();
-//intersection observer begins
-const observer = new IntersectionObserver((e) => {
-    e.forEach((e) => {
-      console.log(e),
-        e.isIntersecting
-          ? (e.target.classList.add("show"),
-            e.target.classList.add("show2"),
-            observer.unobserve(e.target))
-          : (e.target.classList.remove("show"),
-            e.target.classList.remove("show2"));
-    });
-  }, {}),
-  hidden = document.querySelectorAll(".hidden"),
-  hidden2 = document.querySelectorAll(".hidden2");
-hidden.forEach((e) => observer.observe(e)),
-  hidden2.forEach((e) => observer.observe(e));
-//intersection observer ends
-const toggle = document.getElementById("open-nav"),
-  closeBtn = document.getElementById("close-nav"),
-  navmenu = document.querySelector("#main-nav .nav-container"),
-  listmenu = document.getElementById("listMenu"),
-  hidemenu = document.getElementById("hideMenu"),
-  topicsMenu = document.querySelector("ul .topic-box-dropdown"),
-  closeSearchBox = document.querySelector(".close-search-menu"),
-  searchBtn = document.querySelector("#search-icon"),
-  searchBox = document.querySelector(".wrapper");
-function search(e) {
-  (searchBox.style.display = "none"), (searchBox.style.display = "flex");
-}
-function handleChange(e) {
-  window.scrollY > 15
-    ? ((document.querySelector("#main-nav").style.display = "none"),
-      (document.querySelector("#topic-container").style.top = ".5rem"),
-      (document.querySelector("#top").style.display = "flex"))
-    : ((document.querySelector("#main-nav").style.display = ""),
-      (document.querySelector("#topic-container").style.top = "3.5rem"),
-      (document.querySelector("#top").style.display = ""));
-}
-const close = document.getElementById("close"),
-  open = document.getElementById("open"),
-  modal = document.getElementById("modal");
-open.addEventListener("click", () => modal.classList.add("show-modal")),
-  document.body.addEventListener(
-    "click",
-    (e) => e.target == modal && modal.classList.remove("show-modal")
-  ),
-  close.addEventListener("click", () => modal.classList.remove("show-modal"));
-
-searchBtn.addEventListener("click", search),
-  closeSearchBox.addEventListener("click", () => {
-    searchBox.style.display = "none";
-  }),
-  toggle.addEventListener("click", () => {
-    (navmenu.style.display = "block"),
-      (closeBtn.style.display = "block"),
-      (toggle.style.display = "none");
-  }),
-  closeBtn.addEventListener("click", () => {
-    (navmenu.style.display = "none"),
-      (closeBtn.style.display = "none"),
-      (toggle.style.display = "");
-  }),
-  listmenu.addEventListener("click", () => {
-    (topicsMenu.style.display = "block"),
-      (hidemenu.style.display = "block"),
-      (listmenu.style.display = "none");
-  }),
-  hidemenu.addEventListener("click", () => {
-    (topicsMenu.style.display = "none"),
-      (listmenu.style.display = "block"),
-      (hidemenu.style.display = "none");
-  });
-
-$(".nav-container a, #topic-container a").on("click", function (e) {
-  if ("" !== this.hash) {
-    e.preventDefault();
-    const t = this.hash;
-    $("html, body").animate({ scrollTop: $(t).offset().top - 100 }, 800);
-  }
-});
-// top
-$("a[href='#top']").click(function () {
-  return $("html, body").animate({ scrollTop: 0 }, "slow"), !1;
-});
