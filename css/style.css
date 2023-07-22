@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  background: #333;
+  background: #212529;
   font-family: "Montserrat", sans-serif;
   line-height: 1.5;
   overflow-x: hidden;
@@ -32,12 +32,12 @@ body {
 }
 
 ::-moz-selection {
-  background: #333;
+  background: #212529;
   color: #f3f3f3;
 }
 
 ::selection {
-  background: #333;
+  background: #212529;
   color: #f3f3f3;
 }
 
@@ -105,7 +105,7 @@ svg {
   left: 0;
   right: 0;
   bottom: 0;
-  background: repeating-radial-gradient(circle at 50% 50%, #f3f3f3 0%, #f3f3f3 10%, #f3f3f3 5%, #333 45%, #f3f3f3 60%, #333 90%, #333 100%);
+  background: #fff;
   display: flex;
   place-content: center;
   align-items: center;
@@ -142,13 +142,13 @@ svg {
   left: 85vw;
   z-index: 1000;
   border-radius: 5px;
-  border: 1px solid #333;
+  border: 1px solid #212529;
 }
 
 #top svg {
   width: 2rem;
   aspect-ratio: 1;
-  fill: #333;
+  fill: #212529;
 }
 
 @keyframes fadeLeft {
@@ -243,7 +243,7 @@ svg {
 }
 /* navbar */
 nav {
-  background: #333;
+  background: #212529;
   width: 100%;
 }
 
@@ -306,7 +306,7 @@ nav {
 }
 
 .logo span {
-  color: #333;
+  color: #212529;
   background: #fff;
   padding: 0.2rem;
 }
@@ -404,7 +404,7 @@ nav button {
   align-items: center;
   width: 100vw;
   height: 50vh;
-  background: #333;
+  background: #212529;
   overflow: hidden;
   transition: all 1s;
   position: fixed;
@@ -588,7 +588,7 @@ button:focus {
   width: 100%;
   cursor: default;
   border-radius: 3px;
-  color: #333;
+  color: #212529;
 }
 
 .search-input.active .autocom-box li {
@@ -597,7 +597,7 @@ button:focus {
 
 .autocom-box li:hover {
   background: #f3f3f3;
-  color: #333;
+  color: #212529;
 }
 
 .search-input .icon {
@@ -609,7 +609,7 @@ button:focus {
   text-align: center;
   line-height: 55px;
   font-size: 20px;
-  background-color: #333;
+  background-color: #212529;
   cursor: pointer;
 }
 .search-input .icon > svg {
@@ -661,7 +661,14 @@ button:focus {
   position: absolute;
   top: 0;
   left: 0;
-  background: repeating-radial-gradient(circle at 30% 87%, #333 0%, #f3f3f3 5%, #333 45%, #f3f3f3 60%, #333 90%);
+  background: repeating-radial-gradient(
+    circle at 30% 87%,
+    #212529 0%,
+    #f3f3f3 5%,
+    #212529 45%,
+    #f3f3f3 60%,
+    #212529 90%
+  );
   width: inherit;
   height: inherit;
   opacity: 0.6;
@@ -709,7 +716,8 @@ button {
   transition: transform 0.8s ease;
   position: relative;
   display: inline-block;
-  box-shadow: inset -2px 2px 2px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: inset -2px 2px 2px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
   outline: none;
   animation: up 1s linear forwards;
   animation-delay: 1.5s;
@@ -875,7 +883,7 @@ button {
 .box h3 {
   font-weight: 1000;
   font-size: 1.3rem;
-  color: #333;
+  color: #212529;
 }
 
 .box:hover h3 {
@@ -904,7 +912,7 @@ button {
   /* overflow: hidden; */
   padding: 1rem;
   -moz-column-gap: 1rem;
-       column-gap: 1rem;
+  column-gap: 1rem;
 }
 
 #stories-container .bigger-box {
@@ -922,7 +930,7 @@ button {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .stories-main-box {
@@ -931,7 +939,7 @@ button {
   display: grid;
   grid-template-columns: repeat(2, 0.5fr);
   -moz-column-gap: 1rem;
-       column-gap: 1rem;
+  column-gap: 1rem;
   row-gap: 1rem;
 }
 
@@ -939,7 +947,7 @@ button {
   width: 100%;
   height: 17.5rem;
   -moz-column-gap: 1rem;
-       column-gap: 1rem;
+  column-gap: 1rem;
   margin-bottom: 0;
   padding-bottom: 0;
   animation-name: fadeLeft;
@@ -967,14 +975,14 @@ button {
 }
 
 .stories-box img {
-  background: #333;
+  background: #212529;
   opacity: 0.7;
   width: 100%;
   height: 100%;
 }
 
 .stories-box:hover img {
-  background: #333;
+  background: #212529;
   opacity: 1;
 }
 
@@ -1025,7 +1033,7 @@ button {
   bottom: 2rem;
   z-index: 100;
   background: #f3f3f3;
-  border-bottom: 1px dotted #333;
+  border-bottom: 1px dotted #212529;
 }
 
 .topic-box {
@@ -1047,7 +1055,7 @@ button {
   padding-top: 0.5rem;
   width: 100%;
   height: 100%;
-  border-right: 1px solid #333;
+  border-right: 1px solid #212529;
   transition: all 0.4s;
 }
 
@@ -1064,7 +1072,7 @@ button {
 }
 
 .topic-box ul > li:hover {
-  background: #333;
+  background: #212529;
 }
 
 .topic-box ul > li:focus a {
@@ -1078,7 +1086,7 @@ button {
 .topic-box ul li a {
   width: 4rem;
   height: 3rem;
-  color: #333;
+  color: #212529;
   padding: 0 0.1rem 0 0.1rem;
   font-size: 1.2rem;
 }
@@ -1093,7 +1101,7 @@ button {
   height: -moz-fit-content;
   height: fit-content;
   width: 100%;
-  background: #333;
+  background: #212529;
   margin-top: 1rem;
   transition: all 0.3s;
 }
@@ -1102,12 +1110,12 @@ button {
   margin: 0 0.2rem;
   width: 90%;
   background: #f3f3f3;
-  border-bottom: 1px dotted #333;
+  border-bottom: 1px dotted #212529;
   transition: all 0.3s;
 }
 
 .topic-box ul .topic-box-dropdown li a {
-  color: #333;
+  color: #212529;
   margin: 0 0.5rem;
 }
 
@@ -1115,13 +1123,13 @@ button {
   margin: 0 auto;
   margin-top: -0.5rem;
   width: 30px;
-  fill: #333;
+  fill: #212529;
 }
 
 #hideMenu {
   display: none;
   margin: auto;
-  fill: #333;
+  fill: #212529;
 }
 
 .topic-box ul li:hover #listMenu {
@@ -1139,7 +1147,7 @@ button {
   height: 300px;
   margin: 10px auto;
   top: 6rem;
-  background: #333;
+  background: #212529;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1159,12 +1167,12 @@ button {
   width: 100%;
   height: 100%;
   -webkit-clip-path: circle(0% at 0 50%);
-          clip-path: circle(0% at 0 50%);
+  clip-path: circle(0% at 0 50%);
 }
 
 .img-slider .slide.active {
   -webkit-clip-path: circle(150% at 0 50%);
-          clip-path: circle(150% at 0 50%);
+  clip-path: circle(150% at 0 50%);
   transition: 2s;
   transition-property: -webkit-clip-path;
   transition-property: clip-path;
@@ -1178,7 +1186,7 @@ button {
   height: 300px;
   border-radius: 5px;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 .img-slider .slide .info {
@@ -1269,7 +1277,7 @@ button {
   align-items: center;
   overflow: hidden;
   padding: 0.5rem 0.5rem 0.5rem 0;
-  background: #333;
+  background: #212529;
   box-shadow: inset -2px 0 15px #f3f3f3;
 }
 
@@ -1320,7 +1328,7 @@ button {
   grid-template-columns: 75% 25%;
   margin: 2rem 0.5rem;
   -moz-column-gap: 1rem;
-       column-gap: 1rem;
+  column-gap: 1rem;
   position: relative;
   top: 5rem;
 }
@@ -1335,7 +1343,7 @@ button {
   width: 100%;
   display: flex;
   -moz-column-gap: 1rem;
-       column-gap: 1rem;
+  column-gap: 1rem;
   margin: 0 4rem 0 0;
   padding-left: 1rem;
 }
@@ -1357,7 +1365,7 @@ button {
 }
 
 .left-section-box-text {
-  border-bottom: 1px dotted #333;
+  border-bottom: 1px dotted #212529;
 }
 
 .left-section-box ul {
@@ -1372,7 +1380,7 @@ button {
   height: -moz-fit-content;
   height: fit-content;
   background: #fff;
-  border-bottom: 1px dotted #333;
+  border-bottom: 1px dotted #212529;
   padding: 1rem 0.3rem;
 }
 
@@ -1382,7 +1390,7 @@ button {
 
 .left-section-box ul li a,
 .left-section-box h3 a {
-  color: #333;
+  color: #212529;
 }
 
 .left-section-box ul li a:hover {
@@ -1403,7 +1411,7 @@ button {
 
 .right-section {
   background: #f3f3f3;
-  color: #333;
+  color: #212529;
   height: 85vh;
   position: relative;
   top: 4.38rem;
@@ -1427,7 +1435,7 @@ button {
   width: 100%;
   padding: 0.5rem 0;
   font-size: 1.5rem;
-  background: #333;
+  background: #212529;
   border: 1px dotted #f3f3f3;
   text-align: center;
 }
@@ -1444,7 +1452,7 @@ button {
 }
 
 .right-section-box .section-text h3 {
-  color: #333;
+  color: #212529;
 }
 
 .highlight {
@@ -1453,7 +1461,7 @@ button {
 }
 
 .section-heading a {
-  color: #333;
+  color: #212529;
 }
 
 .last-section {
@@ -1473,7 +1481,7 @@ button {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   filter: brightness(0.9);
 }
 
@@ -1506,7 +1514,7 @@ button {
 
 .live-stream-box-text p {
   background: #fff;
-  color: #333;
+  color: #212529;
   text-align: center;
   position: relative;
 }
@@ -1540,7 +1548,7 @@ button {
 .form-head {
   width: 90vw;
   height: 30vh;
-  background: #333;
+  background: #212529;
   color: #fff;
   border-width: 100vw 50vh 50vh 0;
 }
@@ -1552,7 +1560,7 @@ button {
   width: calc(100vw - 1rem);
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   filter: brightness(0.7);
 }
 
@@ -1566,7 +1574,7 @@ button {
 }
 
 .form-head-text {
-  color: #333;
+  color: #212529;
   font-size: 1.5rem;
   text-align: center;
   margin-bottom: 1rem;
@@ -1576,18 +1584,18 @@ button {
   width: calc(100vw - 1rem);
   height: -moz-fit-content;
   height: fit-content;
-  color: #333;
+  color: #212529;
   display: grid;
   grid-template-columns: 50vw 50vw;
 }
 
 .form-box h3 {
   text-align: center;
-  color: #333;
+  color: #212529;
 }
 
 .form-box h4 {
-  color: #333;
+  color: #212529;
 }
 
 .form-box-one {
@@ -1616,7 +1624,7 @@ button {
 
 .form-box-two {
   width: 100%;
-  background: #333;
+  background: #212529;
   padding: 2rem 0;
   overflow: hidden;
   word-wrap: break-word;
@@ -1710,7 +1718,7 @@ textarea::placeholder {
 }
 
 .form-btn:hover {
-  background: #333;
+  background: #212529;
   color: #fff;
   border: 1px solid #fff;
 }
@@ -1719,7 +1727,7 @@ textarea::placeholder {
   display: grid;
   grid-template-columns: repeat(3, calc(33.3333333333vw - 2rem));
   -moz-column-gap: 1rem;
-       column-gap: 1rem;
+  column-gap: 1rem;
   padding: 1rem;
 }
 
@@ -1733,7 +1741,7 @@ textarea::placeholder {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   filter: brightness(0.7);
   box-shadow: 0 0 10px #f3f3f3;
   border-radius: 10px;

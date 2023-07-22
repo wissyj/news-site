@@ -629,11 +629,11 @@ button:focus {
   left: 0;
   background: repeating-radial-gradient(
     circle at 30% 87%,
-    #333 0%,
+    #212529 0%,
     #f3f3f3 5%,
-    #333 45%,
+    #212529 45%,
     #f3f3f3 60%,
-    #333 90%
+    #212529 90%
   );
   width: inherit;
   height: inherit;
@@ -1420,7 +1420,7 @@ button {
 }
 
 .form-head-text {
-  color: #333;
+  color: #212529;
   font-size: 1.5rem;
   text-align: center;
   margin-bottom: 1rem;
@@ -1429,7 +1429,7 @@ button {
 .form-box {
   width: calc(100vw - 1rem);
   height: fit-content;
-  color: #333;
+  color: #212529;
   display: grid;
   grid-template-columns: 50vw 50vw;
 }
@@ -1469,7 +1469,7 @@ button {
 
 .form-box-two {
   width: 100%;
-  background: #333;
+  background: #212529;
   padding: 2rem 0;
   overflow: hidden;
   word-wrap: break-word;
@@ -1558,7 +1558,7 @@ textarea::placeholder {
 }
 
 .form-btn:hover {
-  background: #333;
+  background: #212529;
   color: #fff;
   border: 1px solid #fff;
 }

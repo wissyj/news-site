@@ -133,12 +133,12 @@
   }
   .nav-container ul li a {
     padding-top: 0.5rem;
-    color: #333;
+    color: #212529;
   }
   .nav-container ul li {
     margin: 0 auto;
     transition: color 0.3s;
-    border-bottom: 0.1px dotted #333;
+    border-bottom: 0.1px dotted #212529;
   }
   .nav-container li:first-child:hover {
     background: #f3f3f3;
@@ -153,7 +153,7 @@
     animation-delay: 1.5s;
   }
   .nav-container ul li:hover {
-    background: #333;
+    background: #212529;
     color: #f3f3f3;
   }
   .nav-container ul li:hover a {
@@ -364,7 +364,7 @@
     padding: 2rem;
   }
   .left-section-box {
-    border-top: 0 0 2px #333;
+    border-top: 0 0 2px #212529;
   }
   .left-section-box img {
     width: 80%;

@@ -11,15 +11,15 @@
   gap: 0.5rem;
 }
 #news-page #breaking-box #news-breaking-box {
-  border-left: 3px solid #333;
+  border-left: 3px solid #212529;
   height: 95vh;
 }
 #news-page #breaking-box #news-breaking-box h1 {
-  background: #333;
+  background: #212529;
   padding: 1rem 0.5rem;
 }
 #news-page #breaking-box #news-breaking-box .right-section-box {
-  border-bottom: 1px dotted #333;
+  border-bottom: 1px dotted #212529;
 }
 
 #page-head {
@@ -37,7 +37,7 @@
   justify-content: left;
   align-items: center;
   flex-wrap: wrap;
-  background: #333;
+  background: #212529;
   margin-left: 0.5rem;
 }
 #page-head ul li {
@@ -71,7 +71,7 @@
   justify-content: center;
 }
 #page-body .page-body-top-title {
-  color: #333;
+  color: #212529;
   text-align: left;
   font-size: 2rem;
   text-transform: uppercase;
@@ -80,7 +80,7 @@
   display: flex;
   border: 1px solid #ccc;
   padding: 0.5rem 0;
-  color: #333;
+  color: #212529;
 }
 #page-body .page-body-top-contents {
   display: flex;
@@ -91,7 +91,7 @@
 }
 #page-body .page-body-top-icon {
   padding-right: 0.5rem;
-  fill: #333;
+  fill: #212529;
 }
 #page-body .page-body-top-icon svg {
   width: 1.2rem;
@@ -111,7 +111,7 @@
   text-align: left;
 }
 #page .news-breaking-box {
-  background: #333;
+  background: #212529;
 }
 #page-bottom {
   margin-top: 4rem;
@@ -120,7 +120,7 @@
   padding-left: 5%;
 }
 #page-bottom .page-bottom h1 {
-  color: #333;
+  color: #212529;
   text-align: left;
   font-size: 1.3rem;
 }
@@ -134,7 +134,7 @@
 #page-bottom .page-bottom ul li {
   padding: 0.5rem;
   border-radius: 5px;
-  border: 1px solid #333;
+  border: 1px solid #212529;
 }
 #page-bottom .page-bottom ul li a {
   color: #c72727;
